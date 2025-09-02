@@ -10,6 +10,11 @@ type AccountBasic = {
   name: string;
   image: string;
   bio: string;
+  id?: string | null;
+  affiliation?: any | null;
+  subscription_type?: string | null;
+  url?: string | null;
+  verified?: boolean | null;
 };
 
 type AccountFull = AccountBasic & {
@@ -50,17 +55,43 @@ function normalizeQuery(s: string): string {
   return s.normalize("NFKD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 }
 
-function fuzzyIncludes(haystack: string, needle: string): boolean {
-  const h = normalizeQuery(haystack);
-  const n = normalizeQuery(needle);
-  if (!n) return true;
-  // simple subsequence match
-  let i = 0;
-  for (const ch of h) {
-    if (ch === n[i]) i++;
-    if (i >= n.length) return true;
-  }
-  return h.includes(n);
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function computeSearchScore(acc: AccountBasic, query: string): number {
+  const q = normalizeQuery(query);
+  if (!q) return 1; // neutral score shows all
+
+  const uname = normalizeQuery(acc.username);
+  const name = normalizeQuery(acc.name || "");
+  const bio = normalizeQuery(acc.bio || "");
+  const id = acc.id ? String(acc.id) : "";
+  const url = normalizeQuery(acc.url || "");
+
+  // Highest priority: exact username
+  if (uname === q) return 100;
+  // Starts with username or @username
+  if (uname.startsWith(q) || ("@" + uname).startsWith(q)) return 90;
+
+  // Exact name
+  if (name === q) return 80;
+  // Word-boundary name match
+  if (new RegExp(`\\b${escapeRegex(q)}`).test(name)) return 70;
+
+  // Substring username
+  if (uname.includes(q)) return 60;
+  // Substring name
+  if (name.includes(q)) return 50;
+
+  // ID and URL (lower weight)
+  if (id && id.includes(q)) return 30;
+  if (url && url.includes(q)) return 25;
+
+  // Bio substring (lowest weight, only if reasonably specific)
+  if (q.length >= 3 && bio.includes(q)) return 10;
+
+  return 0;
 }
 
 function navLink(href: string, text: string) {
@@ -139,10 +170,12 @@ async function renderDirectory() {
   const title = h("h1", null, "Directory");
   const searchWrap = h("div", { className: "search" });
   const input = h("input", { placeholder: "Search name, @handle, bio" }) as HTMLInputElement;
-  searchWrap.append(input, h("div", { className: "muted" }, "Client-side only"));
+  searchWrap.append(input, h("div", { className: "muted" }));
 
+  const resultsWrap = h("div", null);
   const grid = h("div", { className: "grid" });
-  app.append(title, searchWrap, grid);
+  resultsWrap.append(grid);
+  app.append(title, searchWrap, resultsWrap);
 
   type AllJson = { accounts: AccountBasic[] };
   let all: AccountBasic[] = [];
@@ -161,8 +194,17 @@ async function renderDirectory() {
         "div",
         { className: "card user-card" },
         h("img", { src: acc.image, alt: `Avatar of @${acc.username}`, loading: "lazy" }),
-        h("a", { href: `/${acc.username}`, onclick: interceptNav }, `${acc.name} (@${acc.username})`),
-        h("div", { className: "muted" }, acc.bio)
+        (() => {
+          const nameLink = h("a", { href: `/${acc.username}`, onclick: interceptNav }, `${acc.name} (@${acc.username})`);
+          const wrapper = h("div", null, nameLink);
+          if (acc.verified) {
+            const cls = acc.subscription_type === 'business' ? 'yellow' : (acc.subscription_type === 'blue' ? 'blue' : (acc.subscription_type === 'government' ? 'gray' : 'blue'));
+            wrapper.appendChild(h("span", { className: `verified-icon ${cls}`, title: `Verified: ${acc.subscription_type || 'blue'}` }));
+          }
+          return wrapper;
+        })(),
+        h("div", { className: "muted" }, acc.bio),
+        acc.url ? h("div", null, h("a", { href: acc.url, target: "_blank", rel: "noopener" }, acc.url)) : null
       );
       grid.append(card);
     });
@@ -182,10 +224,16 @@ async function renderDirectory() {
 
   input.addEventListener("input", () => {
     const q = input.value.trim();
-    const filtered = all.filter((a) =>
-      fuzzyIncludes(a.username, q) || fuzzyIncludes(a.name, q) || fuzzyIncludes(a.bio, q)
-    );
-    render(filtered);
+    if (q.length === 0) {
+      render(all);
+      return;
+    }
+    const scored = all
+      .map((a) => ({ a, s: computeSearchScore(a, q) }))
+      .filter((x) => x.s > 0)
+      .sort((x, y) => y.s - x.s)
+      .map((x) => x.a);
+    render(scored);
   });
 }
 
@@ -198,8 +246,31 @@ async function renderAccount(username: string) {
     const header = h(
       "div",
       { className: "card", style: "display:flex; gap:16px; align-items:center;" },
-      h("img", { src: data.image, alt: `Avatar of @${username}`, width: 80, height: 80, style: "border-radius:12px; object-fit:cover;" }),
-      h("div", null, h("h2", null, data.name), h("div", { className: "muted" }, data.bio), h("div", null, h("span", { className: "badge-preview" }, "PAID SHILL")))
+      h("img", { src: data.image || data.profile_image_url, alt: `Avatar of @${username}`, width: 80, height: 80, style: "border-radius:12px; object-fit:cover;" }),
+      h(
+        "div",
+        null,
+        (() => {
+          const title = h("h2", null, `${data.name} (@${data.username})`);
+          if (data.verified) {
+            const cls = data.subscription_type === 'business' ? 'yellow' : (data.subscription_type === 'blue' ? 'blue' : (data.subscription_type === 'government' ? 'gray' : 'blue'));
+            title.appendChild(h("span", { className: `verified-icon ${cls}`, title: `Verified: ${data.subscription_type || 'blue'}` }));
+          }
+          return title;
+        })(),
+        h("div", { className: "muted" }, data.bio || data.description || ""),
+        h(
+          "div",
+          { className: "muted" },
+          [
+            data.id ? `ID: ${data.id} · ` : "",
+            data.subscription_type ? `Sub: ${data.subscription_type}` : "",
+            data.verified ? " · Verified" : "",
+          ].filter(Boolean).join("")
+        ),
+        data.url ? h("div", null, h("a", { href: data.url, target: "_blank", rel: "noopener" }, data.url)) : null,
+        h("div", null, h("span", { className: "badge-preview" }, "PAID SHILL"))
+      )
     );
 
     const proofsTitle = h("h3", null, "Proofs and Context");

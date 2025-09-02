@@ -68,7 +68,17 @@ async function buildWebsite() {
   const shillsOutRoot = path.join(webDist, 'shills');
   ensureDir(shillsOutRoot);
   const extShillsPath = path.join(extRoot, 'shills.json');
-  type AccountBasic = { username: string; name?: string; image?: string; bio?: string };
+  type AccountBasic = {
+    username: string;
+    name?: string;
+    image?: string; // avatar
+    bio?: string; // description
+    id?: string | null;
+    affiliation?: any | null;
+    subscription_type?: string | null;
+    url?: string | null;
+    verified?: boolean | null;
+  };
 
   let accounts: AccountBasic[] = [];
   if (fs.existsSync(webShillsSrc)) {
@@ -79,9 +89,15 @@ async function buildWebsite() {
         const username = String(raw.username || '').replace(/^@/, '');
         if (!username) continue;
         const name = raw.name || username;
-        const image = raw.image || `https://unavatar.io/twitter/${username}`;
-        const bio = raw.bio || `Bio for @${username}.`;
-        accounts.push({ username, name, image, bio });
+        const image = raw.image || raw.profile_image_url || `https://unavatar.io/twitter/${username}`;
+        const bio = raw.bio || raw.description || `Bio for @${username}.`;
+        const id = raw.id ?? null;
+        const affiliation = raw.affiliation ?? null;
+        const subscription_type = raw.subscription_type ?? null;
+        // Prefer top-level url; otherwise first expanded_url in entities.url.urls
+        const url = raw.url ?? (raw.entities && raw.entities.url && Array.isArray(raw.entities.url.urls) && raw.entities.url.urls[0]?.expanded_url) ?? null;
+        const verified = (typeof raw.verified === 'boolean') ? raw.verified : null;
+        accounts.push({ username, name, image, bio, id, affiliation, subscription_type, url, verified });
         // Copy per-account file to dist
         fs.copyFileSync(path.join(webShillsSrc, f), path.join(shillsOutRoot, `${username}.json`));
       } catch (e) {
