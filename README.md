@@ -21,17 +21,18 @@ shilld.xyz/username opens the dynamic page for that account.
 
 ### Account page
 
-Each account page (e.g. shilld.xyz/example) renders the information from
-`web/dist/shills/example.json`, which is sourced from the per-user file at
+Each account page (e.g. shilld.xyz/shills/example) renders the information from
+`web/dist/shills/example/example.json`, which is sourced from the per-user file at
 `web/shills/example.json`. Per-user files contain the basic info like name,
 description, address, and more, plus `proofs` with
 `{ name, date, description, urls[] }` which explain why this person is on the
 list.
 
 During build, all per-user files in `web/shills/` are aggregated into
-`web/dist/shills/_all.json` (only basic info is kept, details discarded)
-to power the directory and extension list, and copied individually into
-`web/dist/shills/<username>.json` for account pages.
+`web/dist/shills/_all.json` (only basic info is kept, details discarded) to
+power the directory and extension list, and copied individually into
+`web/dist/shills/<username>/<username>.json` for account pages and corresponding
+`index.html` so the content is indexable and sitemappable.
 
 The extension fetches from `https://shilld.xyz/shills/_all.json` and falls back
 to its bundled `ext/shills/_all.json` (usernames only, synchronized at build time)
@@ -72,7 +73,7 @@ To add or edit a shill entry:
 
     - Aggregate all `web/shills/*.json` (except `_all.json`) into
     `web/dist/shills/_all.json`.
-    - Copy per-account files into `web/dist/shills/<username>.json`.
+    - Copy per-account files into `web/dist/shills/<username>/[<username>.json|index.html]`.
     - Generate the fallback file `shills.json` to put into the extension and zip
       the extension for Chrome Web Store deployment.
 

@@ -43,12 +43,29 @@ async function buildWebsite() {
   log('✅ JavaScript bundled.');
 
   // Copy static files
-  fs.copyFileSync(path.join(webSrc, 'index.html'), path.join(webDist, 'index.html'));
+  // Ensure main.js is referenced by absolute path for nested routes
+  const idxSrc = fs.readFileSync(path.join(webSrc, 'index.html'), 'utf8').replace('src="./assets/main.js"', 'src="/assets/main.js"');
+  fs.writeFileSync(path.join(webDist, 'index.html'), idxSrc);
   fs.copyFileSync(path.join(webSrc, 'style.css'), path.join(webDist, 'style.css'));
+  // Copy account template for runtime fetch
+  const acctTpl = path.join(webSrc, 'account.html');
+  if (fs.existsSync(acctTpl)) fs.copyFileSync(acctTpl, path.join(webDist, 'account.html'));
   const fallback404 = path.join(webRoot, '404.html');
   if (fs.existsSync(fallback404)) {
     fs.copyFileSync(fallback404, path.join(webDist, '404.html'));
   }
+  // Generate sitemap.xml for account pages
+  try {
+    const shillsSrc = path.join(webRoot, 'shills');
+    const domain = process.env.SITE_URL || 'https://shilld.xyz';
+    if (fs.existsSync(shillsSrc)) {
+      const files = fs.readdirSync(shillsSrc).filter(f => f.endsWith('.json') && f !== '_all.json');
+      const urls = files.map(f => `${domain}/shills/${path.basename(f, '.json')}`);
+      const now = new Date().toISOString();
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc><lastmod>${now}</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>`).join('\n')}\n</urlset>\n`;
+      fs.writeFileSync(path.join(webDist, 'sitemap.xml'), xml);
+    }
+  } catch {}
   log('✅ Static files copied.');
 
   // Copy images if any (support both src/images and web/images)
@@ -98,8 +115,10 @@ async function buildWebsite() {
         const url = raw.url ?? (raw.entities && raw.entities.url && Array.isArray(raw.entities.url.urls) && raw.entities.url.urls[0]?.expanded_url) ?? null;
         const verified = (typeof raw.verified === 'boolean') ? raw.verified : null;
         accounts.push({ username, name, image, bio, id, affiliation, subscription_type, url, verified });
-        // Copy per-account file to dist
-        fs.copyFileSync(path.join(webShillsSrc, f), path.join(shillsOutRoot, `${username}.json`));
+        // Copy per-account file into its folder under dist/shills/<username>/<username>.json
+        const perOutDir = path.join(shillsOutRoot, username);
+        ensureDir(perOutDir);
+        fs.copyFileSync(path.join(webShillsSrc, f), path.join(perOutDir, `${username}.json`));
       } catch (e) {
         log(`⚠️  Skipping invalid shill file ${f}`);
       }
@@ -150,6 +169,74 @@ async function buildWebsite() {
 
   // Pages compatibility: add .nojekyll
   fs.writeFileSync(path.join(webDist, '.nojekyll'), '');
+
+  // Pre-render static account pages for direct access and SEO
+  try {
+    const shellPath = path.join(webSrc, 'index.html');
+    const accountTplPath = path.join(webDist, 'account.html');
+    const shell = fs.readFileSync(shellPath, 'utf8');
+    const appMarker = '<main id="app" class="container"></main>';
+    const escapeHtml = (s: any) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;' } as any)[c]);
+    const verifiedSpan = (sub?: string|null, ver?: boolean|null) => ver ? `<span class="verified-icon ${sub==='business'?'yellow':(sub==='blue'?'blue':(sub==='government'?'gray':'blue'))}" title="Verified: ${escapeHtml(sub||'blue')}"></span>` : '';
+
+    const renderAccount = (a: AccountBasic, full: any): string => {
+      const avatar = escapeHtml(a.image || (full && full.profile_image_url));
+      const bio = escapeHtml(a.bio || (full && full.description) || '');
+      const meta = [ a.id ? `ID: ${escapeHtml(a.id)}` : '', a.subscription_type ? `Sub: ${escapeHtml(a.subscription_type)}` : '', a.verified ? 'Verified' : '' ].filter(Boolean).join(' · ');
+      const url = a.url ? `<div><a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.url)}</a></div>` : '';
+      const proofs = (full?.proofs || []).map((p: any) => {
+        const urls = (p.urls || []).map((u: string) => `<div><a href="${escapeHtml(u)}" target="_blank" rel="noopener">${escapeHtml(u)}</a></div>`).join('');
+        return `<div class="proof"><strong>${escapeHtml(p.name)}</strong><div class="muted">${escapeHtml(p.date)}</div><div>${escapeHtml(p.description)}</div>${urls}</div>`;
+      }).join('') || `<div class="muted">No proofs provided.</div>`;
+      return `
+        <section class="card">
+          <div style="display:flex; gap:16px; align-items:center;">
+            <img src="${avatar}" alt="Avatar of @${escapeHtml(a.username)}" width="80" height="80" style="border-radius:12px; object-fit:cover;"/>
+            <div>
+              <h2>${escapeHtml(a.name)} (@${escapeHtml(a.username)}) ${verifiedSpan(a.subscription_type, a.verified)}</h2>
+              <div class="muted">${bio}</div>
+              <div class="muted">${meta}</div>
+              ${url}
+              <div><span class="badge-preview">PAID SHILL</span></div>
+            </div>
+          </div>
+        </section>
+        <h3>Proofs and Context</h3>
+        <div class="proofs">${proofs}</div>
+      `;
+    };
+
+    const baseShellNested = shell
+      .replace('href="./style.css"', 'href="../style.css"')
+      .replace('src="./assets/main.js"', 'src="../assets/main.js"')
+      .replace(/src="\.\/images\//g, 'src="../images/');
+
+    for (const acc of accounts) {
+      const fullPath = path.join(shillsOutRoot, `${acc.username}.json`);
+      // Adjust path for nested json location
+      let full: any = {};
+      try { full = JSON.parse(fs.readFileSync(path.join(shillsOutRoot, acc.username, `${acc.username}.json`), 'utf8')); } catch {}
+      const content = renderAccount(acc, full);
+      // Two-level nested page: /shills/<username>/index.html
+      const baseShellNested2 = shell
+        .replace('href="./style.css"', 'href="../../style.css"')
+        .replace('src="./assets/main.js"', 'src="/assets/main.js"')
+        .replace(/src="\.\/images\//g, 'src="../../images/');
+      const html = baseShellNested2.replace(appMarker, `<main id="app" class="container">${content}</main>`);
+      const outDir = path.join(webDist, 'shills', acc.username);
+      ensureDir(outDir);
+      fs.writeFileSync(path.join(outDir, 'index.html'), html);
+      // No need to duplicate the account template per folder; keep a single copy at root
+    }
+    // Also emit a static directory page shell to allow direct visits
+    const dirHtml = baseShellNested.replace(appMarker, '<main id="app" class="container"></main>');
+    const dirOut = path.join(webDist, 'directory');
+    ensureDir(dirOut);
+    fs.writeFileSync(path.join(dirOut, 'index.html'), dirHtml);
+    log('✅ Pre-rendered account pages in /shills/* and directory shell.');
+  } catch (e) {
+    log('⚠️  Failed to pre-render pages');
+  }
   log('🎉 Website build complete → web/dist');
 }
 

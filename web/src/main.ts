@@ -95,21 +95,7 @@ function computeSearchScore(acc: AccountBasic, query: string): number {
 }
 
 function navLink(href: string, text: string) {
-  return h(
-    "a",
-    {
-      href,
-      onclick: (e: MouseEvent) => {
-        const url = new URL((e.currentTarget as HTMLAnchorElement).href, location.origin);
-        if (url.origin === location.origin) {
-          e.preventDefault();
-          history.pushState({}, "", url.pathname);
-          route();
-        }
-      },
-    },
-    text
-  );
+  return h("a", { href }, text);
 }
 
 async function renderLanding() {
@@ -165,6 +151,15 @@ async function fetchJSON<T>(url: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+async function fetchHTML(url: string): Promise<DocumentFragment> {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+  const text = await res.text();
+  const tpl = document.createElement('template');
+  tpl.innerHTML = text;
+  return tpl.content;
+}
+
 async function renderDirectory() {
   clear(app);
   const title = h("h1", null, "Directory");
@@ -180,7 +175,7 @@ async function renderDirectory() {
   type AllJson = { accounts: AccountBasic[] };
   let all: AccountBasic[] = [];
   try {
-    const data = await fetchJSON<AllJson>("./shills/_all.json");
+    const data = await fetchJSON<AllJson>("/shills/_all.json");
     all = data.accounts || [];
   } catch (_e) {
     grid.append(h("div", { className: "muted" }, "Failed to load directory."));
@@ -195,7 +190,7 @@ async function renderDirectory() {
         { className: "card user-card" },
         h("img", { src: acc.image, alt: `Avatar of @${acc.username}`, loading: "lazy" }),
         (() => {
-          const nameLink = h("a", { href: `/${acc.username}`, onclick: interceptNav }, `${acc.name} (@${acc.username})`);
+          const nameLink = h("a", { href: `/shills/${acc.username}` }, `${acc.name} (@${acc.username})`);
           const wrapper = h("div", null, nameLink);
           if (acc.verified) {
             const cls = acc.subscription_type === 'business' ? 'yellow' : (acc.subscription_type === 'blue' ? 'blue' : (acc.subscription_type === 'government' ? 'gray' : 'blue'));
@@ -210,15 +205,7 @@ async function renderDirectory() {
     });
   }
 
-  function interceptNav(e: MouseEvent) {
-    const a = e.currentTarget as HTMLAnchorElement;
-    const url = new URL(a.href, location.origin);
-    if (url.origin === location.origin) {
-      e.preventDefault();
-      history.pushState({}, "", url.pathname);
-      route();
-    }
-  }
+  // Per-link interception removed; global handler manages SPA routing
 
   render(all);
 
@@ -237,81 +224,108 @@ async function renderDirectory() {
   });
 }
 
-async function renderAccount(username: string) {
-  clear(app);
-  const title = h("h1", null, `@${username}`);
-  app.append(title);
-  try {
-    const data = await fetchJSON<AccountFull>(`./shills/${encodeURIComponent(username)}.json`);
-    const header = h(
-      "div",
-      { className: "card", style: "display:flex; gap:16px; align-items:center;" },
-      h("img", { src: data.image || data.profile_image_url, alt: `Avatar of @${username}`, width: 80, height: 80, style: "border-radius:12px; object-fit:cover;" }),
-      h(
-        "div",
-        null,
-        (() => {
-          const title = h("h2", null, `${data.name} (@${data.username})`);
-          if (data.verified) {
-            const cls = data.subscription_type === 'business' ? 'yellow' : (data.subscription_type === 'blue' ? 'blue' : (data.subscription_type === 'government' ? 'gray' : 'blue'));
-            title.appendChild(h("span", { className: `verified-icon ${cls}`, title: `Verified: ${data.subscription_type || 'blue'}` }));
-          }
-          return title;
-        })(),
-        h("div", { className: "muted" }, data.bio || data.description || ""),
-        h(
-          "div",
-          { className: "muted" },
-          [
-            data.id ? `ID: ${data.id} · ` : "",
-            data.subscription_type ? `Sub: ${data.subscription_type}` : "",
-            data.verified ? " · Verified" : "",
-          ].filter(Boolean).join("")
-        ),
-        data.url ? h("div", null, h("a", { href: data.url, target: "_blank", rel: "noopener" }, data.url)) : null,
-        h("div", null, h("span", { className: "badge-preview" }, "PAID SHILL"))
-      )
-    );
+function hasExistingAccountRender(): boolean {
+  // detects pre-rendered account content inside main#app
+  return !!document.querySelector('main#app section.card');
+}
 
-    const proofsTitle = h("h3", null, "Proofs and Context");
-    const proofsList = h("div", { className: "proofs" });
+async function safeFetchAccount(username: string): Promise<AccountFull | null> {
+  try {
+    return await fetchJSON<AccountFull>(`/shills/${encodeURIComponent(username)}/${encodeURIComponent(username)}.json`);
+  } catch (_e) {
+    return null;
+  }
+}
+
+async function renderAccount(username: string) {
+  const title = h("h1", null, `@${username}`);
+
+  try {
+    // Resolve canonical username first to avoid extra failing requests
+    let canonical = username;
+    try {
+      const all = await fetchJSON<{ accounts: AccountBasic[] }>(`/shills/_all.json`);
+      const match = (all.accounts || []).find(a => a.username.toLowerCase() === username.toLowerCase());
+      if (match) canonical = match.username;
+    } catch (e) {
+      console.log('Failed to load _all.json for canonicalization:', e);
+    }
+
+    const hasPrerender = !!document.querySelector('main #app section.card');
+    console.log('[account] canonical', canonical, 'hasPrerender', hasPrerender);
+    const data = await safeFetchAccount(canonical);
+    if (!data) {
+      if (!hasPrerender) {
+        clear(app);
+        app.append(title);
+        app.append(h("div", { className: "muted" }, "Account not found."));
+      } else {
+        console.warn('Account JSON not found; keeping prerendered content.');
+      }
+      return;
+    }
+
+    // We have data: render fresh content from template
+    clear(app);
+    app.append(title);
+    const tpl = await fetchHTML('/account.html');
+    const tplEl = tpl.querySelector('#account-template') as HTMLTemplateElement | null;
+    const frag = tplEl && 'content' in tplEl ? (tplEl as any).content.cloneNode(true) as DocumentFragment : tpl;
+    const accountEl = frag.querySelector('[data-account]') as HTMLElement;
+    const avatar = frag.querySelector('[data-avatar]') as HTMLImageElement;
+    const nameEl = frag.querySelector('[data-name]') as HTMLElement;
+    const userEl = frag.querySelector('[data-username]') as HTMLElement;
+    const verifiedEl = frag.querySelector('[data-verified]') as HTMLElement;
+    const bioEl = frag.querySelector('[data-bio]') as HTMLElement;
+    const metaEl = frag.querySelector('[data-meta]') as HTMLElement;
+    const urlEl = frag.querySelector('[data-url]') as HTMLAnchorElement;
+    const proofsWrap = frag.querySelector('[data-proofs]') as HTMLElement;
+
+    avatar.src = data.image || (data as any).profile_image_url || '';
+    avatar.alt = `Avatar of @${data.username}`;
+    nameEl.textContent = data.name;
+    userEl.textContent = `@${data.username}`;
+    bioEl.textContent = data.bio || (data as any).description || '';
+    metaEl.textContent = [ data.id ? `ID: ${data.id} · ` : '', data.subscription_type ? `Sub: ${data.subscription_type}` : '', data.verified ? ' · Verified' : '' ].filter(Boolean).join('');
+    if (data.url) { urlEl.href = data.url; urlEl.textContent = data.url; } else { urlEl.parentElement?.remove(); }
+    if (data.verified) {
+      const cls = data.subscription_type === 'business' ? 'yellow' : (data.subscription_type === 'blue' ? 'blue' : (data.subscription_type === 'government' ? 'gray' : 'blue'));
+      verifiedEl.className = `verified-icon ${cls}`;
+      verifiedEl.title = `Verified: ${data.subscription_type || 'blue'}`;
+    }
+
     if (!data.proofs || data.proofs.length === 0) {
-      proofsList.append(h("div", { className: "muted" }, "No proofs provided for this demo."));
+      proofsWrap.append(h('div', { className: 'muted' }, 'No proofs provided.'));
     } else {
       data.proofs.forEach((p) => {
-        const urls = h(
-          "div",
-          null,
-          ...p.urls.map((u) => h("div", null, h("a", { href: u, target: "_blank", rel: "noopener" }, u)))
-        );
-        proofsList.append(
-          h(
-            "div",
-            { className: "proof" },
-            h("strong", null, p.name),
-            h("div", { className: "muted" }, p.date),
-            h("div", null, p.description),
-            urls
-          )
-        );
+        const urls = h('div', null, ...p.urls.map((u) => h('div', null, h('a', { href: u, target: '_blank', rel: 'noopener' }, u))));
+        proofsWrap.append(h('div', { className: 'proof' }, h('strong', null, p.name), h('div', { className: 'muted' }, p.date), h('div', null, p.description), urls));
       });
     }
 
-    app.append(header, proofsTitle, proofsList);
-  } catch (_e) {
-    app.append(h("div", { className: "muted" }, "Account not found."));
+    app.append(accountEl, frag.querySelector('h3')!, proofsWrap);
+  } catch (e) {
+    console.log('renderAccount fatal', e);
+    if (!hasExistingAccountRender()) {
+      app.append(h("div", { className: "muted" }, "Account not found."));
+    }
   }
 }
 
 function route() {
-  const path = location.pathname.replace(/\/+$/, "");
-  if (path === "" || path === "/") return void renderLanding();
-  if (path === "/directory") return void renderDirectory();
-  const user = path.slice(1);
-  // guard against reserved paths
-  const reserved = new Set(["favicon.ico", "assets", "shills"]);
-  if (!user || reserved.has(user)) return void renderLanding();
-  return void renderAccount(user);
+  const segments = location.pathname.replace(/\/+$/, '').split('/').filter(Boolean);
+  console.log('[route] path', location.pathname, 'segments', segments);
+  if (segments.length === 0) return void renderLanding();
+  if (segments[0] === 'directory') return void renderDirectory();
+  if (segments[0] === 'shills' && segments[1]) {
+    console.log('[route] account', segments[1]);
+    return void renderAccount(segments[1]);
+  }
+  if (segments.length === 1) {
+    console.log('[route] legacy account', segments[0]);
+    return void renderAccount(segments[0]);
+  }
+  return void renderLanding();
 }
 
 window.addEventListener("popstate", route);
@@ -328,6 +342,11 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
       // Internal link (begins with '/')
       if (href.startsWith('/')) {
+        // Avoid duplicate navigation if we're already at this path
+        if (location.pathname === href) {
+          e.preventDefault();
+          return;
+        }
         e.preventDefault();
         history.pushState({}, '', href);
         route();

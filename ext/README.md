@@ -25,7 +25,7 @@ Either find it in the Chrome Web Store via [shilld.xyz](https://shilld.xyz) or:
 
 2. Visit X/Twitter (`x.com` or `twitter.com`). Tweets and profile headers for
    usernames in the remote list will show a bold red/orange "PAID SHILL" badge
-   that links to `https://shilld.xyz/<username>`.
+   that links to `https://shilld.xyz/shill/<username>`.
 
 ## Managing the list
 

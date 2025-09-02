@@ -1,0 +1,22 @@
+<template id="account-template">
+  <section class="card" data-account>
+    <div style="display:flex; gap:16px; align-items:center;">
+      <img data-avatar alt="" width="80" height="80" style="border-radius:12px; object-fit:cover;"/>
+      <div>
+        <h2>
+          <span data-name></span>
+          (<span data-username></span>)
+          <span data-verified></span>
+        </h2>
+        <div class="muted" data-bio></div>
+        <div class="muted" data-meta></div>
+        <div><a data-url target="_blank" rel="noopener"></a></div>
+        <div><span class="badge-preview">PAID SHILL</span></div>
+      </div>
+    </div>
+  </section>
+  <h3>Proofs and Context</h3>
+  <div class="proofs" data-proofs></div>
+</template>
+
+
