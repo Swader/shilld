@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shilld</title>
     <meta name="description" content="Shilld extension and directory of marked accounts">
+    <!-- Google tag (gtag.js) with environment gating -->
+    <script>
+      (function() {
+        var host = location.hostname;
+        var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(host);
+        var enabled = !isLocal; // enable on non-local hosts
+        // Allow manual override via query (?ga=1 or ?ga=0)
+        if (/([?&])ga=1(?!\d)/.test(location.search)) enabled = true;
+        if (/([?&])ga=0(?!\d)/.test(location.search)) enabled = false;
+        if (!enabled) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YLSZ4679EL';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-YLSZ4679EL');
+      })();
+    </script>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -21,10 +41,41 @@
         </nav>
       </div>
     </header>
-    <main id="app" class="container"></main>
+    <main id="app" class="container">
+      <section class="hero">
+        <div class="card">
+          <h1>Shilld: Visible PAID SHILL badges on X/Twitter</h1>
+          <p>
+            The Shilld extension adds a bold <span class="badge-preview">PAID SHILL</span>
+            badge to tweets and profile headers for usernames from a public list.
+          </p>
+          <ul class="feature-list">
+            <li class="feature">Fetches the canonical list from /shills/_all.json (this site).</li>
+            <li class="feature">Background service worker caches results for 5 days.</li>
+            <li class="feature">Works on x.com and twitter.com, including dynamic timelines.</li>
+            <li class="feature">No data leaves your browser.</li>
+          </ul>
+          <div style="display:flex; gap:12px;">
+            <a class="btn" href="/directory">Browse directory</a>
+            <a class="btn" href="#install">How to install</a>
+          </div>
+        </div>
+        <div class="card hero-visual">
+          <img src="./images/hero.png" alt="Badge preview screenshot" />
+        </div>
+      </section>
+
+      <section class="card" id="how">
+        <h2>How it works</h2>
+        <p>
+          A background service worker fetches the usernames list from this site (CORS-safe in the extension context),
+          caches it for 5 days in chrome.storage, and the content script inserts the badge next to usernames in tweets
+          and on profile headers.
+        </p>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="container">
-        <p>Built for the web. The browser extension adds a visible "PAID SHILL" badge on X/Twitter for listed usernames.</p>
         <p class="made-by">Made by <a href="https://x.com/_swader_" target="_blank" rel="noopener">_swader_</a></p>
       </div>
     </footer>

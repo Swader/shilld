@@ -98,51 +98,9 @@ function navLink(href: string, text: string) {
   return h("a", { href }, text);
 }
 
-async function renderLanding() {
-  clear(app);
-  const hero = h(
-    "section",
-    { className: "hero" },
-    h(
-      "div",
-      { className: "card" },
-      h("h1", null, "Shilld: Visible PAID SHILL badges on X/Twitter"),
-      h(
-        "p",
-        null,
-        "The Shilld extension adds a bold ",
-        h("span", { className: "badge-preview" }, "PAID SHILL"),
-        " badge to tweets and profile headers for usernames from a public list."
-      ),
-      h(
-        "ul",
-        { className: "feature-list" },
-        h("li", { className: "feature" }, "Fetches the canonical list from /shills/_all.json (this site)."),
-        h("li", { className: "feature" }, "Background service worker caches results for 5 days."),
-        h("li", { className: "feature" }, "Works on x.com and twitter.com, including dynamic timelines."),
-        h("li", { className: "feature" }, "No data leaves your browser.")
-      ),
-      h("div", { style: "display:flex; gap:12px;" }, navLink("/directory", "Browse directory"), h("a", { className: "btn", href: "#install" }, "How to install"))
-    ),
-    h(
-      "div",
-      { className: "card hero-visual" },
-      h("img", { src: "./images/hero.png", alt: "Badge preview screenshot" })
-    )
-  );
-
-  const how = h(
-    "section",
-    { className: "card", id: "how" },
-    h("h2", null, "How it works"),
-    h(
-      "p",
-      null,
-      "A background service worker fetches the usernames list from this site (CORS-safe in the extension context), caches it for 5 days in chrome.storage, and the content script inserts the badge next to usernames in tweets and on profile headers."
-    )
-  );
-
-  app.append(hero, how);
+function renderLanding() {
+  // Landing page is now static in index.html
+  // No-op; leave existing DOM as-is
 }
 
 async function fetchJSON<T>(url: string): Promise<T> {
@@ -342,6 +300,12 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
       // Internal link (begins with '/')
       if (href.startsWith('/')) {
+        // For the homepage, do a full navigation so the static landing renders without SPA
+        if (href === '/') {
+          e.preventDefault();
+          window.location.assign('/');
+          return;
+        }
         // Avoid duplicate navigation if we're already at this path
         if (location.pathname === href) {
           e.preventDefault();

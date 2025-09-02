@@ -5,7 +5,7 @@
   "short_name": "Shilld",
   "author": "https://x.com/_swader_",
   "homepage_url": "https://shilld.xyz",
-  "description": "Adds a 'PAID SHILL' badge to tweets and profiles of specified usernames. Clicking the badge leads to shilld.xyz/<username>.",
+  "description": "Adds a 'PAID SHILL' badge to tweets and profiles of specified usernames. Clicking the badge leads to shilld.xyz/shills/<username>.",
   "icons": {
     "16": "icons/favicon-16x16.png",
     "32": "icons/favicon-32x32.png",
