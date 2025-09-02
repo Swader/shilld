@@ -1,0 +1,78 @@
+{
+  "id": "1543324728781307908",
+  "name": "Mduz",
+  "username": "Mduz_NFT",
+  "affiliation": null,
+  "description": "Web3 degen | Shitcoin 10-1000x maxi | Trading since 2018\n\nDesigns by @WizArt_Studios\n\nAlpha - https://t.co/wJlX5RM5eQ\n\n#BTC #ETH #SOL",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/dsVDiMdlO5",
+          "expanded_url": "https://toshi.bet/r/mduz",
+          "display_url": "toshi.bet/r/mduz"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 94,
+          "end": 117,
+          "url": "https://t.co/wJlX5RM5eQ",
+          "expanded_url": "https://t.me/mduzcalls",
+          "display_url": "t.me/mduzcalls"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 119,
+          "end": 123,
+          "tag": "BTC"
+        },
+        {
+          "start": 124,
+          "end": 128,
+          "tag": "ETH"
+        },
+        {
+          "start": 129,
+          "end": 133,
+          "tag": "SOL"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 69,
+          "end": 84,
+          "username": "WizArt_Studios"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1543324728781307908/1715874670",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1789296487718862848/EwH5rrFw_normal.jpg",
+  "public_metrics": {
+    "followers_count": 32914,
+    "following_count": 1089,
+    "tweet_count": 17641,
+    "listed_count": 106,
+    "like_count": 7626,
+    "media_count": 1868
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/dsVDiMdlO5",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

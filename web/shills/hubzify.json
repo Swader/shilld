@@ -1,0 +1,64 @@
+{
+  "id": "1850940848806236160",
+  "name": "hubz",
+  "username": "hubzify",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1932310834958790656/0-ndnoV6_bigger.jpg",
+    "user_id": [
+      "612056599"
+    ],
+    "url": "https://twitter.com/MEVX_Official",
+    "description": "MevX"
+  },
+  "description": "Owner @TheVaultPrivate | Partner @MevX_Official",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/Xr7LJhFnxN",
+          "expanded_url": "http://mevx.io/@hubzify",
+          "display_url": "mevx.io/@hubzify"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 6,
+          "end": 22,
+          "username": "TheVaultPrivate"
+        },
+        {
+          "start": 33,
+          "end": 47,
+          "username": "MevX_Official"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1850940848806236160/1756661335",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1962637445482102786/UEC560VS_normal.jpg",
+  "public_metrics": {
+    "followers_count": 57727,
+    "following_count": 8400,
+    "tweet_count": 57318,
+    "listed_count": 55,
+    "like_count": 141667,
+    "media_count": 1520
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/Xr7LJhFnxN",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

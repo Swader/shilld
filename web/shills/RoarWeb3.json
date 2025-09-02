@@ -1,0 +1,62 @@
+{
+  "id": "2364065785",
+  "name": "Roar",
+  "username": "RoarWeb3",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1933918379733045248/VmW7EMts_bigger.jpg",
+    "user_id": [
+      "1683430955258728449"
+    ],
+    "url": "https://twitter.com/ToshiBet",
+    "description": "Toshi.bet 🈺"
+  },
+  "description": "locked in, memecoin printer • nfa/dyor • print: https://t.co/PlAI0WcHa4 • working w/ @OKX • no kyc betting here: @dexsport_io • dm for inquries 📨",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 48,
+          "end": 71,
+          "url": "https://t.co/PlAI0WcHa4",
+          "expanded_url": "https://t.me/roarscabal",
+          "display_url": "t.me/roarscabal"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 85,
+          "end": 89,
+          "username": "OKX"
+        },
+        {
+          "start": 113,
+          "end": 125,
+          "username": "dexsport_io"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2364065785/1685817230",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1665064257707208706/gLIyF_2O_normal.jpg",
+  "public_metrics": {
+    "followers_count": 125993,
+    "following_count": 77058,
+    "tweet_count": 28162,
+    "listed_count": 210,
+    "like_count": 52059,
+    "media_count": 1689
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

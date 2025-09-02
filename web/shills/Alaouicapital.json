@@ -1,0 +1,61 @@
+{
+  "id": "1375108625971212292",
+  "name": "Alaoui Capital",
+  "username": "Alaouicapital",
+  "affiliation": null,
+  "description": "Following volume, chasing ALPHA 👑|| Advisor @wallet || Join here: https://t.co/RbyjmWy0dj",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/f8vlh0kRT3",
+          "expanded_url": "https://linktr.ee/Alaouicapital",
+          "display_url": "linktr.ee/Alaouicapital"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 66,
+          "end": 89,
+          "url": "https://t.co/RbyjmWy0dj",
+          "expanded_url": "http://t.me/alaouiportal",
+          "display_url": "t.me/alaouiportal"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 44,
+          "end": 51,
+          "username": "wallet"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1375108625971212292/1741889282",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1901342597601210369/OBMVo5uQ_normal.jpg",
+  "public_metrics": {
+    "followers_count": 62229,
+    "following_count": 720,
+    "tweet_count": 40393,
+    "listed_count": 78,
+    "like_count": 80781,
+    "media_count": 1444
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/f8vlh0kRT3",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

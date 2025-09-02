@@ -1,0 +1,61 @@
+{
+  "id": "1871623406677835776",
+  "name": "Odita🐦‍🔥",
+  "username": "Ony3oku",
+  "affiliation": null,
+  "description": "Curating vibes, managing tribes | KOLs Manager | Amb @BaanxGroup @spyreio @QuaiNetwork | Partner @tokenmetricsinc | Building @phoenixxweb3",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 53,
+          "end": 64,
+          "username": "BaanxGroup"
+        },
+        {
+          "start": 65,
+          "end": 73,
+          "username": "spyreio"
+        },
+        {
+          "start": 74,
+          "end": 86,
+          "username": "QuaiNetwork"
+        },
+        {
+          "start": 97,
+          "end": 113,
+          "username": "tokenmetricsinc"
+        },
+        {
+          "start": 125,
+          "end": 138,
+          "username": "phoenixxweb3"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1871623406677835776/1749575228",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1951000849238441984/KI0_M3Ve_normal.jpg",
+  "public_metrics": {
+    "followers_count": 9818,
+    "following_count": 2038,
+    "tweet_count": 19662,
+    "listed_count": 36,
+    "like_count": 45844,
+    "media_count": 349
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

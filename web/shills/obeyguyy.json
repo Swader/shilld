@@ -1,0 +1,59 @@
+{
+  "id": "1537246378560212992",
+  "name": "Guy",
+  "username": "obeyguyy",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "url": "https://twitter.com/solpumpcom",
+    "description": "Solpump"
+  },
+  "description": "owner @obeyalliance / dm for partnerships.",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/GrmdCOmdTj",
+          "expanded_url": "https://kick.com/obeyguy",
+          "display_url": "kick.com/obeyguy"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 6,
+          "end": 19,
+          "username": "obeyalliance"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1537246378560212992/1751443182",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1931369139714580480/OyHz_Fgz_normal.jpg",
+  "public_metrics": {
+    "followers_count": 95791,
+    "following_count": 23277,
+    "tweet_count": 145301,
+    "listed_count": 186,
+    "like_count": 171846,
+    "media_count": 1430
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/GrmdCOmdTj",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

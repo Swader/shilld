@@ -1,0 +1,55 @@
+{
+  "id": "1575127643913162754",
+  "name": "seph",
+  "username": "Seph_Jim",
+  "affiliation": null,
+  "description": "Niqadio #138 • Degen • S.M.M @AisarLabs @kOLsRadar  • DM https://t.co/BvonuVUlOz • post is n.f.a",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 57,
+          "end": 80,
+          "url": "https://t.co/BvonuVUlOz",
+          "expanded_url": "http://t.me/Seph_Jim",
+          "display_url": "t.me/Seph_Jim"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 29,
+          "end": 39,
+          "username": "AisarLabs"
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "username": "kOLsRadar"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1575127643913162754/1746335146",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1955323144593444864/BZt961w4_normal.jpg",
+  "public_metrics": {
+    "followers_count": 7545,
+    "following_count": 5032,
+    "tweet_count": 106572,
+    "listed_count": 53,
+    "like_count": 254773,
+    "media_count": 1955
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

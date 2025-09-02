@@ -1,0 +1,50 @@
+{
+  "id": "1818144781643685889",
+  "name": "Thurston (zapped arc)",
+  "username": "itsthurstxn",
+  "affiliation": {
+    "url": "https://twitter.com/quanto",
+    "user_id": [
+      "1742035058029162496"
+    ],
+    "description": "Quanto",
+    "badge_url": "https://pbs.twimg.com/profile_images/1944612250699862016/0Sx3UeMT_bigger.jpg"
+  },
+  "description": "on-chain god whos most likely zapped out of his mind",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/affVmi134G",
+          "expanded_url": "https://quanto.trade/x/itsthurstxn",
+          "display_url": "quanto.trade/x/itsthurstxn"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1818144781643685889/1749875985",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1933746981513621504/0CrHo55M_normal.jpg",
+  "public_metrics": {
+    "followers_count": 5015,
+    "following_count": 1878,
+    "tweet_count": 5073,
+    "listed_count": 30,
+    "like_count": 11358,
+    "media_count": 410
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/affVmi134G",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

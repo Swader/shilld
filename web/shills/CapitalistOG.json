@@ -1,0 +1,68 @@
+{
+  "id": "1356685423985250304",
+  "name": "Capitalist🧢 資本家",
+  "username": "CapitalistOG",
+  "affiliation": null,
+  "description": "CONNECTOR | PUSHER | GRINDER | PSYOPED TEH JAPANESE META - https://t.co/8KyoTjIkhR - Telegram https://t.co/jEB117gdyT (many fakes) @rainbetcom",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/rvVID2sWkX",
+          "expanded_url": "https://t.me/capitalistcalls",
+          "display_url": "t.me/capitalistcalls"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 59,
+          "end": 82,
+          "url": "https://t.co/8KyoTjIkhR",
+          "expanded_url": "https://t.me/capitalistslounge",
+          "display_url": "t.me/capitalistslou…"
+        },
+        {
+          "start": 94,
+          "end": 117,
+          "url": "https://t.co/jEB117gdyT",
+          "expanded_url": "http://t.me/capitalistakamrwinner",
+          "display_url": "t.me/capitalistakam…"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 131,
+          "end": 142,
+          "username": "rainbetcom"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1356685423985250304/1750845104",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1955135202440650752/xqGtrkO8_normal.jpg",
+  "public_metrics": {
+    "followers_count": 49112,
+    "following_count": 817,
+    "tweet_count": 9659,
+    "listed_count": 160,
+    "like_count": 21125,
+    "media_count": 1426
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/rvVID2sWkX",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1388112933406846976",
+  "name": "Darky",
+  "username": "Darky1k",
+  "affiliation": null,
+  "description": "Crypto analyst | solana whale investor | Follow for the next alpha 🐐 always dyor nfa / dm for proposals",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/aOEfkRabpL",
+          "expanded_url": "https://t.me/DarkyCalls",
+          "display_url": "t.me/DarkyCalls"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1388112933406846976/1753223221",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1948832775399702528/p6wfUbDU_normal.jpg",
+  "public_metrics": {
+    "followers_count": 452515,
+    "following_count": 123947,
+    "tweet_count": 405,
+    "listed_count": 655,
+    "like_count": 26346,
+    "media_count": 24
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/aOEfkRabpL",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

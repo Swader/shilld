@@ -1,0 +1,78 @@
+{
+  "id": "1800445627",
+  "name": "Presidentpush",
+  "username": "presidentpush",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1930649359856848896/y2Czqjrj_bigger.jpg",
+    "user_id": [
+      "1688577373396963328"
+    ],
+    "url": "https://twitter.com/bonkbot_io",
+    "description": "BONKbot"
+  },
+  "description": "Founder of @presidentalpha_ \nData Research for @lukebelmar \nAmbassador @bonkbot_io - https://t.co/Kgmz3CRngh",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/MtJPQnCEB4",
+          "expanded_url": "https://t.me/presidential_alpha",
+          "display_url": "t.me/presidential_a…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 85,
+          "end": 108,
+          "url": "https://t.co/Kgmz3CRngh",
+          "expanded_url": "http://www.app.telemetry.io/@president",
+          "display_url": "app.telemetry.io/@president"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 11,
+          "end": 27,
+          "username": "presidentalpha_"
+        },
+        {
+          "start": 47,
+          "end": 58,
+          "username": "lukebelmar"
+        },
+        {
+          "start": 71,
+          "end": 82,
+          "username": "bonkbot_io"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1800445627/1705490371",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1905438477350813696/GMzju32l_normal.jpg",
+  "public_metrics": {
+    "followers_count": 16812,
+    "following_count": 499,
+    "tweet_count": 34604,
+    "listed_count": 92,
+    "like_count": 63406,
+    "media_count": 4161
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/MtJPQnCEB4",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

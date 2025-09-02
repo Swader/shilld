@@ -1,0 +1,73 @@
+{
+  "id": "1456163056829046785",
+  "name": "Jeremy",
+  "username": "Jeremyybtc",
+  "affiliation": {
+    "url": "https://twitter.com/GlydeGG",
+    "user_id": [
+      "1890404372162793472"
+    ],
+    "description": "Glyde",
+    "badge_url": "https://pbs.twimg.com/profile_images/1939004510954721280/Z5W9IW3g_bigger.jpg"
+  },
+  "description": "founder @GlydeGG | unemployed (btc) since 17’ | chief of vibes and imaginary money | trading group: https://t.co/UdrhtRjAEJ | advisor @OKX | BAYC #2853",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/3cY1C8rAUu",
+          "expanded_url": "https://t.me/jeremyton",
+          "display_url": "t.me/jeremyton"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 100,
+          "end": 123,
+          "url": "https://t.co/UdrhtRjAEJ",
+          "expanded_url": "http://t.me/jsdao",
+          "display_url": "t.me/jsdao"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 8,
+          "end": 16,
+          "username": "GlydeGG"
+        },
+        {
+          "start": 134,
+          "end": 138,
+          "username": "OKX"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1456163056829046785/1724177150",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1823163289984991233/ettiw3_w_normal.jpg",
+  "public_metrics": {
+    "followers_count": 265885,
+    "following_count": 37201,
+    "tweet_count": 636465,
+    "listed_count": 1422,
+    "like_count": 501815,
+    "media_count": 18834
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/3cY1C8rAUu",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

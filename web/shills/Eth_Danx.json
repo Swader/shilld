@@ -1,0 +1,56 @@
+{
+  "id": "1791904618114379777",
+  "name": "DAN.€TH",
+  "username": "Eth_Danx",
+  "affiliation": null,
+  "description": "⚡Loudest Hype King in Web3 ★| Brand/Growth Strategist → Alpha calls • DeFi • Memecoins. Founder @diamnd_cult ★| King-@Meta_dawgs ★| Ex-@Duck_Chain-@Chickcoop_io",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 96,
+          "end": 108,
+          "username": "diamnd_cult"
+        },
+        {
+          "start": 117,
+          "end": 128,
+          "username": "Meta_dawgs"
+        },
+        {
+          "start": 135,
+          "end": 146,
+          "username": "Duck_Chain"
+        },
+        {
+          "start": 147,
+          "end": 160,
+          "username": "Chickcoop_io"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1791904618114379777/1753204970",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1947708880659877888/Z7u6hTQ3_normal.jpg",
+  "public_metrics": {
+    "followers_count": 12924,
+    "following_count": 1452,
+    "tweet_count": 40479,
+    "listed_count": 43,
+    "like_count": 44713,
+    "media_count": 1074
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

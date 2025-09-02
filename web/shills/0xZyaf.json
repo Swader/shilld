@@ -1,0 +1,78 @@
+{
+  "id": "938127486143074305",
+  "name": "Zyaf",
+  "username": "0xZyaf",
+  "affiliation": null,
+  "description": "trench channel: https://t.co/NSH1YXwd3H | private group acces https://t.co/K9Vxi2hLRG | founder @zunoalpha | @celsiuscasino @peekabooggg partner",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/yhoONmAZCK",
+          "expanded_url": "http://celsius.games/NbppatFFgb",
+          "display_url": "celsius.games/NbppatFFgb"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 16,
+          "end": 39,
+          "url": "https://t.co/NSH1YXwd3H",
+          "expanded_url": "http://t.me/zyafgambles",
+          "display_url": "t.me/zyafgambles"
+        },
+        {
+          "start": 62,
+          "end": 85,
+          "url": "https://t.co/K9Vxi2hLRG",
+          "expanded_url": "http://zunoalpha.com",
+          "display_url": "zunoalpha.com"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 96,
+          "end": 106,
+          "username": "zunoalpha"
+        },
+        {
+          "start": 109,
+          "end": 123,
+          "username": "celsiuscasino"
+        },
+        {
+          "start": 124,
+          "end": 136,
+          "username": "peekabooggg"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/938127486143074305/1747980183",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1855914045179666432/rQY1ldpv_normal.jpg",
+  "public_metrics": {
+    "followers_count": 65814,
+    "following_count": 6766,
+    "tweet_count": 6552,
+    "listed_count": 195,
+    "like_count": 947904,
+    "media_count": 1151
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/yhoONmAZCK",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

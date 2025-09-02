@@ -1,0 +1,61 @@
+{
+  "id": "1571236793051238400",
+  "name": "Xelf Tier 3",
+  "username": "xelf_sol",
+  "affiliation": null,
+  "description": "On Chain Terrorist, FBI Most Wanted | LOWEST FEES 👇🏻@MEXC_Official PARTNER https://t.co/nnUY10aQE5 (Pro Lev Trader, #6 ranked in my city)",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/zOB3eMphFi",
+          "expanded_url": "https://linktr.ee/xelf_sol",
+          "display_url": "linktr.ee/xelf_sol"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 75,
+          "end": 98,
+          "url": "https://t.co/nnUY10aQE5",
+          "expanded_url": "https://promote.mexc.com/a/jxhHFe1O",
+          "display_url": "promote.mexc.com/a/jxhHFe1O"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 52,
+          "end": 66,
+          "username": "MEXC_Official"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1571236793051238400/1756051444",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1951460603849011200/vmb9qlmP_normal.jpg",
+  "public_metrics": {
+    "followers_count": 43229,
+    "following_count": 4203,
+    "tweet_count": 12920,
+    "listed_count": 123,
+    "like_count": 23343,
+    "media_count": 3359
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/zOB3eMphFi",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

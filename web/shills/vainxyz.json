@@ -1,0 +1,50 @@
+{
+  "id": "1876851872327479296",
+  "name": "vain",
+  "username": "vainxyz",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "url": "https://twitter.com/solpumpcom",
+    "description": "Solpump"
+  },
+  "description": "surfing the charts 🌴 | all posts are nfa | dm for marketing",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/Q5tBLny1cx",
+          "expanded_url": "https://t.me/vainxyz",
+          "display_url": "t.me/vainxyz"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1876851872327479296/1747456509",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1895628914870874112/vZAtlGZ1_normal.jpg",
+  "public_metrics": {
+    "followers_count": 51939,
+    "following_count": 37248,
+    "tweet_count": 107425,
+    "listed_count": 76,
+    "like_count": 2039,
+    "media_count": 171
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/Q5tBLny1cx",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

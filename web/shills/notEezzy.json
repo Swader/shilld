@@ -1,0 +1,75 @@
+{
+  "id": "992590209752629249",
+  "name": "eezzyLIVE 🧸",
+  "username": "notEezzy",
+  "affiliation": {
+    "url": "https://twitter.com/LABtrade_",
+    "user_id": [
+      "1797551190814691329"
+    ],
+    "description": "LAB",
+    "badge_url": "https://pbs.twimg.com/profile_images/1803130189783711744/QO8EUMyR_bigger.jpg"
+  },
+  "description": "trading attention: https://t.co/l4bT7hxeLB | eezzyLIVE: Thursdays and Sundays | 7-11PM BST | https://t.co/Wu3lJRDXKF | Partner: @Metawin",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/S0hIj0uH3r",
+          "expanded_url": "http://linktr.ee/noteezzy",
+          "display_url": "linktr.ee/noteezzy"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 19,
+          "end": 42,
+          "url": "https://t.co/l4bT7hxeLB",
+          "expanded_url": "http://t.me/eezzyjournal",
+          "display_url": "t.me/eezzyjournal"
+        },
+        {
+          "start": 93,
+          "end": 116,
+          "url": "https://t.co/Wu3lJRDXKF",
+          "expanded_url": "http://twitch.tv/eezzyLIVE",
+          "display_url": "twitch.tv/eezzyLIVE"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 128,
+          "end": 136,
+          "username": "Metawin"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/992590209752629249/1626468072",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1750880316196089856/YplOr-oj_normal.jpg",
+  "public_metrics": {
+    "followers_count": 192982,
+    "following_count": 3718,
+    "tweet_count": 42032,
+    "listed_count": 2570,
+    "like_count": 38209,
+    "media_count": 4744
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/S0hIj0uH3r",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

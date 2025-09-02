@@ -1,0 +1,80 @@
+{
+  "id": "1594463188044906497",
+  "name": "dyor ( revenge arc )",
+  "username": "dyorwgmi",
+  "affiliation": null,
+  "description": "Italian stallion & Verified Trader on @CoinMarketCap | Partner @toshibet - https://t.co/X0O1hCChAT | Alpha: https://t.co/QxakcuipY9 | Calls: https://t.co/QZDiOK6Zuj. Open to Inquiries!",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/dUNilhWf9c",
+          "expanded_url": "https://coinmarketcap.com/community/profile/dyorwgmi/",
+          "display_url": "coinmarketcap.com/community/prof…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 75,
+          "end": 98,
+          "url": "https://t.co/X0O1hCChAT",
+          "expanded_url": "http://toshi.bet/r/DYOR",
+          "display_url": "toshi.bet/r/DYOR"
+        },
+        {
+          "start": 108,
+          "end": 131,
+          "url": "https://t.co/QxakcuipY9",
+          "expanded_url": "http://t.me/dyormind",
+          "display_url": "t.me/dyormind"
+        },
+        {
+          "start": 141,
+          "end": 164,
+          "url": "https://t.co/QZDiOK6Zuj",
+          "expanded_url": "http://t.me/dyorkitchen",
+          "display_url": "t.me/dyorkitchen"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 38,
+          "end": 52,
+          "username": "CoinMarketCap"
+        },
+        {
+          "start": 63,
+          "end": 72,
+          "username": "toshibet"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1594463188044906497/1745522762",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1943482197647736832/_ZgFR219_normal.jpg",
+  "public_metrics": {
+    "followers_count": 91257,
+    "following_count": 19780,
+    "tweet_count": 27931,
+    "listed_count": 71,
+    "like_count": 22193,
+    "media_count": 973
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/dUNilhWf9c",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

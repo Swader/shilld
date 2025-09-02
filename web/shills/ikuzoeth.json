@@ -1,0 +1,53 @@
+{
+  "id": "1441883494716624900",
+  "name": "TEE🧊",
+  "username": "ikuzoeth",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1939004510954721280/Z5W9IW3g_bigger.jpg",
+    "user_id": [
+      "1890404372162793472"
+    ],
+    "url": "https://twitter.com/GlydeGG",
+    "description": "Glyde"
+  },
+  "description": "founder @lckdofficial | partners @glydegg",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 8,
+          "end": 21,
+          "username": "lckdofficial"
+        },
+        {
+          "start": 33,
+          "end": 41,
+          "username": "glydegg"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1441883494716624900/1754131894",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1959145604338053120/ORtBdjgs_normal.jpg",
+  "public_metrics": {
+    "followers_count": 65204,
+    "following_count": 9333,
+    "tweet_count": 123604,
+    "listed_count": 137,
+    "like_count": 201452,
+    "media_count": 2614
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

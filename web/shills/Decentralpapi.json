@@ -1,0 +1,48 @@
+{
+  "id": "1347607980607496192",
+  "name": "OMIMI",
+  "username": "Decentralpapi",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1878858246607261696/jsIAyVOB_bigger.jpg",
+    "user_id": [
+      "1184954936875978752"
+    ],
+    "url": "https://twitter.com/Flipgg_",
+    "description": "Flip.gg"
+  },
+  "description": "I'm HIM | Creator @AisarLabs |\nMy tweets are my opinion NFA, always DYOR",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 18,
+          "end": 28,
+          "username": "AisarLabs"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1347607980607496192/1754914176",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1954289515142467585/nrqS_DL2_normal.jpg",
+  "public_metrics": {
+    "followers_count": 15083,
+    "following_count": 3348,
+    "tweet_count": 54649,
+    "listed_count": 97,
+    "like_count": 76983,
+    "media_count": 2121
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "1634990649257742338",
+  "name": "bong",
+  "username": "bon_g",
+  "affiliation": {
+    "url": "https://twitter.com/gmgnai",
+    "user_id": [
+      "1656210167816650754"
+    ],
+    "description": "GMGN.Ai",
+    "badge_url": "https://pbs.twimg.com/profile_images/1936960938512633856/z8NqCU8e_bigger.jpg"
+  },
+  "description": "中国阴谋集团创始人 | trading https://t.co/pJphiZ35ly| Disclaimer:",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/OzI9kZ7ypc",
+          "expanded_url": "https://t.me/bongplays",
+          "display_url": "t.me/bongplays"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 20,
+          "end": 43,
+          "url": "https://t.co/pJphiZ35ly",
+          "expanded_url": "http://gmgn.ai/r/bong",
+          "display_url": "gmgn.ai/r/bong"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1634990649257742338/1748556559",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1940084216017965060/yqxoz7Zy_normal.jpg",
+  "public_metrics": {
+    "followers_count": 42925,
+    "following_count": 2434,
+    "tweet_count": 10208,
+    "listed_count": 126,
+    "like_count": 24233,
+    "media_count": 1458
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/OzI9kZ7ypc",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "1419659978437181444",
+  "name": "comet",
+  "username": "cometcalls",
+  "affiliation": {
+    "url": "https://twitter.com/townsxyz",
+    "user_id": [
+      "1619069071516917761"
+    ],
+    "description": "Towns App",
+    "badge_url": "https://pbs.twimg.com/profile_images/1945658198217596928/tLPwnPHB_bigger.png"
+  },
+  "description": "memecoin genius. @coinbase ambassador. $giga bull. trade with me ⬇️",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/389G00yy7V",
+          "expanded_url": "https://coinbase.com/join/8N7F5V7?src=ios-link",
+          "display_url": "coinbase.com/join/8N7F5V7?s…"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 17,
+          "end": 26,
+          "username": "coinbase"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 39,
+          "end": 44,
+          "tag": "giga"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1419659978437181444/1729390788",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1886252148846899201/dD18TAS__normal.jpg",
+  "public_metrics": {
+    "followers_count": 110231,
+    "following_count": 5629,
+    "tweet_count": 21663,
+    "listed_count": 327,
+    "like_count": 137440,
+    "media_count": 3965
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/389G00yy7V",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

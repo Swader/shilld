@@ -1,0 +1,62 @@
+{
+  "id": "626496021",
+  "name": "Solid 堅固",
+  "username": "SolidTradesz",
+  "affiliation": null,
+  "description": "Trading, Investing, and Building ✧ Building @solidintel_x ✧ Operating in @solidcabal ✧ Growing with @Bybit_Official",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/1zo9UeS0PV",
+          "expanded_url": "https://t.me/solidtradesz",
+          "display_url": "t.me/solidtradesz"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 44,
+          "end": 57,
+          "username": "solidintel_x"
+        },
+        {
+          "start": 73,
+          "end": 84,
+          "username": "solidcabal"
+        },
+        {
+          "start": 100,
+          "end": 115,
+          "username": "Bybit_Official"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/626496021/1717051600",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1937435695267667968/WLXwZhJa_normal.jpg",
+  "public_metrics": {
+    "followers_count": 109913,
+    "following_count": 6302,
+    "tweet_count": 29882,
+    "listed_count": 666,
+    "like_count": 83347,
+    "media_count": 7786
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/1zo9UeS0PV",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "1475817452521066500",
+  "name": "𝓩𝓪𝓬𝓴 💫",
+  "username": "ZackNFA",
+  "affiliation": null,
+  "description": "Crypto Star✨ @BitMEX | @Bybit_Official | @bitgetglobal Partner✨my only TG: Zackweb3✨ my tweets are NFA/AD",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/KyCp3caqm4",
+          "expanded_url": "https://bitlive.leagueoftraders.io/leader/122689258497508401",
+          "display_url": "bitlive.leagueoftraders.io/leader/1226892…"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 13,
+          "end": 20,
+          "username": "BitMEX"
+        },
+        {
+          "start": 23,
+          "end": 38,
+          "username": "Bybit_Official"
+        },
+        {
+          "start": 41,
+          "end": 54,
+          "username": "bitgetglobal"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1475817452521066500/1734892413",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1816119017347694592/GfQW5VDd_normal.jpg",
+  "public_metrics": {
+    "followers_count": 66968,
+    "following_count": 20226,
+    "tweet_count": 31087,
+    "listed_count": 51,
+    "like_count": 40773,
+    "media_count": 1297
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/KyCp3caqm4",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

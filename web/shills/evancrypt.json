@@ -1,0 +1,57 @@
+{
+  "id": "1430751893077127168",
+  "name": "Evan",
+  "username": "evancrypt",
+  "affiliation": null,
+  "description": "DeFi researcher🔬|| 100x instigator📝|| whales🐳 & community || marketing advisory & promotion | Amb @Lunarstrategy @Alienvision_io || TG-Evancrypt",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/OHVCVE1SLZ",
+          "expanded_url": "http://t.me/EvanNiche",
+          "display_url": "t.me/EvanNiche"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 98,
+          "end": 112,
+          "username": "Lunarstrategy"
+        },
+        {
+          "start": 113,
+          "end": 128,
+          "username": "Alienvision_io"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1430751893077127168/1690988918",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1703776040194043904/yq7_Cr50_normal.jpg",
+  "public_metrics": {
+    "followers_count": 45538,
+    "following_count": 4040,
+    "tweet_count": 23529,
+    "listed_count": 96,
+    "like_count": 26011,
+    "media_count": 1511
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/OHVCVE1SLZ",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

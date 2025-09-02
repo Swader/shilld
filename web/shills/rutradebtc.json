@@ -1,0 +1,43 @@
+{
+  "id": "132738669",
+  "name": "Alex RT₿",
+  "username": "rutradebtc",
+  "affiliation": null,
+  "description": "Crypto trader, analyst, and low-caps investor since 2015 | Building $1M worth bag that will reach $10M on the next bull cycle | Follow to get a bunch of alpha",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/cL1II4XARJ",
+          "expanded_url": "http://t.me/rutradebtc",
+          "display_url": "t.me/rutradebtc"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/132738669/1693828458",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1697589180971294720/W_73yBPQ_normal.jpg",
+  "public_metrics": {
+    "followers_count": 71025,
+    "following_count": 3145,
+    "tweet_count": 34299,
+    "listed_count": 683,
+    "like_count": 30913,
+    "media_count": 9039
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/cL1II4XARJ",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

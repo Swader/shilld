@@ -1,0 +1,79 @@
+{
+  "id": "1591162159299452928",
+  "name": "blood",
+  "username": "bloodweb3",
+  "affiliation": {
+    "url": "https://twitter.com/solpumpcom",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "description": "Solpump",
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg"
+  },
+  "description": "web3 marketing🩸| partner @solpumpcom @betsbx @steepdotgg | all posts are nfa | @duelbits @bloomtrading | dm for marketing 📩",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/S1Ah1HPiKS",
+          "expanded_url": "http://t.me/bloodweb3",
+          "display_url": "t.me/bloodweb3"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 25,
+          "end": 36,
+          "username": "solpumpcom"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "username": "betsbx"
+        },
+        {
+          "start": 45,
+          "end": 56,
+          "username": "steepdotgg"
+        },
+        {
+          "start": 79,
+          "end": 88,
+          "username": "duelbits"
+        },
+        {
+          "start": 89,
+          "end": 102,
+          "username": "bloomtrading"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1591162159299452928/1752984182",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1886596344015462401/nEVqkJx3_normal.jpg",
+  "public_metrics": {
+    "followers_count": 91904,
+    "following_count": 43274,
+    "tweet_count": 214238,
+    "listed_count": 214,
+    "like_count": 18999,
+    "media_count": 436
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/S1Ah1HPiKS",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

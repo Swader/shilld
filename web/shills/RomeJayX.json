@@ -1,0 +1,68 @@
+{
+  "id": "1500248217086140417",
+  "name": "Rome",
+  "username": "RomeJayX",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1446190334753443849/c4HA2pm9_bigger.jpg",
+    "user_id": [
+      "1446189710913638415"
+    ],
+    "url": "https://twitter.com/GraffitiMansion",
+    "description": "Graffiti Mansion"
+  },
+  "description": "Money Maxi & Content Creator 🎬 | MAYC #23017 | @GraffitiMansion Rep | Trade with https://t.co/n8RMeuOqRG | Turning market chaos into alpha 📈",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/AUt9Id8FFB",
+          "expanded_url": "https://linktr.ee/RomeLinks",
+          "display_url": "linktr.ee/RomeLinks"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 81,
+          "end": 104,
+          "url": "https://t.co/n8RMeuOqRG",
+          "expanded_url": "https://vyper.trade/@rome",
+          "display_url": "vyper.trade/@rome"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 47,
+          "end": 63,
+          "username": "GraffitiMansion"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1500248217086140417/1754816616",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1953974551236554755/cOi5AEYa_normal.jpg",
+  "public_metrics": {
+    "followers_count": 36988,
+    "following_count": 3886,
+    "tweet_count": 100312,
+    "listed_count": 110,
+    "like_count": 141616,
+    "media_count": 16962
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/AUt9Id8FFB",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

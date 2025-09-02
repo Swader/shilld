@@ -1,0 +1,77 @@
+{
+  "id": "1395259314252632070",
+  "name": "Michill💕",
+  "username": "SexyMichill",
+  "affiliation": null,
+  "description": "I’m a FOMO alien come from metaverse🪐| CMO @Didotxyz_｜Core @bayctaiwan / @Azuki_Taiwan ｜Ambassador @CoinUpOfficials｜Building @pukecastCN by @rugradio🎙️",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/hJStQYofZ4",
+          "expanded_url": "https://www.okx.com/join/30117814",
+          "display_url": "okx.com/join/30117814"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 43,
+          "end": 53,
+          "username": "Didotxyz_"
+        },
+        {
+          "start": 59,
+          "end": 70,
+          "username": "bayctaiwan"
+        },
+        {
+          "start": 73,
+          "end": 86,
+          "username": "Azuki_Taiwan"
+        },
+        {
+          "start": 99,
+          "end": 115,
+          "username": "CoinUpOfficials"
+        },
+        {
+          "start": 125,
+          "end": 136,
+          "username": "pukecastCN"
+        },
+        {
+          "start": 140,
+          "end": 149,
+          "username": "rugradio"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1395259314252632070/1705437937",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1854622505673408512/aa1RZIQ2_normal.jpg",
+  "public_metrics": {
+    "followers_count": 22659,
+    "following_count": 2533,
+    "tweet_count": 52721,
+    "listed_count": 87,
+    "like_count": 49593,
+    "media_count": 2281
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/hJStQYofZ4",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

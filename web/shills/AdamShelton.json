@@ -1,0 +1,31 @@
+{
+  "id": "24206551",
+  "name": "Adam Shelton",
+  "username": "AdamShelton",
+  "affiliation": null,
+  "description": "Designer at Future Workshops.",
+  "entities": null,
+  "profile_banner_url": null,
+  "profile_image_url": "https://pbs.twimg.com/profile_images/721977416508420096/RgkrDxGd_normal.jpg",
+  "public_metrics": {
+    "followers_count": 135,
+    "following_count": 135,
+    "tweet_count": 359,
+    "listed_count": 12,
+    "like_count": 7,
+    "media_count": 89
+  },
+  "subscription_type": "none",
+  "url": null,
+  "verified": false,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "1500894907447267328",
+  "name": "Parisa",
+  "username": "parsa_nft",
+  "affiliation": null,
+  "description": "i love game",
+  "entities": null,
+  "profile_banner_url": null,
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1519553495845810176/V0LwduGi_normal.jpg",
+  "public_metrics": {
+    "followers_count": 7,
+    "following_count": 122,
+    "tweet_count": 22,
+    "listed_count": 0,
+    "like_count": 11,
+    "media_count": 0
+  },
+  "subscription_type": "none",
+  "url": null,
+  "verified": false,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

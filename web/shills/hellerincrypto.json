@@ -1,0 +1,64 @@
+{
+  "id": "1514885319006511104",
+  "name": "heller",
+  "username": "hellerincrypto",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "url": "https://twitter.com/solpumpcom",
+    "description": "Solpump"
+  },
+  "description": "Demon mode: ON | Locked in | KOL | Reply guy | Trenching daily | Addicted to @solpumpcom | Marketing | Team @Trench_Demons_ | Dm for promo & collab",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/vDWvj6ANRX",
+          "expanded_url": "https://t.me/heller100x",
+          "display_url": "t.me/heller100x"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 77,
+          "end": 88,
+          "username": "solpumpcom"
+        },
+        {
+          "start": 108,
+          "end": 123,
+          "username": "Trench_Demons_"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1514885319006511104/1753768356",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1950071779826819073/zzaFhDJL_normal.jpg",
+  "public_metrics": {
+    "followers_count": 31137,
+    "following_count": 20021,
+    "tweet_count": 324557,
+    "listed_count": 125,
+    "like_count": 66748,
+    "media_count": 3276
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/vDWvj6ANRX",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

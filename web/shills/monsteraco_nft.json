@@ -1,0 +1,61 @@
+{
+  "id": "1645364873239359489",
+  "name": "Monsteraco",
+  "username": "monsteraco_nft",
+  "affiliation": null,
+  "description": "Crypto Investor & KOL| Best app for memecoins: BullX 👉 https://t.co/rKECG0m41q | ByBit 👉 https://t.co/MwQOO1wzOf Posts are NFA & AD’s",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/ivBaG2maao",
+          "expanded_url": "https://atm.day?ref=Monsteraco_nft",
+          "display_url": "atm.day/?ref=Monsterac…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 55,
+          "end": 78,
+          "url": "https://t.co/rKECG0m41q",
+          "expanded_url": "http://t.me/BullxNeoBot?start=access_O6ANKNAW2DO_nft",
+          "display_url": "t.me/BullxNeoBot?st…"
+        },
+        {
+          "start": 89,
+          "end": 112,
+          "url": "https://t.co/MwQOO1wzOf",
+          "expanded_url": "http://partner.bybit.com/b/138105",
+          "display_url": "partner.bybit.com/b/138105"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1645364873239359489/1729884977",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1837315893858127872/32ddGwTo_normal.jpg",
+  "public_metrics": {
+    "followers_count": 62254,
+    "following_count": 2424,
+    "tweet_count": 4608,
+    "listed_count": 38,
+    "like_count": 61509,
+    "media_count": 723
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/ivBaG2maao",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

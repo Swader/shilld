@@ -1,0 +1,54 @@
+{
+  "id": "1931825335",
+  "name": "cotton",
+  "username": "cottonxbt",
+  "affiliation": null,
+  "description": "fat ass, degenerating around X \n\nTrade with me in the LAB Terminal 🧪\nSave 50% on fees and test it yourself 👇\nhttps://t.co/YF0BPummD2",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/YRu58srVOg",
+          "expanded_url": "http://t.me/cottoncook",
+          "display_url": "t.me/cottoncook"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 109,
+          "end": 132,
+          "url": "https://t.co/YF0BPummD2",
+          "expanded_url": "https://t.me/LAB_Trading_bot?start=cottonXref",
+          "display_url": "t.me/LAB_Trading_bo…"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1931825335/1719230324",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1939617668539011072/LWUbvQNU_normal.jpg",
+  "public_metrics": {
+    "followers_count": 37319,
+    "following_count": 8885,
+    "tweet_count": 7156,
+    "listed_count": 82,
+    "like_count": 9309,
+    "media_count": 1132
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/YRu58srVOg",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

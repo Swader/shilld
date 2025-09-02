@@ -1,0 +1,29 @@
+/* Loud, obvious PAID SHILL badge styling */
+.shilld-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff1f1f, #ff9f00);
+  color: #000;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 1;
+  border: 2px solid #000;
+  box-shadow: 0 2px 0 #000, 0 0 10px rgba(255, 31, 31, 0.6), inset 0 -2px 0 rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.shilld-badge:hover {
+  transform: rotate(-2deg) scale(1.05);
+  box-shadow: 0 3px 0 #000, 0 0 12px rgba(255, 159, 0, 0.7), inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+
+.shilld-badge:active {
+  transform: rotate(-1deg) scale(0.98);
+}
+

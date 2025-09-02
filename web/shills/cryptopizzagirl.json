@@ -1,0 +1,64 @@
+{
+  "id": "1403438682309369862",
+  "name": "CryptoPizzaGirl 🍕🐳",
+  "username": "cryptopizzagirl",
+  "affiliation": {
+    "url": "https://twitter.com/bcgame",
+    "user_id": [
+      "1306070606056546305"
+    ],
+    "description": "BC.GAME",
+    "badge_url": "https://pbs.twimg.com/profile_images/1922194730970234880/vtI08oX1_bigger.jpg"
+  },
+  "description": "🇮🇹 ⋆ TikTok: @CryptoPizzaGirl ⋆ For promo DM TG @CryptoPizzaGirl_TG 🤝 Join my TG GROUP 👇",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/FePFTVH0nS",
+          "expanded_url": "https://t.me/cryptopizzacalls",
+          "display_url": "t.me/cryptopizzacal…"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 13,
+          "end": 29,
+          "username": "CryptoPizzaGirl"
+        },
+        {
+          "start": 48,
+          "end": 67,
+          "username": "CryptoPizzaGirl_TG"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1403438682309369862/1741001787",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1894408318946361344/fVpmUyJt_normal.jpg",
+  "public_metrics": {
+    "followers_count": 27685,
+    "following_count": 2687,
+    "tweet_count": 31699,
+    "listed_count": 89,
+    "like_count": 32162,
+    "media_count": 3073
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/FePFTVH0nS",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

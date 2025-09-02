@@ -1,0 +1,59 @@
+{
+  "id": "1445470769291563012",
+  "name": "Aisar",
+  "username": "aisarcore",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1846384980488040449/aUE7bBD5_bigger.jpg",
+    "user_id": [
+      "1846384711289262083"
+    ],
+    "url": "https://twitter.com/StalkHQ",
+    "description": "Stalkchain"
+  },
+  "description": "Founder @AisarLabs | Over a decade in Marketing with 200+ Clients | Crypto since 11'",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/kq1m63g6mr",
+          "expanded_url": "https://aisarlabs.xyz",
+          "display_url": "aisarlabs.xyz"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 8,
+          "end": 18,
+          "username": "AisarLabs"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1445470769291563012/1634206388",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1862031315463188480/bUjDVAEs_normal.jpg",
+  "public_metrics": {
+    "followers_count": 54597,
+    "following_count": 6519,
+    "tweet_count": 411128,
+    "listed_count": 194,
+    "like_count": 391583,
+    "media_count": 895
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/kq1m63g6mr",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

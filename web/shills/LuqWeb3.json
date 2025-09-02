@@ -1,0 +1,43 @@
+{
+  "id": "1486005627432448005",
+  "name": "Luq",
+  "username": "LuqWeb3",
+  "affiliation": null,
+  "description": "trenching daily | kol | dm for marketing 📩|  tg: https://t.co/ew7Q8dC2xn",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 49,
+          "end": 72,
+          "url": "https://t.co/ew7Q8dC2xn",
+          "expanded_url": "https://t.me/luqalpha",
+          "display_url": "t.me/luqalpha"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1486005627432448005/1737823712",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1883214376187912192/OTlZPCGP_normal.jpg",
+  "public_metrics": {
+    "followers_count": 54220,
+    "following_count": 22671,
+    "tweet_count": 18279,
+    "listed_count": 62,
+    "like_count": 11458,
+    "media_count": 390
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

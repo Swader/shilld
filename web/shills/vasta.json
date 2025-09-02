@@ -1,0 +1,48 @@
+{
+  "id": "1495674877256560640",
+  "name": "vasta 💰",
+  "username": "vasta",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
+    "user_id": [
+      "1889117062070759424"
+    ],
+    "url": "https://twitter.com/PyroAgency",
+    "description": "Pyro Agency"
+  },
+  "description": "content creator paving my own path • web3 degen • open for marketing // posts are nfa • @solana maxi 🐦‍🔥",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 88,
+          "end": 95,
+          "username": "solana"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1495674877256560640/1755163565",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1949613622813986816/Lje-aK7d_normal.jpg",
+  "public_metrics": {
+    "followers_count": 121213,
+    "following_count": 32680,
+    "tweet_count": 51725,
+    "listed_count": 402,
+    "like_count": 38038,
+    "media_count": 2056
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

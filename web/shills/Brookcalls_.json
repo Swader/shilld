@@ -1,0 +1,80 @@
+{
+  "id": "1687255410237927424",
+  "name": "Brook",
+  "username": "Brookcalls_",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1939004510954721280/Z5W9IW3g_bigger.jpg",
+    "user_id": [
+      "1890404372162793472"
+    ],
+    "url": "https://twitter.com/GlydeGG",
+    "description": "Glyde"
+  },
+  "description": "Full time degenerate | trencher | Partner ~ @GlydeGG & @MEXC_Official | Join tg https://t.co/Rmfjb7WLaq | https://t.co/Ki9tQSiSx6",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/3QkooQNl1K",
+          "expanded_url": "https://promote.mexc.co/a/PlHTb3hs",
+          "display_url": "promote.mexc.co/a/PlHTb3hs"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 80,
+          "end": 103,
+          "url": "https://t.co/Rmfjb7WLaq",
+          "expanded_url": "https://t.me/brookcalls",
+          "display_url": "t.me/brookcalls"
+        },
+        {
+          "start": 106,
+          "end": 129,
+          "url": "https://t.co/Ki9tQSiSx6",
+          "expanded_url": "https://t.me/Brookriskyplays",
+          "display_url": "t.me/Brookriskyplays"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 44,
+          "end": 52,
+          "username": "GlydeGG"
+        },
+        {
+          "start": 55,
+          "end": 69,
+          "username": "MEXC_Official"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1687255410237927424/1752907719",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1946269543317352448/OE6Iw_ka_normal.jpg",
+  "public_metrics": {
+    "followers_count": 52071,
+    "following_count": 9778,
+    "tweet_count": 107073,
+    "listed_count": 213,
+    "like_count": 109272,
+    "media_count": 1768
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/3QkooQNl1K",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

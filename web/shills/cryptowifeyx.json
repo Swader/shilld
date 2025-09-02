@@ -1,0 +1,68 @@
+{
+  "id": "1590955612527120385",
+  "name": "Crypto Wifey",
+  "username": "cryptowifeyx",
+  "affiliation": {
+    "url": "https://twitter.com/degencom",
+    "user_id": [
+      "1869068814354104321"
+    ],
+    "description": "Degen",
+    "badge_url": "https://pbs.twimg.com/profile_images/1959526509724459008/nI8p-TaJ_bigger.jpg"
+  },
+  "description": "I am a girl not your crypto bro / Gem finder 💎 / Contact me: https://t.co/7gX0Z2VT7S / TikTok queen | NFA | https://t.co/afZMJXdilX",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/tjFDiT4wzK",
+          "expanded_url": "https://degen.com/r/5692",
+          "display_url": "degen.com/r/5692"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 61,
+          "end": 84,
+          "url": "https://t.co/7gX0Z2VT7S",
+          "expanded_url": "http://t.me/cryptowifey",
+          "display_url": "t.me/cryptowifey"
+        },
+        {
+          "start": 108,
+          "end": 131,
+          "url": "https://t.co/afZMJXdilX",
+          "expanded_url": "http://TikTok.com/@wifeycrypto",
+          "display_url": "TikTok.com/@wifeycrypto"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1590955612527120385/1721582301",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1931183737938812928/oTii9ubs_normal.jpg",
+  "public_metrics": {
+    "followers_count": 27573,
+    "following_count": 832,
+    "tweet_count": 1339,
+    "listed_count": 27,
+    "like_count": 1303,
+    "media_count": 273
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/tjFDiT4wzK",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

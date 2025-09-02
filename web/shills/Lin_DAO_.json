@@ -1,0 +1,66 @@
+{
+  "id": "1452664547693707275",
+  "name": "Linda",
+  "username": "Lin_DAO_",
+  "affiliation": null,
+  "description": "growth advisor | https://t.co/laB22e2vte | cook live @chopithot | co host ‘state of the trenches’ | comedian | @berabaddies | trade with 1000x leverage on hype ⬇️",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/qEr2yZvSFT",
+          "expanded_url": "https://opt.fun?invite=wcjb9h1hbrr",
+          "display_url": "opt.fun/?invite=wcjb9h…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 17,
+          "end": 40,
+          "url": "https://t.co/laB22e2vte",
+          "expanded_url": "http://lindao.xyz",
+          "display_url": "lindao.xyz"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 53,
+          "end": 63,
+          "username": "chopithot"
+        },
+        {
+          "start": 111,
+          "end": 123,
+          "username": "berabaddies"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1452664547693707275/1734660105",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1914745313463590912/B6v3ej4T_normal.jpg",
+  "public_metrics": {
+    "followers_count": 24028,
+    "following_count": 2233,
+    "tweet_count": 15248,
+    "listed_count": 396,
+    "like_count": 37435,
+    "media_count": 735
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/qEr2yZvSFT",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

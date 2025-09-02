@@ -1,0 +1,76 @@
+{
+  "id": "218392981",
+  "name": "CardCabz.eth | 𝔽rAI",
+  "username": "CardCabz",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1844429845184249860/T2MVaGI-_bigger.jpg",
+    "user_id": [
+      "1818702702748012544"
+    ],
+    "url": "https://twitter.com/unrugginc",
+    "description": "UNRUGGABLES INC"
+  },
+  "description": "I DROP ALPHA! Trader/Airdrop Hunter/Crypto Educator/Marketing Specialist: DM for Collab! @ScratchTokenX @MutantDogsYC #SpacesHost #ContentCreator",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/bnuwpdgtCf",
+          "expanded_url": "http://unruggables.io",
+          "display_url": "unruggables.io"
+        }
+      ]
+    },
+    "description": {
+      "hashtags": [
+        {
+          "start": 118,
+          "end": 129,
+          "tag": "SpacesHost"
+        },
+        {
+          "start": 130,
+          "end": 145,
+          "tag": "ContentCreator"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 89,
+          "end": 103,
+          "username": "ScratchTokenX"
+        },
+        {
+          "start": 104,
+          "end": 117,
+          "username": "MutantDogsYC"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/218392981/1737005461",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1957277828258390016/0QL4EQ3c_normal.jpg",
+  "public_metrics": {
+    "followers_count": 11505,
+    "following_count": 3992,
+    "tweet_count": 67890,
+    "listed_count": 52,
+    "like_count": 142609,
+    "media_count": 1479
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/bnuwpdgtCf",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

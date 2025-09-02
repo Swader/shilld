@@ -1,0 +1,87 @@
+{
+  "id": "1399509584067260418",
+  "name": "leochain",
+  "username": "leochain0",
+  "affiliation": null,
+  "description": "TG: https://t.co/yQiVL2VMXH\nChannel: https://t.co/pqckzT3ZQ6\nGroup: https://t.co/wToTeX2SVc\n#SOLANA $SOL #MEMECOINS",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/oWipmdUz7T",
+          "expanded_url": "http://t.me/leoclub168c",
+          "display_url": "t.me/leoclub168c"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 4,
+          "end": 27,
+          "url": "https://t.co/yQiVL2VMXH",
+          "expanded_url": "https://t.me/detour168",
+          "display_url": "t.me/detour168"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "url": "https://t.co/pqckzT3ZQ6",
+          "expanded_url": "https://t.me/leoclub168c",
+          "display_url": "t.me/leoclub168c"
+        },
+        {
+          "start": 68,
+          "end": 91,
+          "url": "https://t.co/wToTeX2SVc",
+          "expanded_url": "https://t.me/leoclub168",
+          "display_url": "t.me/leoclub168"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 92,
+          "end": 99,
+          "tag": "SOLANA"
+        },
+        {
+          "start": 105,
+          "end": 115,
+          "tag": "MEMECOINS"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 100,
+          "end": 104,
+          "tag": "SOL"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1399509584067260418/1731024737",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1685831340917460992/EvKN-QOe_normal.jpg",
+  "public_metrics": {
+    "followers_count": 43310,
+    "following_count": 696,
+    "tweet_count": 6305,
+    "listed_count": 285,
+    "like_count": 10703,
+    "media_count": 924
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/oWipmdUz7T",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

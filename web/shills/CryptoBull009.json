@@ -1,0 +1,68 @@
+{
+  "id": "1730225411798245376",
+  "name": "Marcus Corvinus",
+  "username": "CryptoBull009",
+  "affiliation": null,
+  "description": "I'm Marcus Crypto Expert & Strategist • Verified Kol CMC & #Binance Square • $BTC Since 2015• DM https://t.co/eDfmttOXrL",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/kDTGljoGYa",
+          "expanded_url": "https://bio.link/cryptobull009",
+          "display_url": "bio.link/cryptobull009"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 97,
+          "end": 120,
+          "url": "https://t.co/eDfmttOXrL",
+          "expanded_url": "http://t.me/CryptoBull009",
+          "display_url": "t.me/CryptoBull009"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 59,
+          "end": 67,
+          "tag": "Binance"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 77,
+          "end": 81,
+          "tag": "BTC"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1730225411798245376/1715939905",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1791408694543953920/58EXQz19_normal.jpg",
+  "public_metrics": {
+    "followers_count": 34261,
+    "following_count": 430,
+    "tweet_count": 4773,
+    "listed_count": 22,
+    "like_count": 3936,
+    "media_count": 588
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/kDTGljoGYa",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

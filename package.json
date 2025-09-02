@@ -1,0 +1,12 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "build:site": "bun run build.ts --site-only",
+    "build:ext": "bun run build.ts --ext-only",
+    "fetch": "bun run fetch-x-users.ts"
+  }
+}

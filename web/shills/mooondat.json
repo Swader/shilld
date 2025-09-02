@@ -1,0 +1,54 @@
+{
+  "id": "1322928558755450880",
+  "name": "ray 🍪",
+  "username": "mooondat",
+  "affiliation": null,
+  "description": "🌝trading journal: https://t.co/M2sIlGa6RK",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/2pPGBJ0ELy",
+          "expanded_url": "http://t.me/mooondat",
+          "display_url": "t.me/mooondat"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 18,
+          "end": 41,
+          "url": "https://t.co/M2sIlGa6RK",
+          "expanded_url": "http://t.me/punts",
+          "display_url": "t.me/punts"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1322928558755450880/1750622361",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1962560424622096384/wVT7XAlP_normal.jpg",
+  "public_metrics": {
+    "followers_count": 201451,
+    "following_count": 3613,
+    "tweet_count": 24930,
+    "listed_count": 545,
+    "like_count": 43799,
+    "media_count": 2814
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/2pPGBJ0ELy",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

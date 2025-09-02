@@ -1,0 +1,61 @@
+{
+  "id": "1083619608433704962",
+  "name": "Mags",
+  "username": "thescalpingpro",
+  "affiliation": null,
+  "description": "#Bitcoin holder since 2016 | Crypto Trader & Analyst | Patterns / Fractals | Bitcoin 500 day strategy | Telegram - https://t.co/7UAd7RfMoe",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/ccMTqxyydz",
+          "expanded_url": "https://partner.bybit.com/b/50439",
+          "display_url": "partner.bybit.com/b/50439"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 115,
+          "end": 138,
+          "url": "https://t.co/7UAd7RfMoe",
+          "expanded_url": "https://t.me/+VAoNyExxahcMbId2",
+          "display_url": "t.me/+VAoNyExxahcMb…"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 0,
+          "end": 8,
+          "tag": "Bitcoin"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1083619608433704962/1662328063",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1558372379050778624/u1qRR7QE_normal.jpg",
+  "public_metrics": {
+    "followers_count": 108643,
+    "following_count": 460,
+    "tweet_count": 12064,
+    "listed_count": 1061,
+    "like_count": 15867,
+    "media_count": 4588
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/ccMTqxyydz",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

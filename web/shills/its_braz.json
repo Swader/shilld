@@ -1,0 +1,89 @@
+{
+  "id": "1260667160810139649",
+  "name": "braz",
+  "username": "its_braz",
+  "affiliation": {
+    "url": "https://twitter.com/solpumpcom",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "description": "Solpump",
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg"
+  },
+  "description": "Content Creator | Streamer | Partner @luckio @solpumpcom @labtrade_ @betsbx @shufflecom @steepdotgg @degencom",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/EpHExPvo8s",
+          "expanded_url": "https://linktr.ee/itsbraz",
+          "display_url": "linktr.ee/itsbraz"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 37,
+          "end": 44,
+          "username": "luckio"
+        },
+        {
+          "start": 45,
+          "end": 56,
+          "username": "solpumpcom"
+        },
+        {
+          "start": 57,
+          "end": 67,
+          "username": "labtrade_"
+        },
+        {
+          "start": 68,
+          "end": 75,
+          "username": "betsbx"
+        },
+        {
+          "start": 76,
+          "end": 87,
+          "username": "shufflecom"
+        },
+        {
+          "start": 88,
+          "end": 99,
+          "username": "steepdotgg"
+        },
+        {
+          "start": 100,
+          "end": 109,
+          "username": "degencom"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1260667160810139649/1738448899",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1885106668146397184/R-yeGgrR_normal.jpg",
+  "public_metrics": {
+    "followers_count": 34073,
+    "following_count": 72,
+    "tweet_count": 977,
+    "listed_count": 65,
+    "like_count": 1243,
+    "media_count": 491
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/EpHExPvo8s",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

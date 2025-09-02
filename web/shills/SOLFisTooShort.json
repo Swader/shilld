@@ -1,0 +1,60 @@
+{
+  "id": "766404548982345732",
+  "name": "S◎LF (trading arc)",
+  "username": "SOLFisTooShort",
+  "affiliation": null,
+  "description": "on chain detective | trencher @vanguard_alfa @coldlabsfnf home: @laughtalefnf https://t.co/zAlTU8CrRk",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 78,
+          "end": 101,
+          "url": "https://t.co/zAlTU8CrRk",
+          "expanded_url": "https://axiom.trade/@solf",
+          "display_url": "axiom.trade/@solf"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 30,
+          "end": 44,
+          "username": "vanguard_alfa"
+        },
+        {
+          "start": 45,
+          "end": 57,
+          "username": "coldlabsfnf"
+        },
+        {
+          "start": 64,
+          "end": 77,
+          "username": "laughtalefnf"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/766404548982345732/1739343121",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1905099883234619392/m13SIjp3_normal.jpg",
+  "public_metrics": {
+    "followers_count": 7501,
+    "following_count": 1911,
+    "tweet_count": 20032,
+    "listed_count": 100,
+    "like_count": 53786,
+    "media_count": 1683
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

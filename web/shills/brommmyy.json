@@ -1,0 +1,67 @@
+{
+  "id": "1268336757675679745",
+  "name": "Brommy",
+  "username": "brommmyy",
+  "affiliation": null,
+  "description": "Not your average trading addict | Foundorr @ThePenthouseNFT | Cabal @UGCabal | Partners @Meta_Winners & @Rainbetcom",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/rWNd2XTNTg",
+          "expanded_url": "https://t.me/brommysbags",
+          "display_url": "t.me/brommysbags"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 43,
+          "end": 59,
+          "username": "ThePenthouseNFT"
+        },
+        {
+          "start": 68,
+          "end": 76,
+          "username": "UGCabal"
+        },
+        {
+          "start": 88,
+          "end": 101,
+          "username": "Meta_Winners"
+        },
+        {
+          "start": 104,
+          "end": 115,
+          "username": "Rainbetcom"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1268336757675679745/1729874296",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1811913726339043329/bzpwlt37_normal.jpg",
+  "public_metrics": {
+    "followers_count": 43092,
+    "following_count": 3587,
+    "tweet_count": 5978,
+    "listed_count": 110,
+    "like_count": 20912,
+    "media_count": 496
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/rWNd2XTNTg",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

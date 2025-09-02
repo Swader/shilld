@@ -1,0 +1,54 @@
+{
+  "id": "1695481893716738048",
+  "name": "CryptoED",
+  "username": "Crypto_ED7",
+  "affiliation": null,
+  "description": "Crypto Analyst/Gem Finder/Web 3 Marketing.                                                                     Join TG for Alpha ➡️ https://t.co/aztnQUkFD4",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/0VN2chATyb",
+          "expanded_url": "https://linktr.ee/cryptoflow7",
+          "display_url": "linktr.ee/cryptoflow7"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 132,
+          "end": 155,
+          "url": "https://t.co/aztnQUkFD4",
+          "expanded_url": "https://t.me/CryptoFlow100",
+          "display_url": "t.me/CryptoFlow100"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1695481893716738048/1742514540",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1902869969999659008/shujXJ_4_normal.jpg",
+  "public_metrics": {
+    "followers_count": 9972,
+    "following_count": 735,
+    "tweet_count": 3327,
+    "listed_count": 30,
+    "like_count": 2536,
+    "media_count": 1078
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/0VN2chATyb",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "1774009594324320256",
+  "name": "prince 👑",
+  "username": "princeracks",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1788689184355414016/mZMLcdNO_bigger.jpg",
+    "user_id": [
+      "1663886111737774081"
+    ],
+    "url": "https://twitter.com/PadreApp",
+    "description": "Padre"
+  },
+  "description": "trading shitcoins • own @AscendxFNF • best trading bot: https://t.co/iuJ54m50DX",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/KdChNS6pyi",
+          "expanded_url": "https://t.me/princesalpha",
+          "display_url": "t.me/princesalpha"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 56,
+          "end": 79,
+          "url": "https://t.co/iuJ54m50DX",
+          "expanded_url": "https://trade.padre.gg/rk/prince",
+          "display_url": "trade.padre.gg/rk/prince"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 24,
+          "end": 35,
+          "username": "AscendxFNF"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1774009594324320256/1741483588",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1896511727224668160/M4s1ssO6_normal.jpg",
+  "public_metrics": {
+    "followers_count": 29480,
+    "following_count": 13180,
+    "tweet_count": 36428,
+    "listed_count": 39,
+    "like_count": 43555,
+    "media_count": 238
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/KdChNS6pyi",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

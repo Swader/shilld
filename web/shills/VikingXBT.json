@@ -1,0 +1,82 @@
+{
+  "id": "858002203",
+  "name": "VikingXBT",
+  "username": "VikingXBT",
+  "affiliation": {
+    "url": "https://twitter.com/SigmaTradingBot",
+    "user_id": [
+      "1688011068931530752"
+    ],
+    "description": "Sigma",
+    "badge_url": "https://pbs.twimg.com/profile_images/1895936820241735680/O_kSY0rB_bigger.jpg"
+  },
+  "description": "• Low iq individual\n• Contact https://t.co/T94sgI9NbI\n• Axiom https://t.co/U7lEKeMora\n• Sigma https://t.co/S7kWAUmmTw\n• @rainbetcom",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/Bz1S74PfnQ",
+          "expanded_url": "http://linktr.ee/vikingxbt",
+          "display_url": "linktr.ee/vikingxbt"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 30,
+          "end": 53,
+          "url": "https://t.co/T94sgI9NbI",
+          "expanded_url": "http://t.me/vikingxbt1",
+          "display_url": "t.me/vikingxbt1"
+        },
+        {
+          "start": 62,
+          "end": 85,
+          "url": "https://t.co/U7lEKeMora",
+          "expanded_url": "https://axiom.trade/@vikingxbt1",
+          "display_url": "axiom.trade/@vikingxbt1"
+        },
+        {
+          "start": 94,
+          "end": 117,
+          "url": "https://t.co/S7kWAUmmTw",
+          "expanded_url": "https://t.me/Sigma_buyBot?start=ref=559301087",
+          "display_url": "t.me/Sigma_buyBot?s…"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 120,
+          "end": 131,
+          "username": "rainbetcom"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/858002203/1740377550",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1833380042753118208/Hz0gL__U_normal.jpg",
+  "public_metrics": {
+    "followers_count": 38124,
+    "following_count": 519,
+    "tweet_count": 42423,
+    "listed_count": 614,
+    "like_count": 76344,
+    "media_count": 8293
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/Bz1S74PfnQ",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

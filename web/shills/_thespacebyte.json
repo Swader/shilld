@@ -1,0 +1,52 @@
+{
+  "id": "216811940",
+  "name": "spacebyte ⛓",
+  "username": "_thespacebyte",
+  "affiliation": null,
+  "description": "Crypto Enthusiast • Web3 Guy • Defi • AI • RWA • Gamefi • Multichain Analysis • Marketing Strategist • NFA • Threador 🧵 Contributor @Seinetwork",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/IJrxciFVhS",
+          "expanded_url": "http://t.me/Spacebyte_01",
+          "display_url": "t.me/Spacebyte_01"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 132,
+          "end": 143,
+          "username": "Seinetwork"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/216811940/1731254935",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1797938939296137216/RF12C9dl_normal.jpg",
+  "public_metrics": {
+    "followers_count": 28525,
+    "following_count": 1909,
+    "tweet_count": 16047,
+    "listed_count": 58,
+    "like_count": 21970,
+    "media_count": 751
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/IJrxciFVhS",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

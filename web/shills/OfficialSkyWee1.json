@@ -1,0 +1,62 @@
+{
+  "id": "1445310460945833987",
+  "name": "Sky Wee",
+  "username": "OfficialSkyWee1",
+  "affiliation": null,
+  "description": "🔸@ForbesUnder30 | Featured @Forbes  Entrepreneur | @binance Partner & Crypto KOL |  Investor & Advisor | Managing Partner | Influencer - 4M+ followers",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/IBkIg8gfnU",
+          "expanded_url": "http://alfan.link/skywee97",
+          "display_url": "alfan.link/skywee97"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 1,
+          "end": 15,
+          "username": "ForbesUnder30"
+        },
+        {
+          "start": 27,
+          "end": 34,
+          "username": "Forbes"
+        },
+        {
+          "start": 51,
+          "end": 59,
+          "username": "binance"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1445310460945833987/1706887986",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1445311714325454852/5PTKHLDJ_normal.jpg",
+  "public_metrics": {
+    "followers_count": 233339,
+    "following_count": 1622,
+    "tweet_count": 1232,
+    "listed_count": 35,
+    "like_count": 541,
+    "media_count": 302
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/IBkIg8gfnU",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

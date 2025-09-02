@@ -1,0 +1,75 @@
+{
+  "id": "1373279357691600906",
+  "name": "Jet 🎒",
+  "username": "JetXBT",
+  "affiliation": null,
+  "description": "|| DM open for #Promotion #Ambassador 💌 || @MadLads & @Backpack Elite OG 🎒 || $BTC $ETH $BNB HODLer 💎✋ || Crypto Investor. Hunting Value 🚀",
+  "entities": {
+    "description": {
+      "hashtags": [
+        {
+          "start": 15,
+          "end": 25,
+          "tag": "Promotion"
+        },
+        {
+          "start": 26,
+          "end": 37,
+          "tag": "Ambassador"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 43,
+          "end": 51,
+          "username": "MadLads"
+        },
+        {
+          "start": 54,
+          "end": 63,
+          "username": "Backpack"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 78,
+          "end": 82,
+          "tag": "BTC"
+        },
+        {
+          "start": 83,
+          "end": 87,
+          "tag": "ETH"
+        },
+        {
+          "start": 88,
+          "end": 92,
+          "tag": "BNB"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1373279357691600906/1747667718",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1953625068388724736/qiyY-1_4_normal.jpg",
+  "public_metrics": {
+    "followers_count": 60803,
+    "following_count": 13041,
+    "tweet_count": 13838,
+    "listed_count": 109,
+    "like_count": 85244,
+    "media_count": 828
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

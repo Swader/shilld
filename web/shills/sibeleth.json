@@ -1,0 +1,50 @@
+{
+  "id": "2371575838",
+  "name": "Sibel",
+  "username": "sibeleth",
+  "affiliation": {
+    "url": "https://twitter.com/gmgnai",
+    "user_id": [
+      "1656210167816650754"
+    ],
+    "description": "GMGN.Ai",
+    "badge_url": "https://pbs.twimg.com/profile_images/1936960938512633856/z8NqCU8e_bigger.jpg"
+  },
+  "description": "Just a girl trading memes | Tweets are NFA | Telegram: https://t.co/SUArQYZjU7 | Disclaimer:",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 55,
+          "end": 78,
+          "url": "https://t.co/SUArQYZjU7",
+          "expanded_url": "https://t.me/Sibelplays",
+          "display_url": "t.me/Sibelplays"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2371575838/1697936319",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1949887422902194177/OYRJTjRd_normal.jpg",
+  "public_metrics": {
+    "followers_count": 176431,
+    "following_count": 6577,
+    "tweet_count": 32200,
+    "listed_count": 1317,
+    "like_count": 166474,
+    "media_count": 1754
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

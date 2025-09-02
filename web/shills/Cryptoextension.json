@@ -1,0 +1,71 @@
+{
+  "id": "1024114610",
+  "name": "CUE",
+  "username": "Cryptoextension",
+  "affiliation": null,
+  "description": "|I Marketing & strategic Advisor |I web3 growth & trade expert\n\nhttps://t.co/vN23wLTGMJ\n\nNFA |I DYOR\n\npromoting @WorkX_official @Socrates_global @bitgertbrise",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/He7432veTy",
+          "expanded_url": "https://t.me/Cryptextension",
+          "display_url": "t.me/Cryptextension"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 64,
+          "end": 87,
+          "url": "https://t.co/vN23wLTGMJ",
+          "expanded_url": "https://t.me/cryptoextent",
+          "display_url": "t.me/cryptoextent"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 112,
+          "end": 127,
+          "username": "WorkX_official"
+        },
+        {
+          "start": 128,
+          "end": 144,
+          "username": "Socrates_global"
+        },
+        {
+          "start": 145,
+          "end": 158,
+          "username": "bitgertbrise"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1024114610/1689074124",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1678708734585978881/9--iee94_normal.jpg",
+  "public_metrics": {
+    "followers_count": 18662,
+    "following_count": 2119,
+    "tweet_count": 10712,
+    "listed_count": 27,
+    "like_count": 18337,
+    "media_count": 497
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/He7432veTy",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

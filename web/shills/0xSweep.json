@@ -1,0 +1,78 @@
+{
+  "id": "1375396777348698115",
+  "name": "Sweep",
+  "username": "0xSweep",
+  "affiliation": {
+    "url": "https://twitter.com/GlydeGG",
+    "user_id": [
+      "1890404372162793472"
+    ],
+    "description": "Glyde",
+    "badge_url": "https://pbs.twimg.com/profile_images/1939004510954721280/Z5W9IW3g_bigger.jpg"
+  },
+  "description": "founder @GlydeGG | degenerate digital broom | crypto since 17' | punk#1863 | advisor @okx @wallet | free trading group: https://t.co/w2U7XhOH1P",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/ZoZklGkVE7",
+          "expanded_url": "http://t.me/sweep0x",
+          "display_url": "t.me/sweep0x"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 120,
+          "end": 143,
+          "url": "https://t.co/w2U7XhOH1P",
+          "expanded_url": "http://t.me/jsdao",
+          "display_url": "t.me/jsdao"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 8,
+          "end": 16,
+          "username": "GlydeGG"
+        },
+        {
+          "start": 85,
+          "end": 89,
+          "username": "okx"
+        },
+        {
+          "start": 90,
+          "end": 97,
+          "username": "wallet"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1375396777348698115/1724092931",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1822955310459334657/59u8XJL3_normal.jpg",
+  "public_metrics": {
+    "followers_count": 230894,
+    "following_count": 20240,
+    "tweet_count": 798750,
+    "listed_count": 1557,
+    "like_count": 732413,
+    "media_count": 43334
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/ZoZklGkVE7",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "210436753",
+  "name": "Azyra",
+  "username": "cryptoazyra",
+  "affiliation": null,
+  "description": "Tokenized Activism meets Weaponized Autism | For marketing Telegram: @cryptoazyra",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 69,
+          "end": 81,
+          "username": "cryptoazyra"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/210436753/1719216933",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1939617448262537216/IY0OuqnM_normal.jpg",
+  "public_metrics": {
+    "followers_count": 34520,
+    "following_count": 8212,
+    "tweet_count": 11543,
+    "listed_count": 60,
+    "like_count": 11616,
+    "media_count": 2341
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

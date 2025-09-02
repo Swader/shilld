@@ -1,0 +1,61 @@
+{
+  "id": "1591503788174712832",
+  "name": "Tyo",
+  "username": "fwTyo",
+  "affiliation": {
+    "url": "https://twitter.com/TradeonVyper",
+    "user_id": [
+      "1798107128823267328"
+    ],
+    "description": "Vyper",
+    "badge_url": "https://pbs.twimg.com/profile_images/1798161731841409024/4IOHh_sr_bigger.jpg"
+  },
+  "description": "Strategist | Always NFA & DYOR l Trading at https://t.co/bcY7LGFCxV",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/S4kAUToiP0",
+          "expanded_url": "https://fwtyo.xyz/",
+          "display_url": "fwtyo.xyz"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 44,
+          "end": 67,
+          "url": "https://t.co/bcY7LGFCxV",
+          "expanded_url": "https://vyper.trade/@tyo",
+          "display_url": "vyper.trade/@tyo"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1591503788174712832/1752324089",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1892582071677140992/bxwsMl38_normal.jpg",
+  "public_metrics": {
+    "followers_count": 356201,
+    "following_count": 52794,
+    "tweet_count": 76337,
+    "listed_count": 451,
+    "like_count": 154371,
+    "media_count": 5751
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/S4kAUToiP0",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

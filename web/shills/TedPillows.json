@@ -1,0 +1,57 @@
+{
+  "id": "3222562058",
+  "name": "Ted",
+  "username": "TedPillows",
+  "affiliation": null,
+  "description": "Investor, Key Opinion Leader and Entrepreneur. Proud @OKX & @MEXC_Official partner. Open to advisory roles.",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/VA0HW4Qsxg",
+          "expanded_url": "https://tedpillows.com",
+          "display_url": "tedpillows.com"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 53,
+          "end": 57,
+          "username": "OKX"
+        },
+        {
+          "start": 60,
+          "end": 74,
+          "username": "MEXC_Official"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/3222562058/1682430866",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1741174664573902849/luD7tU5P_normal.jpg",
+  "public_metrics": {
+    "followers_count": 205686,
+    "following_count": 19201,
+    "tweet_count": 128444,
+    "listed_count": 1004,
+    "like_count": 269200,
+    "media_count": 4928
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/VA0HW4Qsxg",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "1476401205811171330",
+  "name": "Trent",
+  "username": "Trentowtf",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
+    "user_id": [
+      "1889117062070759424"
+    ],
+    "url": "https://twitter.com/PyroAgency",
+    "description": "Pyro Agency"
+  },
+  "description": "Official Degen| Web3 Content Creator 🤝 Since 2021 📉KOL: @AisarLabs |All posts = NFA / DYOR | DM for inquiries 📥",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/2stjV3GSHk",
+          "expanded_url": "http://t.me/TrentoWtff",
+          "display_url": "t.me/TrentoWtff"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 56,
+          "end": 66,
+          "username": "AisarLabs"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1476401205811171330/1747326106",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1951878265871728641/OaNdNzYO_normal.jpg",
+  "public_metrics": {
+    "followers_count": 47799,
+    "following_count": 7421,
+    "tweet_count": 151369,
+    "listed_count": 121,
+    "like_count": 149960,
+    "media_count": 4785
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/2stjV3GSHk",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

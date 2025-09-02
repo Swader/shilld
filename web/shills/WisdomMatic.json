@@ -1,0 +1,54 @@
+{
+  "id": "1155886049727524864",
+  "name": "Big Wiz 🧸📈💰",
+  "username": "WisdomMatic",
+  "affiliation": null,
+  "description": "onchain gambler | liquidated on every exchange but still gambling | Private investor | Collabs ➡️ https://t.co/uoQifqyX3J",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/wA0MubXEuJ",
+          "expanded_url": "https://t.me/cryptocoachpro",
+          "display_url": "t.me/cryptocoachpro"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 98,
+          "end": 121,
+          "url": "https://t.co/uoQifqyX3J",
+          "expanded_url": "http://t.me/WisdomMatic",
+          "display_url": "t.me/WisdomMatic"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1155886049727524864/1731998717",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1595000031244943360/c2KdF0Bp_normal.jpg",
+  "public_metrics": {
+    "followers_count": 241838,
+    "following_count": 743,
+    "tweet_count": 64009,
+    "listed_count": 1790,
+    "like_count": 26899,
+    "media_count": 3545
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/wA0MubXEuJ",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

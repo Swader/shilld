@@ -1,0 +1,57 @@
+{
+  "id": "1473990353359446019",
+  "name": "MORTY",
+  "username": "MortyWeb3",
+  "affiliation": null,
+  "description": "24/7 in the trenches | Marketing | KOL & Campaign manager |  Partner: @Bybit_Official | TG: @MortyWeb3 | Dm for business | NFA",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/iSWcaKsQHY",
+          "expanded_url": "https://t.me/BullxNeoBot?start=access_O302YDA8LGC",
+          "display_url": "t.me/BullxNeoBot?st…"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 70,
+          "end": 85,
+          "username": "Bybit_Official"
+        },
+        {
+          "start": 92,
+          "end": 102,
+          "username": "MortyWeb3"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1473990353359446019/1715180122",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1775200658372636679/VIAbBiVw_normal.jpg",
+  "public_metrics": {
+    "followers_count": 126227,
+    "following_count": 2625,
+    "tweet_count": 67761,
+    "listed_count": 240,
+    "like_count": 90136,
+    "media_count": 1726
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/iSWcaKsQHY",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

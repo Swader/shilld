@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Shilld - PAID SHILL Badges for X/Twitter",
+  "version": "0.2.0",
+  "short_name": "Shilld",
+  "author": "https://x.com/_swader_",
+  "homepage_url": "https://shilld.xyz",
+  "description": "Adds a 'PAID SHILL' badge to tweets and profiles of specified usernames. Clicking the badge leads to shilld.xyz/<username>.",
+  "icons": {
+    "16": "icons/favicon-16x16.png",
+    "32": "icons/favicon-32x32.png",
+    "48": "icons/android-chrome-192x192.png",
+    "128": "icons/android-chrome-512x512.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://shilld.xyz/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://www.twitter.com/*",
+        "https://mobile.twitter.com/*",
+        "https://x.com/*",
+        "https://www.x.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Shilld",
+    "default_icon": {
+      "16": "icons/favicon-16x16.png",
+      "32": "icons/favicon-32x32.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["shills.json"],
+      "matches": [
+        "https://twitter.com/*",
+        "https://www.twitter.com/*",
+        "https://mobile.twitter.com/*",
+        "https://x.com/*",
+        "https://www.x.com/*"
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,61 @@
+{
+  "id": "1354164648757628935",
+  "name": "WILSON",
+  "username": "ix_wilson",
+  "affiliation": null,
+  "description": "ℭ𝔞𝔪𝔢 𝔣𝔯𝔬𝔪 𝔫𝔬𝔱𝔥𝔦𝔫𝔤 | Founder: @streetz_dao | tg: https://t.co/0GZ2uhQrOm",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/01ErV4nXct",
+          "expanded_url": "https://linktr.ee/ixwilson",
+          "display_url": "linktr.ee/ixwilson"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 48,
+          "end": 71,
+          "url": "https://t.co/0GZ2uhQrOm",
+          "expanded_url": "https://t.me/ix_wilson",
+          "display_url": "t.me/ix_wilson"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 29,
+          "end": 41,
+          "username": "streetz_dao"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1354164648757628935/1721746871",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1881179889157423104/VCGtN1P5_normal.jpg",
+  "public_metrics": {
+    "followers_count": 166773,
+    "following_count": 711,
+    "tweet_count": 79909,
+    "listed_count": 672,
+    "like_count": 65475,
+    "media_count": 4306
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/01ErV4nXct",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

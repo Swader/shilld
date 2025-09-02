@@ -1,0 +1,83 @@
+{
+  "id": "1427770408464306176",
+  "name": "Tom | GENZ COIN",
+  "username": "TomGenzcoin",
+  "affiliation": null,
+  "description": "Co - Founder https://t.co/BMiZicGC5a | AMB @trondao @mint_blockchain  | Support @Openpad_io @trustfiorg | Business Contact: https://t.co/k2QbMeIwDl",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/k2QbMeIwDl",
+          "expanded_url": "https://t.me/Tom_Genzcoin",
+          "display_url": "t.me/Tom_Genzcoin"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 13,
+          "end": 36,
+          "url": "https://t.co/BMiZicGC5a",
+          "expanded_url": "https://t.me/jasongemx100",
+          "display_url": "t.me/jasongemx100"
+        },
+        {
+          "start": 124,
+          "end": 147,
+          "url": "https://t.co/k2QbMeIwDl",
+          "expanded_url": "https://t.me/Tom_Genzcoin",
+          "display_url": "t.me/Tom_Genzcoin"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 43,
+          "end": 51,
+          "username": "trondao"
+        },
+        {
+          "start": 52,
+          "end": 68,
+          "username": "mint_blockchain"
+        },
+        {
+          "start": 80,
+          "end": 91,
+          "username": "Openpad_io"
+        },
+        {
+          "start": 92,
+          "end": 103,
+          "username": "trustfiorg"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1427770408464306176/1724948681",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1748708457379962880/4hiucjHD_normal.jpg",
+  "public_metrics": {
+    "followers_count": 30786,
+    "following_count": 1776,
+    "tweet_count": 27771,
+    "listed_count": 24,
+    "like_count": 19769,
+    "media_count": 932
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/k2QbMeIwDl",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

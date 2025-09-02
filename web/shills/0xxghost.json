@@ -1,0 +1,61 @@
+{
+  "id": "974760351211368454",
+  "name": "xghost🧸",
+  "username": "0xxghost",
+  "affiliation": null,
+  "description": "$60m wager casino gambler, crypto trader, memes trader, vibes,   https://t.co/IkXSc2Z5LG Contracts. https://t.co/ljAK3a1VVb\nKICK: 0xxghost",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/GK0tmtomkr",
+          "expanded_url": "https://twitch.com/0xxghost",
+          "display_url": "twitch.com/0xxghost"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 65,
+          "end": 88,
+          "url": "https://t.co/IkXSc2Z5LG",
+          "expanded_url": "http://iwrite.Smart",
+          "display_url": "iwrite.Smart"
+        },
+        {
+          "start": 100,
+          "end": 123,
+          "url": "https://t.co/ljAK3a1VVb",
+          "expanded_url": "https://t.me/xghoost",
+          "display_url": "t.me/xghoost"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/974760351211368454/1731534480",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1787888262243139584/wEuS2Uor_normal.jpg",
+  "public_metrics": {
+    "followers_count": 68272,
+    "following_count": 6664,
+    "tweet_count": 74912,
+    "listed_count": 527,
+    "like_count": 74312,
+    "media_count": 5339
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/GK0tmtomkr",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

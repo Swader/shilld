@@ -1,0 +1,53 @@
+{
+  "id": "1541811450926202884",
+  "name": "MAXX",
+  "username": "Web3Maxx",
+  "affiliation": {
+    "url": "https://twitter.com/Ourbit_Official",
+    "user_id": [
+      "1755825073817366528"
+    ],
+    "description": "Ourbit",
+    "badge_url": "https://pbs.twimg.com/profile_images/1960705708284067840/R46qGI6Z_bigger.jpg"
+  },
+  "description": "Half creator, half bot | Web3 Journalist since ‘21👩🏻‍💻 Educational Videos | 🪩@NolchaShows | @EYEKONSTUDIO",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 77,
+          "end": 89,
+          "username": "NolchaShows"
+        },
+        {
+          "start": 92,
+          "end": 105,
+          "username": "EYEKONSTUDIO"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1541811450926202884/1734049195",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1945618952559726592/-r-FVrCM_normal.jpg",
+  "public_metrics": {
+    "followers_count": 22792,
+    "following_count": 6732,
+    "tweet_count": 65925,
+    "listed_count": 208,
+    "like_count": 154141,
+    "media_count": 3813
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

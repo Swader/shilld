@@ -1,0 +1,52 @@
+{
+  "id": "1528379203531440130",
+  "name": "Rain",
+  "username": "raintures",
+  "affiliation": null,
+  "description": "I'm Rain | | Alpha Content  | Threads  | ⛓️ Partner @LBank_Exchange",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/rvjMtWxKLv",
+          "expanded_url": "https://linktr.ee/rainascrdl",
+          "display_url": "linktr.ee/rainascrdl"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 52,
+          "end": 67,
+          "username": "LBank_Exchange"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1528379203531440130/1739224834",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1889071944571527168/uNsNm76T_normal.jpg",
+  "public_metrics": {
+    "followers_count": 90601,
+    "following_count": 8353,
+    "tweet_count": 125215,
+    "listed_count": 167,
+    "like_count": 193224,
+    "media_count": 7360
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/rvjMtWxKLv",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

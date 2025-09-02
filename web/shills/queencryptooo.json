@@ -1,0 +1,86 @@
+{
+  "id": "1357395816193916929",
+  "name": "Zoe🔶",
+  "username": "queencryptooo",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1932746338648678400/Tg5FJokD_bigger.jpg",
+    "user_id": [
+      "1915792665876066304"
+    ],
+    "url": "https://twitter.com/Linos_AI",
+    "description": "Linos.AI"
+  },
+  "description": "Web3 content creator || thread writer 🧵 ||crypto news || $KTA $PI $ICP $HBAR $WLFI #spx6900 tweets are NFA🙋‍♀️ promos r paid ||for business DM",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/WwrEgzkPnV",
+          "expanded_url": "https://t.me/cryptoqueen1",
+          "display_url": "t.me/cryptoqueen1"
+        }
+      ]
+    },
+    "description": {
+      "hashtags": [
+        {
+          "start": 83,
+          "end": 91,
+          "tag": "spx6900"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 57,
+          "end": 61,
+          "tag": "KTA"
+        },
+        {
+          "start": 62,
+          "end": 65,
+          "tag": "PI"
+        },
+        {
+          "start": 66,
+          "end": 70,
+          "tag": "ICP"
+        },
+        {
+          "start": 71,
+          "end": 76,
+          "tag": "HBAR"
+        },
+        {
+          "start": 77,
+          "end": 82,
+          "tag": "WLFI"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1357395816193916929/1756150534",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1832006804999389184/uCuuvmgf_normal.jpg",
+  "public_metrics": {
+    "followers_count": 90562,
+    "following_count": 6986,
+    "tweet_count": 41263,
+    "listed_count": 221,
+    "like_count": 168952,
+    "media_count": 3195
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/WwrEgzkPnV",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

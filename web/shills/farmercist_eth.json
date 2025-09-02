@@ -1,0 +1,43 @@
+{
+  "id": "814264532419969026",
+  "name": "Farmercist 👨‍🌾",
+  "username": "farmercist_eth",
+  "affiliation": null,
+  "description": "ecosystem/project contributor",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/TyBDenPaWU",
+          "expanded_url": "https://t.me/farmercistjournal0",
+          "display_url": "t.me/farmercistjour…"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/814264532419969026/1751032547",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1938597076490698752/1V6J79EO_normal.jpg",
+  "public_metrics": {
+    "followers_count": 250690,
+    "following_count": 2116,
+    "tweet_count": 44083,
+    "listed_count": 1244,
+    "like_count": 36651,
+    "media_count": 5458
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/TyBDenPaWU",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

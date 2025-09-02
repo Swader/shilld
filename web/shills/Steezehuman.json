@@ -1,0 +1,57 @@
+{
+  "id": "1296724110601531392",
+  "name": "Stephenblaq",
+  "username": "Steezehuman",
+  "affiliation": null,
+  "description": "Founder @voidsyndicate1 • Onchain guru • Top Tier 1 KOL• AI Resercher • Content Creator • Ambassador • Base Builder @AisarLabs",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/dL1qZJXJ5P",
+          "expanded_url": "https://linktr.ee/Steezehuman",
+          "display_url": "linktr.ee/Steezehuman"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 8,
+          "end": 23,
+          "username": "voidsyndicate1"
+        },
+        {
+          "start": 116,
+          "end": 126,
+          "username": "AisarLabs"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1296724110601531392/1729428465",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1841982630742384640/m_x3zUqh_normal.jpg",
+  "public_metrics": {
+    "followers_count": 33008,
+    "following_count": 24057,
+    "tweet_count": 31189,
+    "listed_count": 57,
+    "like_count": 118726,
+    "media_count": 1999
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/dL1qZJXJ5P",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

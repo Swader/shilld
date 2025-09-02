@@ -1,0 +1,46 @@
+{
+  "id": "389010886",
+  "name": "Steve Ascher",
+  "username": "StevenAscher",
+  "affiliation": null,
+  "description": "6️⃣3️⃣1️⃣ - Former Pro Baseball Player ⚾ - Crypto OG since ‘17 - 5x @Quirkiesnft OG - Partners @SeedifyFund - Web3 Marketing Strategist",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 68,
+          "end": 80,
+          "username": "Quirkiesnft"
+        },
+        {
+          "start": 95,
+          "end": 107,
+          "username": "SeedifyFund"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/389010886/1707972194",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1746909379364835328/DQVxcJvj_normal.jpg",
+  "public_metrics": {
+    "followers_count": 62246,
+    "following_count": 1518,
+    "tweet_count": 112674,
+    "listed_count": 166,
+    "like_count": 239415,
+    "media_count": 3952
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

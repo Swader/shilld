@@ -1,0 +1,50 @@
+{
+  "id": "1392321879176736768",
+  "name": "Parker 🐐",
+  "username": "DotComParker",
+  "affiliation": {
+    "url": "https://twitter.com/solpumpcom",
+    "user_id": [
+      "1920590621418663936"
+    ],
+    "description": "Solpump",
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg"
+  },
+  "description": "solana maxi// read extended bio// NFA",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/sUGZHfrbey",
+          "expanded_url": "https://t.me/DotComCabal",
+          "display_url": "t.me/DotComCabal"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1392321879176736768/1755348984",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1870022703262167040/tTrQ6IJg_normal.jpg",
+  "public_metrics": {
+    "followers_count": 139947,
+    "following_count": 6871,
+    "tweet_count": 2599,
+    "listed_count": 194,
+    "like_count": 23251,
+    "media_count": 346
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/sUGZHfrbey",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

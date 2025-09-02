@@ -1,0 +1,75 @@
+{
+  "id": "1214731728524197888",
+  "name": "Trevv ($TRENCH)",
+  "username": "9trevv",
+  "affiliation": {
+    "url": "https://twitter.com/Ourbit_Official",
+    "user_id": [
+      "1755825073817366528"
+    ],
+    "description": "Ourbit",
+    "badge_url": "https://pbs.twimg.com/profile_images/1960705708284067840/R46qGI6Z_bigger.jpg"
+  },
+  "description": "for the $TRENCH E2KiYxrbfeBeajPr2kJAvwkzPr8p1hi81kFGYfB6pump @TrenchWarriorME https://t.co/e34cLdMHJ9",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/LayiI8sFtV",
+          "expanded_url": "https://discord.gg/Fz6MdKtjQK",
+          "display_url": "discord.gg/Fz6MdKtjQK"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 78,
+          "end": 101,
+          "url": "https://t.co/e34cLdMHJ9",
+          "expanded_url": "http://toshi.bet/r/trevv",
+          "display_url": "toshi.bet/r/trevv"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 61,
+          "end": 77,
+          "username": "TrenchWarriorME"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 8,
+          "end": 15,
+          "tag": "TRENCH"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1214731728524197888/1752438438",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1944461581665853440/Q5iiZuPj_normal.jpg",
+  "public_metrics": {
+    "followers_count": 46533,
+    "following_count": 3089,
+    "tweet_count": 11245,
+    "listed_count": 119,
+    "like_count": 34977,
+    "media_count": 1611
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/LayiI8sFtV",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

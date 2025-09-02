@@ -1,0 +1,62 @@
+{
+  "id": "2482911169",
+  "name": "Da Bless",
+  "username": "CryptoDa_Bless",
+  "affiliation": null,
+  "description": "Navigate the crypto space with Da Bless. Knowledge, Innovation, and Profits.🌐 💎hands | content creator |trader | #NFA #DYOR | #GGMU🔴",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/uy73oUlfMY",
+          "expanded_url": "http://T.me/CryptoDa_Bless",
+          "display_url": "T.me/CryptoDa_Bless"
+        }
+      ]
+    },
+    "description": {
+      "hashtags": [
+        {
+          "start": 113,
+          "end": 117,
+          "tag": "NFA"
+        },
+        {
+          "start": 118,
+          "end": 123,
+          "tag": "DYOR"
+        },
+        {
+          "start": 126,
+          "end": 131,
+          "tag": "GGMU"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2482911169/1743859128",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1799160882359873538/fuEI1lcV_normal.jpg",
+  "public_metrics": {
+    "followers_count": 33027,
+    "following_count": 1777,
+    "tweet_count": 12853,
+    "listed_count": 203,
+    "like_count": 33360,
+    "media_count": 559
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/uy73oUlfMY",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

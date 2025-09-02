@@ -1,0 +1,53 @@
+{
+  "id": "1408048834358427650",
+  "name": "GemsScope",
+  "username": "GemsScope",
+  "affiliation": {
+    "url": "https://twitter.com/qiibeefdn",
+    "user_id": [
+      "1389140690819559428"
+    ],
+    "description": "qiibee foundation",
+    "badge_url": "https://pbs.twimg.com/profile_images/1806280670748033024/iSHQTUex_bigger.jpg"
+  },
+  "description": "NFTs & Crypto Scoper | #SpacesHost | DeFi Maxi | Building #ScopeAlpha",
+  "entities": {
+    "description": {
+      "hashtags": [
+        {
+          "start": 23,
+          "end": 34,
+          "tag": "SpacesHost"
+        },
+        {
+          "start": 58,
+          "end": 69,
+          "tag": "ScopeAlpha"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1408048834358427650/1725829046",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1832865606195924993/OJEEj12O_normal.jpg",
+  "public_metrics": {
+    "followers_count": 167233,
+    "following_count": 4672,
+    "tweet_count": 48346,
+    "listed_count": 428,
+    "like_count": 94818,
+    "media_count": 5563
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

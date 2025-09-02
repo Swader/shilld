@@ -1,0 +1,61 @@
+{
+  "id": "1839538326958710784",
+  "name": "Wasted 🕷️",
+  "username": "wasted0x",
+  "affiliation": {
+    "url": "https://twitter.com/PadreApp",
+    "user_id": [
+      "1663886111737774081"
+    ],
+    "description": "Padre",
+    "badge_url": "https://pbs.twimg.com/profile_images/1788689184355414016/mZMLcdNO_bigger.jpg"
+  },
+  "description": "No wasted opportunities | Nothing I post is FA | Best trading bot 👉 https://t.co/wDo7hu5Oyu | Calls👇",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/ViPPqfI850",
+          "expanded_url": "http://t.me/wastedscalls",
+          "display_url": "t.me/wastedscalls"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 68,
+          "end": 91,
+          "url": "https://t.co/wDo7hu5Oyu",
+          "expanded_url": "https://trade.padre.gg/rk/wasted",
+          "display_url": "trade.padre.gg/rk/wasted"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1839538326958710784/1739783063",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1891381154646769664/diUJUfOd_normal.jpg",
+  "public_metrics": {
+    "followers_count": 37421,
+    "following_count": 33013,
+    "tweet_count": 47761,
+    "listed_count": 0,
+    "like_count": 84884,
+    "media_count": 576
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/ViPPqfI850",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

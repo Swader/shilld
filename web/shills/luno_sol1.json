@@ -1,0 +1,72 @@
+{
+  "id": "1873997068957532160",
+  "name": "Luno",
+  "username": "luno_sol1",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1910004824370036737/8lzt-LED_bigger.jpg",
+    "user_id": [
+      "1887626253240573952"
+    ],
+    "url": "https://twitter.com/bitfortunecom",
+    "description": "BITFORTUNE"
+  },
+  "description": "| Streamer | Gambler 🍀 | Partners 👉🏽 @bitfortunecom @luckio @steepdotgg @PackDraw Play with me https://t.co/o1T3DDWdue DM for Inquiries/Promotion🤝🏽",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 95,
+          "end": 118,
+          "url": "https://t.co/o1T3DDWdue",
+          "expanded_url": "http://join.bitfortune.com/luno",
+          "display_url": "join.bitfortune.com/luno"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 37,
+          "end": 51,
+          "username": "bitfortunecom"
+        },
+        {
+          "start": 52,
+          "end": 59,
+          "username": "luckio"
+        },
+        {
+          "start": 60,
+          "end": 71,
+          "username": "steepdotgg"
+        },
+        {
+          "start": 72,
+          "end": 81,
+          "username": "PackDraw"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1873997068957532160/1750368494",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1935811996705816576/R8MkOga5_normal.jpg",
+  "public_metrics": {
+    "followers_count": 45349,
+    "following_count": 6638,
+    "tweet_count": 1750,
+    "listed_count": 16,
+    "like_count": 21910,
+    "media_count": 220
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

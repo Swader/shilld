@@ -1,0 +1,41 @@
+{
+  "id": "1680778913037819904",
+  "name": "Henry",
+  "username": "henrys0x",
+  "affiliation": null,
+  "description": "Just a bag worker | French Cabal | Founder @minglecomp | DM for Inquiries",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 43,
+          "end": 54,
+          "username": "minglecomp"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1680778913037819904/1724210221",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1945330152059072512/Y_qX5RdI_normal.jpg",
+  "public_metrics": {
+    "followers_count": 33884,
+    "following_count": 9162,
+    "tweet_count": 10977,
+    "listed_count": 57,
+    "like_count": 23765,
+    "media_count": 432
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

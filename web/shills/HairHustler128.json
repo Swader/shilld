@@ -1,0 +1,61 @@
+{
+  "id": "1551071115350605825",
+  "name": "Hazey",
+  "username": "HairHustler128",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1890167600623075328/78A0_Npk_bigger.jpg",
+    "user_id": [
+      "1139096055046385665"
+    ],
+    "url": "https://twitter.com/TradeWithLash",
+    "description": "Lash"
+  },
+  "description": "MemeCoin Degen🎯|💴 💵 Giveaway Degen 💷 🤑•▄︻デ══━Bot :  https://t.co/lnJMJxdsEN | Posts are NFA | Dm For Promo/Collabs",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/36iGNKDtRh",
+          "expanded_url": "https://t.me/HazeyHitsMemes",
+          "display_url": "t.me/HazeyHitsMemes"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 52,
+          "end": 75,
+          "url": "https://t.co/lnJMJxdsEN",
+          "expanded_url": "https://t.me/TradeWithLashBot?start=FNMYHTC2",
+          "display_url": "t.me/TradeWithLashB…"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1551071115350605825/1756188071",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1854854853928841216/0VkRiD5R_normal.jpg",
+  "public_metrics": {
+    "followers_count": 21105,
+    "following_count": 7212,
+    "tweet_count": 59707,
+    "listed_count": 55,
+    "like_count": 122107,
+    "media_count": 3725
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/36iGNKDtRh",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

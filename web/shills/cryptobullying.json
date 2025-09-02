@@ -1,0 +1,61 @@
+{
+  "id": "264379860",
+  "name": "Bully",
+  "username": "cryptobullying",
+  "affiliation": {
+    "url": "https://twitter.com/StalkHQ",
+    "user_id": [
+      "1846384711289262083"
+    ],
+    "description": "Stalkchain",
+    "badge_url": "https://pbs.twimg.com/profile_images/1846384980488040449/aUE7bBD5_bigger.jpg"
+  },
+  "description": "Im not gonna argue with people that are broker than me about money | https://t.co/8waoNm4bOs",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/qaI711I90w",
+          "expanded_url": "https://t.me/bullybattalion",
+          "display_url": "t.me/bullybattalion"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 69,
+          "end": 92,
+          "url": "https://t.co/8waoNm4bOs",
+          "expanded_url": "https://stalkchain.com/?via=Bully",
+          "display_url": "stalkchain.com/?via=Bully"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/264379860/1753028820",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1932083839335075841/_80jQwUn_normal.jpg",
+  "public_metrics": {
+    "followers_count": 31681,
+    "following_count": 8847,
+    "tweet_count": 9896,
+    "listed_count": 42,
+    "like_count": 12703,
+    "media_count": 1520
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/qaI711I90w",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

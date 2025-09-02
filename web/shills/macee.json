@@ -1,0 +1,80 @@
+{
+  "id": "773369997074829312",
+  "name": "mace",
+  "username": "macee",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1897362120297340930/atacLsm4_bigger.jpg",
+    "user_id": [
+      "1897361832865898496"
+    ],
+    "url": "https://twitter.com/CryptoDegensOrg",
+    "description": "Crypto Degens"
+  },
+  "description": "founder in my past life | channel: https://t.co/0tBNfSaTGv l prev: @Ton_Blockchain an @eesee_io\n\nhttps://t.co/Uerg446uTm",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/b53cDgrCgw",
+          "expanded_url": "https://t.me/m4cee",
+          "display_url": "t.me/m4cee"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 35,
+          "end": 58,
+          "url": "https://t.co/0tBNfSaTGv",
+          "expanded_url": "http://t.me/maceplays",
+          "display_url": "t.me/maceplays"
+        },
+        {
+          "start": 97,
+          "end": 120,
+          "url": "https://t.co/Uerg446uTm",
+          "expanded_url": "https://axiom.trade/@mace",
+          "display_url": "axiom.trade/@mace"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 67,
+          "end": 82,
+          "username": "Ton_Blockchain"
+        },
+        {
+          "start": 86,
+          "end": 95,
+          "username": "eesee_io"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/773369997074829312/1732333280",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1868154878842769408/x63PLvZp_normal.jpg",
+  "public_metrics": {
+    "followers_count": 40512,
+    "following_count": 13091,
+    "tweet_count": 51847,
+    "listed_count": 50,
+    "like_count": 53058,
+    "media_count": 314
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/b53cDgrCgw",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

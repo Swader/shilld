@@ -1,0 +1,41 @@
+{
+  "id": "1318446774915399680",
+  "name": "NFTPRINCE♔",
+  "username": "nftpriest_1",
+  "affiliation": null,
+  "description": "𝙏𝙤𝙥 𝙂 in @Alphalabsdao | 𝗥𝗲𝘀𝗲𝗮𝗿𝗰𝗵𝗲𝗿 | 𝗘𝗮𝗿𝗹𝘆 𝗔𝗹𝗽𝗵𝗮 |𝗡𝗙𝗧𝘀",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 9,
+          "end": 22,
+          "username": "Alphalabsdao"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1318446774915399680/1752818311",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1902168717678800897/B4n6ZT8k_normal.jpg",
+  "public_metrics": {
+    "followers_count": 11565,
+    "following_count": 1292,
+    "tweet_count": 15435,
+    "listed_count": 29,
+    "like_count": 21329,
+    "media_count": 935
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

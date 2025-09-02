@@ -1,0 +1,66 @@
+{
+  "id": "1429452046873337859",
+  "name": "genuine",
+  "username": "GenuineDegen",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1806280670748033024/iSHQTUex_bigger.jpg",
+    "user_id": [
+      "1389140690819559428"
+    ],
+    "url": "https://twitter.com/qiibeefdn",
+    "description": "qiibee foundation"
+  },
+  "description": "the most genuine degen you know | web³ brand strategist & growth hacker | partnerships at @hubdotxyz | $PFP CTO Partner 🟩⬜️ | nfa & dyor",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/e2oLO8lDQt",
+          "expanded_url": "http://hub.xyz/genuine",
+          "display_url": "hub.xyz/genuine"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 90,
+          "end": 100,
+          "username": "hubdotxyz"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 103,
+          "end": 107,
+          "tag": "PFP"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1429452046873337859/1756225412",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1926457122847420416/rztnggY5_normal.jpg",
+  "public_metrics": {
+    "followers_count": 80786,
+    "following_count": 17598,
+    "tweet_count": 301875,
+    "listed_count": 239,
+    "like_count": 335717,
+    "media_count": 9813
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/e2oLO8lDQt",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

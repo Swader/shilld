@@ -1,0 +1,50 @@
+{
+  "id": "3347158491",
+  "name": "decu",
+  "username": "notdecu",
+  "affiliation": {
+    "url": "https://twitter.com/printrgobrrr",
+    "user_id": [
+      "1445372842837626886"
+    ],
+    "description": "Printr",
+    "badge_url": "https://pbs.twimg.com/profile_images/1892975257700487168/_-2sD2JO_bigger.jpg"
+  },
+  "description": "Made it on the blockchain. Start trading here: https://t.co/B0zD49WGJ5",
+  "entities": {
+    "description": {
+      "urls": [
+        {
+          "start": 47,
+          "end": 70,
+          "url": "https://t.co/B0zD49WGJ5",
+          "expanded_url": "https://t.me/DecusCalls",
+          "display_url": "t.me/DecusCalls"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/3347158491/1752334736",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1944058901713805312/Hl1bsg0D_normal.jpg",
+  "public_metrics": {
+    "followers_count": 48025,
+    "following_count": 965,
+    "tweet_count": 7269,
+    "listed_count": 69,
+    "like_count": 15123,
+    "media_count": 547
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

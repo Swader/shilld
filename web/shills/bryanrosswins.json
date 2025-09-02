@@ -1,0 +1,54 @@
+{
+  "id": "1184281741256560641",
+  "name": "Bryan Ross",
+  "username": "bryanrosswins",
+  "affiliation": null,
+  "description": "Crypto Analyst • Finance degree from Cal Poly • Asymmetrical insights on financial markets • Join my free Telegram Channel: https://t.co/22G8YBI9gk",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/X1E3wwQPeD",
+          "expanded_url": "https://linktr.ee/bryanross",
+          "display_url": "linktr.ee/bryanross"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 124,
+          "end": 147,
+          "url": "https://t.co/22G8YBI9gk",
+          "expanded_url": "https://t.me/bryanrosswins",
+          "display_url": "t.me/bryanrosswins"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1184281741256560641/1640647886",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1396173202317930498/R45Gpmis_normal.jpg",
+  "public_metrics": {
+    "followers_count": 13654,
+    "following_count": 1271,
+    "tweet_count": 4445,
+    "listed_count": 71,
+    "like_count": 6860,
+    "media_count": 500
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/X1E3wwQPeD",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

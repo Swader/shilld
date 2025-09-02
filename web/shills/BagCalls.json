@@ -1,0 +1,68 @@
+{
+  "id": "1403293509411512325",
+  "name": "BagCalls",
+  "username": "BagCalls",
+  "affiliation": null,
+  "description": "investor in $PEPE TG: Bitbaggerr https://t.co/ZsMjDWRYHv https://t.co/2DOsiPDtfS",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/eWx7qBYEQQ",
+          "expanded_url": "https://app.towns.com/t/0x7a21ff3139c4d6b533dbf59354876ab501e97aff/",
+          "display_url": "app.towns.com/t/0x7a21ff3139…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 33,
+          "end": 56,
+          "url": "https://t.co/ZsMjDWRYHv",
+          "expanded_url": "http://t.me/bagcalls",
+          "display_url": "t.me/bagcalls"
+        },
+        {
+          "start": 57,
+          "end": 80,
+          "url": "https://t.co/2DOsiPDtfS",
+          "expanded_url": "http://t.me/bagscasino",
+          "display_url": "t.me/bagscasino"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 12,
+          "end": 17,
+          "tag": "PEPE"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1403293509411512325/1646078969",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1612873751867314176/i5c1K5s8_normal.jpg",
+  "public_metrics": {
+    "followers_count": 69706,
+    "following_count": 1698,
+    "tweet_count": 8047,
+    "listed_count": 246,
+    "like_count": 9580,
+    "media_count": 1048
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/eWx7qBYEQQ",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

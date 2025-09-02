@@ -1,0 +1,54 @@
+{
+  "id": "1431840544037163011",
+  "name": "Shmoo",
+  "username": "ShmooNFT",
+  "affiliation": null,
+  "description": "https://t.co/YGjufo5m2C",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/NXXIzP7uS5",
+          "expanded_url": "http://hoo.be/shmoo",
+          "display_url": "hoo.be/shmoo"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/YGjufo5m2C",
+          "expanded_url": "https://t.me/shmooscasino",
+          "display_url": "t.me/shmooscasino"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": null,
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1638586422847315997/dfTn08KU_normal.png",
+  "public_metrics": {
+    "followers_count": 77642,
+    "following_count": 881,
+    "tweet_count": 45630,
+    "listed_count": 398,
+    "like_count": 22379,
+    "media_count": 1307
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/NXXIzP7uS5",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

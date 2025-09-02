@@ -1,0 +1,54 @@
+{
+  "id": "1392424356144422912",
+  "name": "Little Mustacho 🐕",
+  "username": "littlemustacho",
+  "affiliation": null,
+  "description": "degening nonstop / https://t.co/ziPY4mbvFR",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/Hqp5prscCT",
+          "expanded_url": "https://t.me/LittleMustachoCalls",
+          "display_url": "t.me/LittleMustacho…"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 19,
+          "end": 42,
+          "url": "https://t.co/ziPY4mbvFR",
+          "expanded_url": "http://axiom.trade/@mustacho",
+          "display_url": "axiom.trade/@mustacho"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1392424356144422912/1728896523",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1928057056730206208/JXgX6a8r_normal.jpg",
+  "public_metrics": {
+    "followers_count": 34723,
+    "following_count": 578,
+    "tweet_count": 29116,
+    "listed_count": 504,
+    "like_count": 76139,
+    "media_count": 6178
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/Hqp5prscCT",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

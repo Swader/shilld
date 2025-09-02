@@ -1,0 +1,79 @@
+{
+  "id": "2823746510",
+  "name": "Abrar The Crypto",
+  "username": "AbrarTheCrypto_",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1961491938193911809/26ec9Vqj_bigger.jpg",
+    "user_id": [
+      "1492810507081945088"
+    ],
+    "url": "https://twitter.com/WagmiHub",
+    "description": "WAGMI HUB"
+  },
+  "description": "Blockchain & DeFi Researcher | Alpha Threador 🧵 Brand Ambassador @BitgetGlobal  |  Partnered w @LBank_Exchange | @Galxe | @OKX | @BitMEX\n\nOpinions are personal",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/bHswjwKvmH",
+          "expanded_url": "http://t.me/AbrarTheCrypto",
+          "display_url": "t.me/AbrarTheCrypto"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 65,
+          "end": 78,
+          "username": "BitgetGlobal"
+        },
+        {
+          "start": 95,
+          "end": 110,
+          "username": "LBank_Exchange"
+        },
+        {
+          "start": 113,
+          "end": 119,
+          "username": "Galxe"
+        },
+        {
+          "start": 122,
+          "end": 126,
+          "username": "OKX"
+        },
+        {
+          "start": 129,
+          "end": 136,
+          "username": "BitMEX"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2823746510/1751311441",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1939768911593189376/ufK3727G_normal.jpg",
+  "public_metrics": {
+    "followers_count": 81047,
+    "following_count": 25411,
+    "tweet_count": 12588,
+    "listed_count": 1645,
+    "like_count": 37325,
+    "media_count": 692
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/bHswjwKvmH",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

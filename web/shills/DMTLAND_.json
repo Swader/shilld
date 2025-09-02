@@ -1,0 +1,74 @@
+{
+  "id": "2782395924",
+  "name": "DMT🐐",
+  "username": "DMTLAND_",
+  "affiliation": null,
+  "description": "An awakening person who share alpha love peace and positivity | Founder @Cryplistic444| $BTC $ETH $PEPE $BOSON",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/OzceIKMNF7",
+          "expanded_url": "https://cryplisticmarketing.com",
+          "display_url": "cryplisticmarketing.com"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 72,
+          "end": 86,
+          "username": "Cryplistic444"
+        }
+      ],
+      "cashtags": [
+        {
+          "start": 88,
+          "end": 92,
+          "tag": "BTC"
+        },
+        {
+          "start": 93,
+          "end": 97,
+          "tag": "ETH"
+        },
+        {
+          "start": 98,
+          "end": 103,
+          "tag": "PEPE"
+        },
+        {
+          "start": 104,
+          "end": 110,
+          "tag": "BOSON"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2782395924/1596824194",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1529008912649035777/BDEqxRyz_normal.jpg",
+  "public_metrics": {
+    "followers_count": 120014,
+    "following_count": 1462,
+    "tweet_count": 16862,
+    "listed_count": 270,
+    "like_count": 29208,
+    "media_count": 3479
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/OzceIKMNF7",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

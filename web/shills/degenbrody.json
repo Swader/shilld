@@ -1,0 +1,63 @@
+{
+  "id": "818635202872410114",
+  "name": "BRODY",
+  "username": "degenbrody",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1863713578236227585/oFhSKY-K_bigger.jpg",
+    "user_id": [
+      "1849872164985634816"
+    ],
+    "url": "https://twitter.com/SayEchooo",
+    "description": "Echo"
+  },
+  "description": "Founder @SolanaK9S | Content creator & Streamer Host @Onchainweekly | Dm @TheRemedyVI to get access to @solanak9s holder chats",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 8,
+          "end": 18,
+          "username": "SolanaK9S"
+        },
+        {
+          "start": 53,
+          "end": 67,
+          "username": "Onchainweekly"
+        },
+        {
+          "start": 73,
+          "end": 85,
+          "username": "TheRemedyVI"
+        },
+        {
+          "start": 103,
+          "end": 113,
+          "username": "solanak9s"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/818635202872410114/1740589969",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1834669037827014657/zJutV9fu_normal.jpg",
+  "public_metrics": {
+    "followers_count": 42547,
+    "following_count": 7434,
+    "tweet_count": 50542,
+    "listed_count": 216,
+    "like_count": 130101,
+    "media_count": 10001
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

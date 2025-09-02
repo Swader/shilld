@@ -1,0 +1,57 @@
+{
+  "id": "1806822321132326913",
+  "name": "🍄AstroNuel🐦‍🔥",
+  "username": "Astro_Nuel",
+  "affiliation": null,
+  "description": "|Web3 Marketer ♗ Building with @phoenixxweb3 @DundiesDistrict ♗",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/pD9byXiqTE",
+          "expanded_url": "http://dundies.xyz",
+          "display_url": "dundies.xyz"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 31,
+          "end": 44,
+          "username": "phoenixxweb3"
+        },
+        {
+          "start": 45,
+          "end": 61,
+          "username": "DundiesDistrict"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1806822321132326913/1753078570",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1962787949587714048/S_GnKTor_normal.jpg",
+  "public_metrics": {
+    "followers_count": 5800,
+    "following_count": 1368,
+    "tweet_count": 20706,
+    "listed_count": 28,
+    "like_count": 62335,
+    "media_count": 1477
+  },
+  "subscription_type": "none",
+  "url": "https://t.co/pD9byXiqTE",
+  "verified": false,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

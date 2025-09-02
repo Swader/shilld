@@ -1,0 +1,52 @@
+{
+  "id": "1064159902149591041",
+  "name": "Xia 🦄",
+  "username": "xiacalls",
+  "affiliation": null,
+  "description": "Web3 girl 💅 | @okx partner | NFA & DYOR",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/oC3mIShDMT",
+          "expanded_url": "https://t.me/XiaCalls",
+          "display_url": "t.me/XiaCalls"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 14,
+          "end": 18,
+          "username": "okx"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1064159902149591041/1753578211",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1947084078475329537/czvC23Co_normal.jpg",
+  "public_metrics": {
+    "followers_count": 68102,
+    "following_count": 14042,
+    "tweet_count": 127488,
+    "listed_count": 73,
+    "like_count": 126208,
+    "media_count": 280
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/oC3mIShDMT",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

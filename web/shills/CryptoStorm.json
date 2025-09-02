@@ -1,0 +1,80 @@
+{
+  "id": "123489643",
+  "name": "‍ ‍‍‍ᓭ cryptostorm ᓯ",
+  "username": "CryptoStorm",
+  "affiliation": null,
+  "description": "What VPN service *dreams* of being :) https://t.co/0TA96GTDaz  https://t.co/i2KjAcfxXX  https://t.co/MtNjyRBXqc  #TrackerSmacker #deepDNS",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/jJy5FqnAQO",
+          "expanded_url": "https://cryptostorm.is",
+          "display_url": "cryptostorm.is"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 38,
+          "end": 61,
+          "url": "https://t.co/0TA96GTDaz",
+          "expanded_url": "http://cryptostorm.is/map",
+          "display_url": "cryptostorm.is/map"
+        },
+        {
+          "start": 63,
+          "end": 86,
+          "url": "https://t.co/i2KjAcfxXX",
+          "expanded_url": "http://cryptostorm.org",
+          "display_url": "cryptostorm.org"
+        },
+        {
+          "start": 88,
+          "end": 111,
+          "url": "https://t.co/MtNjyRBXqc",
+          "expanded_url": "https://github.com/cryptostorm",
+          "display_url": "github.com/cryptostorm"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 113,
+          "end": 128,
+          "tag": "TrackerSmacker"
+        },
+        {
+          "start": 129,
+          "end": 137,
+          "tag": "deepDNS"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/123489643/1502707115",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/897044665244950529/RsTVxVIa_normal.jpg",
+  "public_metrics": {
+    "followers_count": 139,
+    "following_count": 14,
+    "tweet_count": 3,
+    "listed_count": 3,
+    "like_count": 2,
+    "media_count": 0
+  },
+  "subscription_type": "none",
+  "url": "https://t.co/jJy5FqnAQO",
+  "verified": false,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "1479307497613795330",
+  "name": "Matt 💰💰",
+  "username": "MattInWeb3",
+  "affiliation": {
+    "url": "https://twitter.com/GlydeGG",
+    "user_id": [
+      "1890404372162793472"
+    ],
+    "description": "Glyde",
+    "badge_url": "https://pbs.twimg.com/profile_images/1939004510954721280/Z5W9IW3g_bigger.jpg"
+  },
+  "description": "Sold my IRL company for 7 figs just so that I could spend every day at this circus 🤷‍♂️",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/JbkgzBcYAR",
+          "expanded_url": "https://t.me/makemoneywithmatttg",
+          "display_url": "t.me/makemoneywithm…"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1479307497613795330/1754658556",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1867950914356563968/jcmArXAA_normal.jpg",
+  "public_metrics": {
+    "followers_count": 111275,
+    "following_count": 1808,
+    "tweet_count": 54601,
+    "listed_count": 273,
+    "like_count": 49480,
+    "media_count": 4437
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/JbkgzBcYAR",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "1703169872589475840",
+  "name": "Gobovi",
+  "username": "Goboovi",
+  "affiliation": null,
+  "description": "#spaceshost • Entrepreneur • Founder @qyra_xyz • KOL • Web3 Native – Est. 2022 • DMs open for collabs • Join https://t.co/icTcPYfiFB • Ads/Nfa/Dyor",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/tg7u2gkRHV",
+          "expanded_url": "https://t.me/Goboovi",
+          "display_url": "t.me/Goboovi"
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "start": 109,
+          "end": 132,
+          "url": "https://t.co/icTcPYfiFB",
+          "expanded_url": "https://t.me/GClubX",
+          "display_url": "t.me/GClubX"
+        }
+      ],
+      "hashtags": [
+        {
+          "start": 0,
+          "end": 11,
+          "tag": "spaceshost"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 37,
+          "end": 46,
+          "username": "qyra_xyz"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1703169872589475840/1718116342",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1832128358311747585/JxZ4AfSU_normal.jpg",
+  "public_metrics": {
+    "followers_count": 21319,
+    "following_count": 3625,
+    "tweet_count": 151179,
+    "listed_count": 58,
+    "like_count": 162778,
+    "media_count": 3257
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/tg7u2gkRHV",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

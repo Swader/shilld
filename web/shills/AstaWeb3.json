@@ -1,0 +1,52 @@
+{
+  "id": "1493000842886225922",
+  "name": "Asta",
+  "username": "AstaWeb3",
+  "affiliation": null,
+  "description": "Web 3 entrepreneur | degen since 20’ | before affiliated: @catwifhatsolana | DM for collab |",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/Qr3pKeM5EX",
+          "expanded_url": "https://t.me/AstaDegens",
+          "display_url": "t.me/AstaDegens"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 58,
+          "end": 74,
+          "username": "catwifhatsolana"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1493000842886225922/1755081402",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1923795742365192192/0KVPdetF_normal.jpg",
+  "public_metrics": {
+    "followers_count": 31182,
+    "following_count": 9649,
+    "tweet_count": 89457,
+    "listed_count": 138,
+    "like_count": 83552,
+    "media_count": 1220
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/Qr3pKeM5EX",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

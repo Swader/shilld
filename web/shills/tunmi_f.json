@@ -1,0 +1,56 @@
+{
+  "id": "1270691979492569088",
+  "name": "Faruq👀",
+  "username": "tunmi_f",
+  "affiliation": null,
+  "description": "the criterion |\nMuslim | medical student🩺 Lead: @RooksCollective ◇ Team: @NextGen696  ◇ Creating for: @CCC_Web3 @Bricktopians ◇ Loonie ◇ WAGBO",
+  "entities": {
+    "description": {
+      "mentions": [
+        {
+          "start": 48,
+          "end": 64,
+          "username": "RooksCollective"
+        },
+        {
+          "start": 73,
+          "end": 84,
+          "username": "NextGen696"
+        },
+        {
+          "start": 102,
+          "end": 111,
+          "username": "CCC_Web3"
+        },
+        {
+          "start": 112,
+          "end": 125,
+          "username": "Bricktopians"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1270691979492569088/1751744202",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1941582986987651072/t9hyvVjq_normal.jpg",
+  "public_metrics": {
+    "followers_count": 2941,
+    "following_count": 1080,
+    "tweet_count": 27394,
+    "listed_count": 15,
+    "like_count": 48977,
+    "media_count": 494
+  },
+  "subscription_type": "blue",
+  "url": null,
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}

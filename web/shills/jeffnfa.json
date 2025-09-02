@@ -1,0 +1,59 @@
+{
+  "id": "1304508441571061760",
+  "name": "jeff",
+  "username": "jeffnfa",
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1945008048591745024/TBUzxhPS_bigger.jpg",
+    "user_id": [
+      "1520939349570985989"
+    ],
+    "url": "https://twitter.com/xFiCapital",
+    "description": "xFi Capital"
+  },
+  "description": "Buying & Trading Memecoins — Web3 Guru | Dm for Marketing & Promotions | Click the 🔔 for Alphas & Growth | Partner @banabets",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "start": 0,
+          "end": 23,
+          "url": "https://t.co/BCUAI4Kn5O",
+          "expanded_url": "https://twitch.tv/supplyjeff",
+          "display_url": "twitch.tv/supplyjeff"
+        }
+      ]
+    },
+    "description": {
+      "mentions": [
+        {
+          "start": 115,
+          "end": 124,
+          "username": "banabets"
+        }
+      ]
+    }
+  },
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1304508441571061760/1744156591",
+  "profile_image_url": "https://pbs.twimg.com/profile_images/1961666965019168768/8tfaDgQA_normal.jpg",
+  "public_metrics": {
+    "followers_count": 30779,
+    "following_count": 19578,
+    "tweet_count": 10985,
+    "listed_count": 37,
+    "like_count": 31039,
+    "media_count": 330
+  },
+  "subscription_type": "blue",
+  "url": "https://t.co/BCUAI4Kn5O",
+  "verified": true,
+  "proofs": [
+    {
+      "name": "zachXBT September 1st paid shill reveal",
+      "description": "zachXTB's leak of KOL pricing for shills approached by a low tier project",
+      "date": "September 1st 2025",
+      "urls": [
+        "https://x.com/zachxbt/status/1962485396597776468"
+      ]
+    }
+  ]
+}
