@@ -18,6 +18,9 @@ usernames you specify, and links the badge to `https://shilld.xyz/<username>`.
 
 Either find it in the Chrome Web Store via [shilld.xyz](https://shilld.xyz) or:
 
+0. Download ZIP from
+   [latest releases](https://github.com/Swader/shilld/releases/) and unzip.
+
 1. Load the extension in Chrome:
    - Go to `chrome://extensions`.
    - Enable "Developer mode" (top-right).

@@ -4,6 +4,15 @@
 
 The extension's source is in `/ext`. See its README for details.
 
+Grab it from the Chrome Web Store (pending approval, coming soon!).
+Alternatively...
+
+You can install it by downloading the
+[zip of a latest release](https://github.com/Swader/shilld/releases/), going
+into your Chromium browser's Extensions tab, selecting "Developer Mode", and
+then clicking "Load unpacked extension", and pointing it to the folder of this
+unpacked zip.
+
 ## Website
 
 The website has one static page, one directory, and one dynamic page.
