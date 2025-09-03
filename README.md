@@ -4,10 +4,11 @@
 
 The extension's source is in `/ext`. See its README for details.
 
-Grab it from the Chrome Web Store (pending approval, coming soon!).
-Alternatively...
+Grab it from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/shilld-paid-shill-badges/abbgddgchkmhkclmfaghppfpkanmpppm?authuser=3&hl=en)
+or if you want to take the open source route...
 
-You can install it by downloading the
+...you can install it by downloading the
 [zip of a latest release](https://github.com/Swader/shilld/releases/), going
 into your Chromium browser's Extensions tab, selecting "Developer Mode", and
 then clicking "Load unpacked extension", and pointing it to the folder of this
@@ -111,6 +112,15 @@ bun run build        # build site + zip extension
 bun run build:site   # build site only (web/dist)
 bun run build:ext    # package extension only (dist/ext/shilld.zip)
 ```
+
+## Support
+
+If you find this useful, consider supporting ongoing maintenance and hosting:
+
+- ETH / stablecoins: `0x655Bd7B8c998AB85AD50754106BfEdc79ACd20AC`
+- SOL / SOL stables: `ZqLfXJw5iLQjtPUZLByf3wWBkLuMaip3HSbSSVakMKH`
+
+Thank you!
 
 ## Fetching X user data
 

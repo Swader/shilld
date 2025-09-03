@@ -16,7 +16,9 @@ usernames you specify, and links the badge to `https://shilld.xyz/<username>`.
 
 ## Install
 
-Either find it in the Chrome Web Store via [shilld.xyz](https://shilld.xyz) or:
+Either find it in the
+[Chrome Web Store](https://chromewebstore.google.com/detail/shilld-paid-shill-badges/abbgddgchkmhkclmfaghppfpkanmpppm?authuser=3&hl=en)
+via [shilld.xyz](https://shilld.xyz) or:
 
 0. Download ZIP from
    [latest releases](https://github.com/Swader/shilld/releases/) and unzip.
