@@ -97,6 +97,53 @@ async function buildWebsite() {
     verified?: boolean | null;
   };
 
+  // Accumulators for calculated statistics
+  type Stats = {
+    generated_at: string;
+    totals: {
+      accounts: number;
+      affiliated: number;
+      independent: number;
+      verified_true: number;
+      verified_false: number;
+      free_accounts: number; // subscription_type === 'none'
+      with_proofs: number;
+    };
+    subscription_distribution: Record<string, number>;
+    affiliation_counts: Record<string, number>;
+    url_host_counts: Record<string, number>;
+    followers: {
+      count_available: number;
+      min: number | null;
+      max: number | null;
+      average: number | null;
+      median: number | null;
+    };
+    top_affiliations: Array<{ label: string; count: number }>;
+    top_url_hosts: Array<{ host: string; count: number }>;
+  };
+
+  const stats: Stats = {
+    generated_at: new Date().toISOString(),
+    totals: {
+      accounts: 0,
+      affiliated: 0,
+      independent: 0,
+      verified_true: 0,
+      verified_false: 0,
+      free_accounts: 0,
+      with_proofs: 0,
+    },
+    subscription_distribution: {},
+    affiliation_counts: {},
+    url_host_counts: {},
+    followers: { count_available: 0, min: null, max: null, average: null, median: null },
+    top_affiliations: [],
+    top_url_hosts: [],
+  };
+
+  const followerSamples: number[] = [];
+
   let accounts: AccountBasic[] = [];
   if (fs.existsSync(webShillsSrc)) {
     const files = fs.readdirSync(webShillsSrc).filter((f) => f.endsWith('.json') && f !== '_all.json');
@@ -119,6 +166,54 @@ async function buildWebsite() {
         const perOutDir = path.join(shillsOutRoot, username);
         ensureDir(perOutDir);
         fs.copyFileSync(path.join(webShillsSrc, f), path.join(perOutDir, `${username}.json`));
+
+        // --- Stats accumulation ---
+        stats.totals.accounts++;
+        // affiliation
+        if (affiliation) {
+          stats.totals.affiliated++;
+          let label: string | null = null;
+          if (typeof affiliation === 'object' && affiliation) {
+            if (affiliation.description && String(affiliation.description).trim()) {
+              label = String(affiliation.description).trim();
+            } else if (affiliation.url) {
+              try { label = new URL(String(affiliation.url)).hostname.replace(/^www\./, ''); } catch {}
+            }
+          }
+        
+          label = label || 'unknown';
+          stats.affiliation_counts[label] = (stats.affiliation_counts[label] || 0) + 1;
+        } else {
+          stats.totals.independent++;
+        }
+
+        // subscription / free
+        const sub = subscription_type ? String(subscription_type) : 'unknown';
+        stats.subscription_distribution[sub] = (stats.subscription_distribution[sub] || 0) + 1;
+        if (sub === 'none') stats.totals.free_accounts++;
+
+        // verified
+        if (verified === true) stats.totals.verified_true++;
+        else if (verified === false) stats.totals.verified_false++;
+
+        // url host counts
+        if (url) {
+          try {
+            const host = new URL(String(url)).hostname.replace(/^www\./, '');
+            if (host) stats.url_host_counts[host] = (stats.url_host_counts[host] || 0) + 1;
+          } catch {}
+        }
+
+        // followers stats
+        const followers = raw?.public_metrics?.followers_count;
+        if (typeof followers === 'number' && Number.isFinite(followers)) {
+          followerSamples.push(followers);
+        }
+
+        // proofs presence
+        if (Array.isArray(raw?.proofs) && raw.proofs.length > 0) {
+          stats.totals.with_proofs++;
+        }
       } catch (e) {
         log(`⚠️  Skipping invalid shill file ${f}`);
       }
@@ -164,6 +259,47 @@ async function buildWebsite() {
   const usernames = accounts.map((a) => a.username.toLowerCase());
   fs.writeFileSync(path.join(webDist, 'shills.json'), JSON.stringify({ usernames }, null, 2));
   fs.writeFileSync(extShillsPath, JSON.stringify({ usernames }, null, 2));
+
+  // Finalize and emit calculated statistics
+  if (!stats.totals.accounts && accounts.length) {
+    // Fallback: infer minimal stats from accounts if we didn't parse raw files (unlikely)
+    stats.totals.accounts = accounts.length;
+    for (const a of accounts) {
+      if (a.affiliation) stats.totals.affiliated++; else stats.totals.independent++;
+      const sub = a.subscription_type ? String(a.subscription_type) : 'unknown';
+      stats.subscription_distribution[sub] = (stats.subscription_distribution[sub] || 0) + 1;
+      if (sub === 'none') stats.totals.free_accounts++;
+      if (a.verified === true) stats.totals.verified_true++; else if (a.verified === false) stats.totals.verified_false++;
+    }
+  }
+
+  if (followerSamples.length) {
+    followerSamples.sort((a, b) => a - b);
+    const sum = followerSamples.reduce((s, v) => s + v, 0);
+    const median = followerSamples.length % 2 === 1
+      ? followerSamples[(followerSamples.length - 1) / 2]
+      : (followerSamples[followerSamples.length / 2 - 1] + followerSamples[followerSamples.length / 2]) / 2;
+    stats.followers = {
+      count_available: followerSamples.length,
+      min: followerSamples[0] ?? null,
+      max: followerSamples[followerSamples.length - 1] ?? null,
+      average: sum / followerSamples.length,
+      median,
+    };
+  }
+
+  const sortedAffiliations = Object.entries(stats.affiliation_counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) => ({ label, count }));
+  stats.top_affiliations = sortedAffiliations.slice(0, 20);
+
+  const sortedHosts = Object.entries(stats.url_host_counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([host, count]) => ({ host, count }));
+  stats.top_url_hosts = sortedHosts.slice(0, 20);
+
+  const statsPath = path.join(webDist, '_calculated_stats.json');
+  fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2));
 
   log('✅ Aggregated shills data from per-user files.');
 
@@ -233,6 +369,11 @@ async function buildWebsite() {
     const dirOut = path.join(webDist, 'directory');
     ensureDir(dirOut);
     fs.writeFileSync(path.join(dirOut, 'index.html'), dirHtml);
+    // Emit a charts page shell to allow direct visits
+    const chartsHtml = baseShellNested.replace(appMarker, '<main id="app" class="container"></main>');
+    const chartsOut = path.join(webDist, 'charts');
+    ensureDir(chartsOut);
+    fs.writeFileSync(path.join(chartsOut, 'index.html'), chartsHtml);
     log('✅ Pre-rendered account pages in /shills/* and directory shell.');
   } catch (e) {
     log('⚠️  Failed to pre-render pages');

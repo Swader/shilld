@@ -98,6 +98,28 @@ function navLink(href: string, text: string) {
   return h("a", { href }, text);
 }
 
+// SVG element helper
+function s<K extends keyof SVGElementTagNameMap>(
+  tag: K,
+  attrs: Record<string, any> | null,
+  ...children: (Node | string | null | undefined)[]
+): SVGElementTagNameMap[K] {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  if (attrs) {
+    for (const [k, v] of Object.entries(attrs)) {
+      if (v == null) continue;
+      // Event handlers are not expected on SVG elements here
+      if (k === 'className') (el as any).className.baseVal = String(v);
+      else el.setAttribute(k, String(v));
+    }
+  }
+  for (const c of children) {
+    if (c == null) continue;
+    el.append(c instanceof Node ? c : document.createTextNode(String(c)));
+  }
+  return el as SVGElementTagNameMap[K];
+}
+
 function renderLanding() {
   // Landing page is now static in index.html
   // No-op; leave existing DOM as-is
@@ -180,6 +202,183 @@ async function renderDirectory() {
       .map((x) => x.a);
     render(scored);
   });
+}
+
+type CalculatedStats = {
+  generated_at: string;
+  totals: {
+    accounts: number;
+    affiliated: number;
+    independent: number;
+    verified_true: number;
+    verified_false: number;
+    free_accounts: number;
+    with_proofs: number;
+  };
+  subscription_distribution: Record<string, number>;
+  affiliation_counts: Record<string, number>;
+  url_host_counts: Record<string, number>;
+  followers: {
+    count_available: number;
+    min: number | null;
+    max: number | null;
+    average: number | null;
+    median: number | null;
+  };
+  top_affiliations: Array<{ label: string; count: number }>;
+  top_url_hosts: Array<{ host: string; count: number }>;
+};
+
+function barChart(data: Array<{ label: string; value: number }>, opts: { width?: number; height?: number; color?: string; title?: string } = {}) {
+  const width = opts.width ?? 720;
+  const height = opts.height ?? Math.max(120, 24 * data.length + 40);
+  const color = opts.color ?? '#f97316';
+
+  const max = data.reduce((m, d) => Math.max(m, d.value), 0) || 1;
+  const paddingLeft = 140;
+  const paddingRight = 64; // extra space for value labels
+  const barHeight = 20;
+  const gap = 4;
+  const totalBarsHeight = data.length * (barHeight + gap);
+  const innerTop = 28;
+  const svg = s('svg', { viewBox: `0 0 ${width} ${Math.max(height, innerTop + totalBarsHeight + 16)}`, role: 'img', 'aria-label': opts.title || 'Bar chart' });
+  if (opts.title) svg.append(s('title', null, opts.title));
+  const g = s('g', { transform: `translate(0, ${innerTop})` });
+  svg.append(g);
+
+  data.forEach((d, i) => {
+    const y = i * (barHeight + gap);
+    const w = Math.max(1, ((width - paddingLeft - paddingRight) * d.value) / max);
+    const valueX = Math.min(paddingLeft + w + 6, width - 10);
+    g.append(
+      s('text', { x: 8, y: y + barHeight * 0.75, className: 'muted' }, d.label),
+      s('rect', { x: paddingLeft, y, width: w, height: barHeight, fill: color, rx: 4 }),
+      s('text', { x: valueX, y: y + barHeight * 0.75 }, String(d.value))
+    );
+  });
+  return svg;
+}
+
+function donutChart(data: Array<{ name: string; value: number; color: string }>, opts: { width?: number; height?: number; label?: string } = {}) {
+  const width = opts.width ?? 360;
+  const height = opts.height ?? 260;
+  const cx = width / 2;
+  const cy = Math.min(height - 20, width / 2);
+  const outerR = Math.min(cx, cy) - 10;
+  const innerR = Math.max(outerR - 28, 20);
+  const total = Math.max(1, data.reduce((s, d) => s + (d.value || 0), 0));
+
+  const svg = s('svg', { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': opts.label || 'Donut chart' });
+  let start = -Math.PI / 2; // start at top
+  data.forEach((d) => {
+    const angle = (d.value / total) * Math.PI * 2;
+    const end = start + angle;
+    const large = angle > Math.PI ? 1 : 0;
+    // Outer arc
+    const x0 = cx + outerR * Math.cos(start);
+    const y0 = cy + outerR * Math.sin(start);
+    const x1 = cx + outerR * Math.cos(end);
+    const y1 = cy + outerR * Math.sin(end);
+    // Inner arc
+    const xi = cx + innerR * Math.cos(end);
+    const yi = cy + innerR * Math.sin(end);
+    const xj = cx + innerR * Math.cos(start);
+    const yj = cy + innerR * Math.sin(start);
+    const path = `M ${x0} ${y0} A ${outerR} ${outerR} 0 ${large} 1 ${x1} ${y1} L ${xi} ${yi} A ${innerR} ${innerR} 0 ${large} 0 ${xj} ${yj} Z`;
+    svg.append(s('path', { d: path, fill: d.color }));
+    start = end;
+  });
+
+  // Center label
+  if (opts.label) {
+    svg.append(
+      s('text', { x: cx, y: cy - 4, className: 'chart-center', fill: '#fff' }, opts.label),
+      s('text', { x: cx, y: cy + 14, className: 'chart-center chart-note' }, `${total.toLocaleString()} total`),
+    );
+  }
+
+  // Legend
+  const legend = h('div', { className: 'legend' });
+  data.forEach((d) => {
+    const pct = Math.round((d.value / total) * 100);
+    legend.append(h('span', { className: 'legend-item' }, h('span', { className: 'legend-swatch', style: `background:${d.color}` }), `${d.name} ${pct}%`));
+  });
+
+  const wrapper = h('div', null);
+  wrapper.append(svg, legend);
+  return wrapper;
+}
+
+async function renderCharts() {
+  clear(app);
+  const header = h('div', { className: 'analytics-header' },
+    h('h1', { className: 'analytics-title' }, 'Shilld Analytics'),
+    h('p', { className: 'analytics-subtitle' }, 'Statistical breakdown of affiliations and verification data')
+  );
+  app.append(header);
+
+  let stats: CalculatedStats | null = null;
+  try {
+    stats = await fetchJSON<CalculatedStats>('/_calculated_stats.json');
+  } catch (e) {
+    app.append(h('div', { className: 'card' }, h('div', { className: 'muted' }, 'Failed to load statistics.')));
+    return;
+  }
+  if (!stats) return;
+
+  // Metric cards
+  const metrics = h('div', { className: 'metrics-grid' },
+    h('section', { className: 'card metric' }, h('div', { className: 'label' }, 'Total Accounts'), h('div', { className: 'value' }, String(stats.totals.accounts)), h('div', { className: 'hint' }, 'All tracked accounts')),
+    h('section', { className: 'card metric' }, h('div', { className: 'label' }, 'Affiliated Rate'), h('div', { className: 'value accent' }, `${Math.round((stats.totals.affiliated / Math.max(1, stats.totals.accounts)) * 100)}%`), h('div', { className: 'hint' }, `${stats.totals.affiliated} of ${stats.totals.accounts} accounts`)),
+    h('section', { className: 'card metric' }, h('div', { className: 'label' }, 'Verification Rate'), h('div', { className: 'value info' }, `${Math.round((stats.totals.verified_true / Math.max(1, stats.totals.accounts)) * 100)}%`), h('div', { className: 'hint' }, `${stats.totals.verified_true} verified accounts`)),
+    h('section', { className: 'card metric' }, h('div', { className: 'label' }, 'Avg Followers'), h('div', { className: 'value success' }, Number(Math.round((stats.followers.average || 0))).toLocaleString()), h('div', { className: 'hint' }, `Median: ${Number(stats.followers.median || 0).toLocaleString()}`))
+  );
+  app.append(metrics);
+
+  const affiliationPairs = [
+    { name: 'Affiliated', value: stats.totals.affiliated, color: '#8b5cf6' },
+    { name: 'Independent', value: stats.totals.independent, color: '#f43f5e' },
+  ];
+  const verificationPairs = [
+    { name: 'Verified', value: stats.totals.verified_true, color: '#38bdf8' },
+    { name: 'Not Verified', value: stats.totals.verified_false, color: '#f59e0b' },
+  ];
+
+  const chartsTop = h('div', { className: 'charts-grid' });
+  chartsTop.append(
+    (function(){
+      const card = h('section', { className: 'card' }, h('h3', null, 'Affiliation Breakdown'));
+      const donut = donutChart(affiliationPairs, { label: 'Affiliation' });
+      card.append(donut);
+      return card;
+    })(),
+    (function(){
+      const card = h('section', { className: 'card' }, h('h3', null, 'Verification Status'));
+      const donut = donutChart(verificationPairs, { label: 'Verification' });
+      card.append(donut);
+      return card;
+    })(),
+  );
+  app.append(chartsTop);
+
+  // Bottom charts
+  const chartsBottom = h('div', { className: 'charts-bottom' });
+  // Top affiliations bar
+  const affData = (stats.top_affiliations || []).map(a => ({ label: a.label, value: a.count }));
+  const barCard = h('section', { className: 'card' }, h('h3', null, 'Top Affiliations'));
+  barCard.append(barChart(affData, { title: 'Top affiliations', color: '#ef4444' }));
+  chartsBottom.append(barCard);
+
+  // Subscription pie
+  const subEntries = Object.entries(stats.subscription_distribution || {});
+  const subs = subEntries.map(([k, v]) => ({ name: k, value: Number(v), color: k === 'blue' ? '#22c55e' : '#a78bfa' }));
+  const subCard = h('section', { className: 'card' }, h('h3', null, 'Subscription Type'));
+  subCard.append(donutChart(subs, { label: 'Subscription' }));
+  chartsBottom.append(subCard);
+  app.append(chartsBottom);
+
+  // Footer note
+  app.append(h('div', { className: 'muted', style: 'text-align:center; margin-top:12px;' }, `Data generated on ${new Date(stats.generated_at).toLocaleDateString()}`));
 }
 
 function hasExistingAccountRender(): boolean {
@@ -275,6 +474,7 @@ function route() {
   console.log('[route] path', location.pathname, 'segments', segments);
   if (segments.length === 0) return void renderLanding();
   if (segments[0] === 'directory') return void renderDirectory();
+  if (segments[0] === 'charts') return void renderCharts();
   if (segments[0] === 'shills' && segments[1]) {
     console.log('[route] account', segments[1]);
     return void renderAccount(segments[1]);
