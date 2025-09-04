@@ -358,6 +358,13 @@ async function renderCharts() {
       card.append(donut);
       return card;
     })(),
+    (function(){
+      const subEntries = Object.entries(stats.subscription_distribution || {});
+      const subs = subEntries.map(([k, v]) => ({ name: k, value: Number(v), color: k === 'blue' ? '#22c55e' : '#a78bfa' }));
+      const card = h('section', { className: 'card' }, h('h3', null, 'Subscription Type'));
+      card.append(donutChart(subs, { label: 'Subscription' }));
+      return card;
+    })(),
   );
   app.append(chartsTop);
 
@@ -368,13 +375,6 @@ async function renderCharts() {
   const barCard = h('section', { className: 'card' }, h('h3', null, 'Top Affiliations'));
   barCard.append(barChart(affData, { title: 'Top affiliations', color: '#ef4444' }));
   chartsBottom.append(barCard);
-
-  // Subscription pie
-  const subEntries = Object.entries(stats.subscription_distribution || {});
-  const subs = subEntries.map(([k, v]) => ({ name: k, value: Number(v), color: k === 'blue' ? '#22c55e' : '#a78bfa' }));
-  const subCard = h('section', { className: 'card' }, h('h3', null, 'Subscription Type'));
-  subCard.append(donutChart(subs, { label: 'Subscription' }));
-  chartsBottom.append(subCard);
   app.append(chartsBottom);
 
   // Footer note

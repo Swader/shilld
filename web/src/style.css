@@ -111,8 +111,8 @@ main {
 .metric .value.success { color: var(--success); }
 .metric .hint { color: var(--muted); font-size: 0.8rem; }
 
-.charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-.charts-bottom { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.charts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+.charts-bottom { display: grid; grid-template-columns: 1fr; gap: 16px; }
 
 .card h3 { margin: 0 0 8px; }
 
