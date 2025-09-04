@@ -119,6 +119,7 @@ async function buildWebsite() {
       average: number | null;
       median: number | null;
     };
+    followers_series: number[];
     top_affiliations: Array<{ label: string; count: number }>;
     top_url_hosts: Array<{ host: string; count: number }>;
   };
@@ -138,6 +139,7 @@ async function buildWebsite() {
     affiliation_counts: {},
     url_host_counts: {},
     followers: { count_available: 0, min: null, max: null, average: null, median: null },
+    followers_series: [],
     top_affiliations: [],
     top_url_hosts: [],
   };
@@ -286,6 +288,7 @@ async function buildWebsite() {
       average: sum / followerSamples.length,
       median,
     };
+    stats.followers_series = followerSamples;
   }
 
   const sortedAffiliations = Object.entries(stats.affiliation_counts)

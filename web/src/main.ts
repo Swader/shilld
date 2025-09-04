@@ -227,6 +227,7 @@ type CalculatedStats = {
   };
   top_affiliations: Array<{ label: string; count: number }>;
   top_url_hosts: Array<{ host: string; count: number }>;
+  followers_series?: number[];
 };
 
 function barChart(data: Array<{ label: string; value: number }>, opts: { width?: number; height?: number; color?: string; title?: string } = {}) {
@@ -309,6 +310,69 @@ function donutChart(data: Array<{ name: string; value: number; color: string }>,
   return wrapper;
 }
 
+// Influence helpers
+function computeHistogram(values: number[], edges: number[]) {
+  const bins = Array(edges.length - 1).fill(0);
+  for (const v of values) {
+    for (let i = 0; i < edges.length - 1; i++) {
+      if (v >= edges[i] && v < edges[i + 1]) { bins[i]++; break; }
+      if (i === edges.length - 2 && v >= edges[i + 1]) bins[i]++;
+    }
+  }
+  return bins.map((count, i) => ({
+    label: i === edges.length - 2 ? `${edges[i].toLocaleString()}+` : `${edges[i].toLocaleString()}–${(edges[i + 1] - 1).toLocaleString()}`,
+    count
+  }));
+}
+
+function lorenzData(values: number[]) {
+  const x = values.filter((v) => Number.isFinite(v) && v >= 0).sort((a, b) => a - b);
+  const n = x.length;
+  const sum = x.reduce((s, v) => s + v, 0) || 1;
+  let cum = 0;
+  const pts: Array<{ p: number; L: number }> = [{ p: 0, L: 0 }];
+  for (let i = 0; i < n; i++) { cum += x[i]; pts.push({ p: (i + 1) / n, L: cum / sum }); }
+  return pts;
+}
+
+function gini(values: number[]) {
+  const x = values.filter((v) => Number.isFinite(v) && v >= 0).sort((a, b) => a - b);
+  const n = x.length;
+  if (n === 0) return 0;
+  const sum = x.reduce((s, v) => s + v, 0);
+  if (sum === 0) return 0;
+  let weighted = 0;
+  for (let i = 0; i < n; i++) weighted += (i + 1) * x[i];
+  return (2 * weighted) / (n * sum) - (n + 1) / n;
+}
+
+function lorenzChart(points: Array<{ p: number; L: number }>, giniValue: number) {
+  const width = 360;
+  const height = 260;
+  const pad = 28;
+  const x = (p: number) => pad + p * (width - 2 * pad);
+  const y = (L: number) => height - pad - L * (height - 2 * pad);
+
+  const svg = s('svg', { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': 'Lorenz curve' });
+  // Axes
+  svg.append(
+    s('line', { x1: pad, y1: height - pad, x2: width - pad, y2: height - pad, stroke: '#333' }),
+    s('line', { x1: pad, y1: pad, x2: pad, y2: height - pad, stroke: '#333' })
+  );
+  // Equality line
+  svg.append(s('line', { x1: pad, y1: height - pad, x2: width - pad, y2: pad, stroke: '#555', 'stroke-dasharray': '4 4' }));
+  // Lorenz path
+  const d = points.map((pt, i) => `${i === 0 ? 'M' : 'L'} ${x(pt.p)} ${y(pt.L)}`).join(' ');
+  svg.append(s('path', { d, stroke: '#60a5fa', fill: 'none', 'stroke-width': 2 }));
+  // Labels
+  svg.append(s('text', { x: width / 2, y: 18, className: 'chart-center' }, `Gini: ${giniValue.toFixed(2)}`));
+  svg.append(s('text', { x: pad, y: height - 6, className: 'muted' }, '0%'));
+  svg.append(s('text', { x: width - pad, y: height - 6, className: 'muted' }, '100%'));
+  svg.append(s('text', { x: 10, y: pad + 4, className: 'muted' }, '100%'));
+
+  return svg;
+}
+
 async function renderCharts() {
   clear(app);
   const header = h('div', { className: 'analytics-header' },
@@ -375,6 +439,26 @@ async function renderCharts() {
   const barCard = h('section', { className: 'card' }, h('h3', null, 'Top Affiliations'));
   barCard.append(barChart(affData, { title: 'Top affiliations', color: '#ef4444' }));
   chartsBottom.append(barCard);
+
+  // Influence distribution (histogram, Lorenz, Gini)
+  const followers = Array.isArray(stats.followers_series) ? stats.followers_series : [];
+  if (followers.length) {
+    const extra = h('section', { className: 'card' }, h('h3', null, 'Influence Distribution'));
+    const row = h('div', { style: 'display:grid; grid-template-columns: 1.2fr 1fr; gap: 16px;' });
+
+    // Histogram
+    const edges = [0, 1000, 5000, 10000, 50000, 100000, 250000, 500000];
+    const hist = computeHistogram(followers, edges);
+    row.append(barChart(hist.map(hh => ({ label: hh.label, value: hh.count })), { title: 'Followers histogram', color: '#f97316', height: 220 } as any));
+
+    // Lorenz + Gini
+    const lor = lorenzData(followers);
+    const g = gini(followers);
+    const lc = lorenzChart(lor, g);
+    row.append(lc);
+    extra.append(row);
+    chartsBottom.append(extra);
+  }
   app.append(chartsBottom);
 
   // Footer note
