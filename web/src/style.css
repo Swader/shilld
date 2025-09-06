@@ -32,6 +32,7 @@ body {
   top: 0;
   background: rgba(11, 12, 16, 0.7);
   backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 .site-header .container {
   display: flex;
@@ -133,6 +134,17 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
+/* Account page metrics and change lists */
+.metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+.metric-item { text-align: center; background: #0f1015; border: 1px solid var(--border); border-radius: 10px; padding: 10px; }
+.metric-number { font-size: 1.4rem; font-weight: 800; }
+.metric-label { color: var(--muted); font-size: 0.85rem; }
+.change-list { margin-top: 10px; display: grid; gap: 8px; }
+.change-row { display: flex; align-items: center; justify-content: space-between; background: #0f1015; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 0.9rem; }
+.aff-list { display: grid; gap: 10px; }
+.aff-row { display: flex; align-items: center; gap: 8px; background: #0f1015; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+.aff-row img { width: 18px; height: 18px; border-radius: 9999px; }
+
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -162,26 +174,40 @@ main {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
 }
 
-.user-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.user-card img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #222;
-}
+.user-card { display: grid; gap: 10px; }
+.user-card img { width: 50px; height: 50px; object-fit: cover; border-radius: 10px; background: #222; }
 .user-card a { color: var(--fg); text-decoration: none; font-weight: 700; }
 .user-card a:hover { color: var(--accent); }
 .muted { color: var(--muted); fill: var(--muted); }
 svg text { fill: var(--fg); }
+
+/* Directory polish */
+.dir-header { margin-bottom: 12px; }
+.dir-title { font-size: 2rem; font-weight: 900; margin: 0; }
+.dir-subtitle { color: var(--muted); margin: 6px 0 0; }
+.dir-count { color: var(--muted); font-size: 0.9rem; margin: 8px 0 16px; }
+
+.avatar-wrap { position: relative; width: 48px; height: 48px; z-index: 1; }
+.avatar { width: 48px; height: 48px; border-radius: 9999px; object-fit: cover; border: 1px solid var(--border); background:#111; }
+.verified-overlay { position: absolute; right: -4px; bottom: -4px; transform: scale(0.9); }
+
+.user-head { display: flex; align-items: flex-start; gap: 10px; }
+.user-names { display: grid; gap: 2px; min-width: 0; }
+.user-name { font-weight: 800; line-height: 1.1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.user-username { color: var(--muted); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 9999px; font-size: 12px; border: 1px solid var(--border); background: #0f1015; color: var(--fg); }
+.badge.secondary { background: #121319; color: var(--muted); }
+.badge.outline { background: transparent; color: var(--fg); }
+.badge.destructive { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #111; border-color: transparent; }
+.badge img { width: 14px; height: 14px; border-radius: 9999px; object-fit: cover; }
 
 .verified-icon { width: 18px; height: 18px; display: inline-block; margin-left: 6px; vertical-align: -3px; background-size: contain; background-repeat: no-repeat; }
 .verified-icon.blue { background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 22" aria-label="Verified account" role="img" xmlns="http://www.w3.org/2000/svg"><g><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z" fill="%230098ff"></path></g></svg>'); }

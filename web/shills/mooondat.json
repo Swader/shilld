@@ -50,5 +50,37 @@
         "https://x.com/zachxbt/status/1962485396597776468"
       ]
     }
+  ],
+  "changes": [
+    {
+      "at": "2025-09-04T14:24:12.287Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1962850230300213249/D4tej5Dl_bigger.jpg",
+        "description": "mc.xyz",
+        "url": "https://twitter.com/mcxyz",
+        "user_id": [
+          "1405895910798790656"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 201451,
+          "after": 201090
+        },
+        "following_count": {
+          "before": 3613,
+          "after": 3661
+        },
+        "tweet_count": {
+          "before": 24930,
+          "after": 25122
+        },
+        "listed_count": {
+          "before": 545,
+          "after": 550
+        }
+      }
+    }
   ]
 }

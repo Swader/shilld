@@ -56,5 +56,33 @@
         "https://x.com/zachxbt/status/1962485396597776468"
       ]
     }
+  ],
+  "changes": [
+    {
+      "at": "2025-09-04T14:24:12.287Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+        "description": "Solpump",
+        "url": "https://twitter.com/solpumpcom",
+        "user_id": [
+          "1920590621418663936"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 46795,
+          "after": 46767
+        },
+        "following_count": {
+          "before": 1333,
+          "after": 1332
+        },
+        "listed_count": {
+          "before": 73,
+          "after": 74
+        }
+      }
+    }
   ]
 }

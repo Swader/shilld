@@ -1,22 +1,49 @@
 <template id="account-template">
-  <section class="card" data-account>
-    <div style="display:flex; gap:16px; align-items:center;">
-      <img data-avatar alt="" width="80" height="80" style="border-radius:12px; object-fit:cover;"/>
-      <div>
-        <h2>
-          <span data-name></span>
-          (<span data-username></span>)
-          <span data-verified></span>
-        </h2>
+  <!-- Header -->
+  <section class="card account-header" data-account>
+    <div class="user-head">
+      <div class="avatar-wrap">
+        <img class="avatar" data-avatar alt="" width="96" height="96" />
+        <span class="verified-overlay" data-verified></span>
+      </div>
+      <div class="user-names" style="gap:6px;">
+        <h1 class="user-name" data-name></h1>
+        <div class="user-username" data-username></div>
         <div class="muted" data-bio></div>
-        <div class="muted" data-meta></div>
-        <div><a data-url target="_blank" rel="noopener"></a></div>
-        <div><span class="badge-preview">PAID SHILL</span></div>
+        <div class="badge-row" data-badges></div>
       </div>
     </div>
   </section>
-  <h3>Proofs and Context</h3>
-  <div class="proofs" data-proofs></div>
+
+  <!-- Metrics -->
+  <section class="card">
+    <h3 style="margin:0 0 8px;">Current Metrics</h3>
+    <div class="metric-grid">
+      <div class="metric-item"><div class="metric-number" data-m-followers>0</div><div class="metric-label">Followers</div></div>
+      <div class="metric-item"><div class="metric-number" data-m-following>0</div><div class="metric-label">Following</div></div>
+      <div class="metric-item"><div class="metric-number" data-m-posts>0</div><div class="metric-label">Posts</div></div>
+      <div class="metric-item"><div class="metric-number" data-m-lists>0</div><div class="metric-label">Lists</div></div>
+    </div>
+  </section>
+
+  <!-- Changes Over Time -->
+  <section class="card" data-changes-section hidden>
+    <h3 style="margin:0 0 8px;">Follower Changes Over Time</h3>
+    <div data-linechart style="width:100%; height:260px;"></div>
+    <div class="change-list" data-change-list></div>
+  </section>
+
+  <!-- Affiliation changes -->
+  <section class="card" data-aff-section hidden>
+    <h3 style="margin:0 0 8px;">Affiliation Changes</h3>
+    <div class="aff-list" data-aff-list></div>
+  </section>
+
+  <!-- Proofs -->
+  <section class="card">
+    <h3 style="margin:0 0 8px;">Proofs of Shillage</h3>
+    <div class="proofs" data-proofs></div>
+  </section>
 </template>
 
 

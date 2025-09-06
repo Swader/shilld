@@ -37,5 +37,37 @@
         "https://x.com/zachxbt/status/1962485396597776468"
       ]
     }
+  ],
+  "changes": [
+    {
+      "at": "2025-09-04T14:24:12.287Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1924687708821102592/Wx0xsnx3_bigger.png",
+        "description": "Stakit",
+        "url": "https://twitter.com/stakit_live",
+        "user_id": [
+          "1677036627145703424"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 61910,
+          "after": 60632
+        },
+        "following_count": {
+          "before": 11775,
+          "after": 11800
+        },
+        "tweet_count": {
+          "before": 291600,
+          "after": 291959
+        },
+        "listed_count": {
+          "before": 182,
+          "after": 185
+        }
+      }
+    }
   ]
 }

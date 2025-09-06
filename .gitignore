@@ -1,6 +1,7 @@
 .env
-fetched/*.json
+fetched
 usernames*.csv
+ids*.csv
 
 # Bun
 bun.lockb

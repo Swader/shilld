@@ -46,5 +46,44 @@
         "https://x.com/zachxbt/status/1962485396597776468"
       ]
     }
+  ],
+  "changes": [
+    {
+      "at": "2025-09-04T14:24:12.287Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+        "description": "Solpump",
+        "url": "https://twitter.com/solpumpcom",
+        "user_id": [
+          "1920590621418663936"
+        ]
+      },
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1877776869216464896/_6BWg9z7_bigger.jpg",
+        "description": "Metal Warrior ⚔️",
+        "url": "https://twitter.com/MetalWarriorOFL",
+        "user_id": [
+          "1707387868014837760"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 51939,
+          "after": 51679
+        },
+        "following_count": {
+          "before": 37248,
+          "after": 38587
+        },
+        "tweet_count": {
+          "before": 107425,
+          "after": 107451
+        },
+        "listed_count": {
+          "before": 76,
+          "after": 77
+        }
+      }
+    }
   ]
 }

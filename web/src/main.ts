@@ -165,22 +165,43 @@ async function renderDirectory() {
   function render(list: AccountBasic[]) {
     clear(grid);
     list.forEach((acc) => {
-      const card = h(
-        "div",
-        { className: "card user-card" },
-        h("img", { src: acc.image, alt: `Avatar of @${acc.username}`, loading: "lazy" }),
-        (() => {
-          const nameLink = h("a", { href: `/shills/${acc.username}` }, `${acc.name} (@${acc.username})`);
-          const wrapper = h("div", null, nameLink);
-          if (acc.verified) {
-            const cls = acc.subscription_type === 'business' ? 'yellow' : (acc.subscription_type === 'blue' ? 'blue' : (acc.subscription_type === 'government' ? 'gray' : 'blue'));
-            wrapper.appendChild(h("span", { className: `verified-icon ${cls}`, title: `Verified: ${acc.subscription_type || 'blue'}` }));
-          }
-          return wrapper;
-        })(),
-        h("div", { className: "muted" }, acc.bio),
-        acc.url ? h("div", null, h("a", { href: acc.url, target: "_blank", rel: "noopener" }, acc.url)) : null
+      const card = h("div", { className: "card user-card" });
+
+      const head = h("div", { className: "user-head" });
+      const avatarWrap = h("div", { className: "avatar-wrap" });
+      const avatar = h("img", { className: "avatar", src: acc.image, alt: `Avatar of @${acc.username}`, loading: "lazy" });
+      (avatar as HTMLImageElement).onerror = () => { (avatar as HTMLImageElement).src = "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"; };
+      avatarWrap.append(avatar);
+      if (acc.verified) {
+        const cls = acc.subscription_type === 'business' ? 'yellow' : (acc.subscription_type === 'blue' ? 'blue' : (acc.subscription_type === 'government' ? 'gray' : 'blue'));
+        avatarWrap.append(h("span", { className: `verified-icon ${cls} verified-overlay`, title: `Verified: ${acc.subscription_type || 'blue'}` }));
+      }
+      const names = h("div", { className: "user-names" },
+        h("a", { href: `/shills/${acc.username}`, className: "user-name" }, acc.name || acc.username),
+        h("div", { className: "user-username" }, `@${acc.username}`)
       );
+      head.append(avatarWrap, names);
+      card.append(head);
+
+      const bio = h("div", { className: "muted clamp-3" }, acc.bio || "No bio available");
+      card.append(bio);
+
+      const badges = h("div", { className: "badge-row" });
+      // affiliation
+      const aff: any = (acc as any).affiliation;
+      if (aff && (aff.description || aff.url)) {
+        const affBadge = h("span", { className: "badge destructive" });
+        if (aff.badge_url) affBadge.append(h("img", { src: aff.badge_url, alt: aff.description || "affil", loading: "lazy", onerror: (e: any) => e.currentTarget && (e.currentTarget.style.display = 'none') } as any));
+        affBadge.append(aff.description || (aff.url ? new URL(aff.url).hostname.replace(/^www\./,'') : 'Affiliated'));
+        badges.append(affBadge);
+      } else {
+        badges.append(h("span", { className: "badge secondary" }, "Independent"));
+      }
+      // subscription/verified
+      if (acc.subscription_type === 'blue' || acc.verified) badges.append(h("span", { className: "badge outline" }, "Verified"));
+      if (acc.subscription_type === 'none') badges.append(h("span", { className: "badge outline" }, "Free"));
+      card.append(badges);
+
       grid.append(card);
     });
   }
@@ -518,22 +539,58 @@ async function renderAccount(username: string) {
     const userEl = frag.querySelector('[data-username]') as HTMLElement;
     const verifiedEl = frag.querySelector('[data-verified]') as HTMLElement;
     const bioEl = frag.querySelector('[data-bio]') as HTMLElement;
-    const metaEl = frag.querySelector('[data-meta]') as HTMLElement;
-    const urlEl = frag.querySelector('[data-url]') as HTMLAnchorElement;
+    const badgesEl = frag.querySelector('[data-badges]') as HTMLElement;
     const proofsWrap = frag.querySelector('[data-proofs]') as HTMLElement;
+    const mFollowers = frag.querySelector('[data-m-followers]') as HTMLElement;
+    const mFollowing = frag.querySelector('[data-m-following]') as HTMLElement;
+    const mPosts = frag.querySelector('[data-m-posts]') as HTMLElement;
+    const mLists = frag.querySelector('[data-m-lists]') as HTMLElement;
+    const changesSection = frag.querySelector('[data-changes-section]') as HTMLElement;
+    const changeList = frag.querySelector('[data-change-list]') as HTMLElement;
+    const affSection = frag.querySelector('[data-aff-section]') as HTMLElement;
+    const affList = frag.querySelector('[data-aff-list]') as HTMLElement;
 
     avatar.src = data.image || (data as any).profile_image_url || '';
     avatar.alt = `Avatar of @${data.username}`;
     nameEl.textContent = data.name;
     userEl.textContent = `@${data.username}`;
     bioEl.textContent = data.bio || (data as any).description || '';
-    metaEl.textContent = [ data.id ? `ID: ${data.id} · ` : '', data.subscription_type ? `Sub: ${data.subscription_type}` : '', data.verified ? ' · Verified' : '' ].filter(Boolean).join('');
-    if (data.url) { urlEl.href = data.url; urlEl.textContent = data.url; } else { urlEl.parentElement?.remove(); }
     if (data.verified) {
       const cls = data.subscription_type === 'business' ? 'yellow' : (data.subscription_type === 'blue' ? 'blue' : (data.subscription_type === 'government' ? 'gray' : 'blue'));
       verifiedEl.className = `verified-icon ${cls}`;
       verifiedEl.title = `Verified: ${data.subscription_type || 'blue'}`;
     }
+    // badges: latest affiliation (from changes) + subscription
+    if (badgesEl) {
+      const changes = Array.isArray((data as any).changes) ? (data as any).changes : [];
+      let latestAff: any = (data as any).affiliation || null;
+      if (changes.length) {
+        const sorted = [...changes].sort((a: any, b: any) => new Date(a.at || 0).getTime() - new Date(b.at || 0).getTime());
+        for (let i = sorted.length - 1; i >= 0; i--) {
+          const c = sorted[i];
+          if (Object.prototype.hasOwnProperty.call(c, 'affiliation_after')) { latestAff = c.affiliation_after ?? null; break; }
+        }
+      }
+      if (latestAff && (latestAff.description || latestAff.url)) {
+        const text = latestAff.description || (latestAff.url ? new URL(latestAff.url).hostname.replace(/^www\./,'') : 'Affiliated');
+        const badge = latestAff.url
+          ? h('a', { className: 'badge destructive', href: latestAff.url, target: '_blank', rel: 'noopener' })
+          : h('span', { className: 'badge destructive' });
+        if (latestAff.badge_url) badge.append(h('img', { src: latestAff.badge_url, alt: text, loading: 'lazy' }));
+        badge.append(`Affiliated with ${text}`);
+        badgesEl.append(badge);
+      } else {
+        badgesEl.append(h('span', { className: 'badge secondary' }, 'Independent'));
+      }
+      if (data.subscription_type === 'blue' || data.verified) badgesEl.append(h('span', { className: 'badge outline' }, 'X Premium'));
+    }
+
+    // metrics
+    const pm = (data as any).public_metrics || {};
+    if (mFollowers) mFollowers.textContent = Number(pm.followers_count || 0).toLocaleString();
+    if (mFollowing) mFollowing.textContent = Number(pm.following_count || 0).toLocaleString();
+    if (mPosts) mPosts.textContent = Number(pm.tweet_count || 0).toLocaleString();
+    if (mLists) mLists.textContent = Number(pm.listed_count || 0).toLocaleString();
 
     if (!data.proofs || data.proofs.length === 0) {
       proofsWrap.append(h('div', { className: 'muted' }, 'No proofs provided.'));
@@ -544,7 +601,54 @@ async function renderAccount(username: string) {
       });
     }
 
-    app.append(accountEl, frag.querySelector('h3')!, proofsWrap);
+    // changes list (followers)
+    const changes = Array.isArray((data as any).changes) ? (data as any).changes : [];
+    if (changes.length && changesSection && changeList) {
+      changesSection.removeAttribute('hidden');
+      changes.forEach((c: any) => {
+        const when = new Date(c.at || Date.now()).toLocaleDateString();
+        const f = c.public_metrics && c.public_metrics.followers_count;
+        if (f && (typeof f.before === 'number' || typeof f.after === 'number')) {
+          changeList.append(
+            h('div', { className: 'change-row' },
+              h('div', { className: 'muted' }, when),
+              h('div', null, `${Number(f.before||0).toLocaleString()} → ${Number(f.after||0).toLocaleString()}`)
+            )
+          );
+        }
+      });
+    }
+
+    // affiliation changes
+    const affChanges = changes.filter((c: any) => c.affiliation_before || c.affiliation_after);
+    if (affChanges.length && affSection && affList) {
+      affSection.removeAttribute('hidden');
+      affChanges.forEach((c: any) => {
+        const when = new Date(c.at || Date.now()).toLocaleDateString();
+        const row = h('div', { className: 'aff-row' },
+          h('span', { className: 'muted', style: 'min-width:80px;' }, when),
+          h('img', { src: c.affiliation_before?.badge_url || '', alt: '', onerror: (e: any) => e.currentTarget && (e.currentTarget.style.display = 'none') } as any),
+          h('span', null, c.affiliation_before?.description || 'None'),
+          h('span', { className: 'muted' }, '→'),
+          h('img', { src: c.affiliation_after?.badge_url || '', alt: '', onerror: (e: any) => e.currentTarget && (e.currentTarget.style.display = 'none') } as any),
+          h('span', null, c.affiliation_after?.description || 'None'),
+        );
+        affList.append(row);
+      });
+    }
+
+    // Build final page order
+    const metricsSection = (mFollowers && (mFollowers.closest('section') as HTMLElement)) || null;
+    const proofsSection = (proofsWrap && (proofsWrap.closest('section') as HTMLElement)) || null;
+
+    const parts: HTMLElement[] = [];
+    parts.push(accountEl);
+    if (metricsSection) parts.push(metricsSection);
+    if (changesSection && !changesSection.hasAttribute('hidden')) parts.push(changesSection);
+    if (affSection && !affSection.hasAttribute('hidden')) parts.push(affSection);
+    if (proofsSection) parts.push(proofsSection);
+
+    app.append(...parts);
   } catch (e) {
     console.log('renderAccount fatal', e);
     if (!hasExistingAccountRender()) {

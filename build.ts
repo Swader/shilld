@@ -314,7 +314,13 @@ async function buildWebsite() {
     const shellPath = path.join(webSrc, 'index.html');
     const accountTplPath = path.join(webDist, 'account.html');
     const shell = fs.readFileSync(shellPath, 'utf8');
-    const appMarker = '<main id="app" class="container"></main>';
+    const replaceMain = (html: string, inner: string) => {
+      const re = /<main id="app" class="container">[\s\S]*?<\/main>/;
+      if (re.test(html)) return html.replace(re, `<main id="app" class="container">${inner}</main>`);
+      // Fallback to simple marker replacement if an empty marker exists
+      const marker = '<main id="app" class="container"></main>';
+      return html.includes(marker) ? html.replace(marker, `<main id="app" class="container">${inner}</main>`) : html;
+    };
     const escapeHtml = (s: any) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;' } as any)[c]);
     const verifiedSpan = (sub?: string|null, ver?: boolean|null) => ver ? `<span class="verified-icon ${sub==='business'?'yellow':(sub==='blue'?'blue':(sub==='government'?'gray':'blue'))}" title="Verified: ${escapeHtml(sub||'blue')}"></span>` : '';
 
@@ -361,19 +367,19 @@ async function buildWebsite() {
         .replace('href="./style.css"', 'href="../../style.css"')
         .replace('src="./assets/main.js"', 'src="/assets/main.js"')
         .replace(/src="\.\/images\//g, 'src="../../images/');
-      const html = baseShellNested2.replace(appMarker, `<main id="app" class="container">${content}</main>`);
+      const html = replaceMain(baseShellNested2, content);
       const outDir = path.join(webDist, 'shills', acc.username);
       ensureDir(outDir);
       fs.writeFileSync(path.join(outDir, 'index.html'), html);
       // No need to duplicate the account template per folder; keep a single copy at root
     }
     // Also emit a static directory page shell to allow direct visits
-    const dirHtml = baseShellNested.replace(appMarker, '<main id="app" class="container"></main>');
+    const dirHtml = replaceMain(baseShellNested, '');
     const dirOut = path.join(webDist, 'directory');
     ensureDir(dirOut);
     fs.writeFileSync(path.join(dirOut, 'index.html'), dirHtml);
     // Emit a charts page shell to allow direct visits
-    const chartsHtml = baseShellNested.replace(appMarker, '<main id="app" class="container"></main>');
+    const chartsHtml = replaceMain(baseShellNested, '');
     const chartsOut = path.join(webDist, 'charts');
     ensureDir(chartsOut);
     fs.writeFileSync(path.join(chartsOut, 'index.html'), chartsHtml);

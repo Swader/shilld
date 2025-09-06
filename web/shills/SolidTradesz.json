@@ -58,5 +58,28 @@
         "https://x.com/zachxbt/status/1962485396597776468"
       ]
     }
+  ],
+  "changes": [
+    {
+      "at": "2025-09-04T14:24:12.287Z",
+      "public_metrics": {
+        "followers_count": {
+          "before": 109913,
+          "after": 108997
+        },
+        "following_count": {
+          "before": 6302,
+          "after": 6309
+        },
+        "tweet_count": {
+          "before": 29882,
+          "after": 29911
+        },
+        "listed_count": {
+          "before": 666,
+          "after": 674
+        }
+      }
+    }
   ]
 }

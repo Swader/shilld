@@ -149,3 +149,41 @@ Add your bearer token to `.env` - copy `.env.example` to `.env` and change it.
 
 If you don't have an API token or want to check a single user interactively, you
 can use [this one-by-one tool](https://get-id-x.foundtt.com/en/).
+
+## Diffing fetched data vs shill files
+
+Use the Bun script to compare a fetched snapshot (under `fetched/<run>/`) to the
+canonical shill files in `web/shills/`. This helps you spot bio changes,
+affiliation changes, and follower deltas, and optionally write a historical
+"changes" log back into each shill JSON.
+
+Basic usage (auto-picks newest run):
+
+```bash
+bun run diff.ts
+```
+
+Pick a specific run directory:
+
+```bash
+bun run diff.ts --dir fetched/04-09-2025-1756995852287
+```
+
+Modes:
+
+- `inspect` (default):
+  - Prints human-readable changes to the console.
+  - Ignores pinned tweets and public metrics (assumed to change frequently).
+  - Canonicalizes affiliation objects so property order does not trigger false diffs.
+  - Shows bio changes as "from" → "to".
+
+- `update`:
+  - Writes a new entry into `web/shills/<username>.json` under a `changes` array with:
+    - `at`: ISO timestamp derived from the fetched run folder name
+    - `affiliation_before` / `affiliation_after` (canonicalized)
+    - `public_metrics` per-field before/after values
+  - Output is still printed to the console.
+
+- `ids`:
+  - Scans `web/shills/` for duplicate `id` values and prints username groups that
+    share the same ID (useful for catching username changes of the same account).

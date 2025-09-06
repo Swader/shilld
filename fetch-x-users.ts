@@ -1,6 +1,7 @@
 // fetch-x-users.ts
-// Bun-runnable script to read usernames from a CSV and fetch full user datasets
-// from the X API v2, writing each profile to its own fetched/<username>.json file.
+// Bun-runnable script to read usernames OR numeric IDs from a CSV and fetch full
+// user datasets from the X API v2, writing each profile to its own
+// fetched/<dd-mm-yyyy>-<timestamp>/<username-or-id>.json file.
 //
 // Usage:
 //   bun run fetch-x-users.ts            # reads usernames.csv in the current folder
@@ -8,21 +9,22 @@
 //
 // Requirements:
 //   - Place your API token in .env as X_BEARER_TOKEN=... (Bun loads .env automatically)
-//   - The CSV should contain a column named "username" (preferred) or just the
-//     usernames in the first column. Values may optionally start with @.
+//   - The CSV should contain a column named "username"/"handle"/"user" (preferred),
+//     OR a column named "id"/"user_id"/"userid". If no header is present, the first
+//     column is used. The script verifies that all entries are either usernames OR
+//     numeric IDs (no mixing) and calls the appropriate endpoint.
 //
 // Notes:
 //   - The script validates that the provided file has a .csv extension.
 //   - It will request a broad set of user.fields and automatically fall back to a
 //     safe subset if the API rejects unknown fields.
-//   - API limit: up to 100 usernames per request. If your CSV contains more than
-//     100 unique usernames, the script will exit with an error (split the file).
-//   - Each user is saved to fetched/<username>.json.
+//   - API limit: up to 100 items per request for both usernames and IDs.
+//   - Each run is saved to a timestamped folder under fetched/ for later diffing.
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const DEFAULT_CSV = "usernames.csv";
-const OUTPUT_DIR = "fetched";
+const OUTPUT_ROOT = "fetched";
 
 interface XAPIError {
   value?: string;
@@ -49,15 +51,19 @@ interface RawXUser {
   id: string;
   name: string;
   username: string;
+
+  created_at?: string; // ISO 8601
+  location?: string;
+  pinned_tweet_id?: string;
+  verified?: boolean;
+  verified_type?: string;
+
   description?: string;
   entities?: XUserEntities;
   profile_image_url?: string;
-  profile_banner_url?: string; // may not be supported in all tiers
   public_metrics?: XPublicMetrics;
-  url?: string; // profile website URL (see entities.url for details)
-  verified?: boolean;
-  verified_type?: string; // e.g., blue, business, government, none (varies)
-  affiliation?: unknown; // placeholder for any affiliation object if provided
+  url?: string;
+  affiliation?: unknown;
   [key: string]: unknown;
 }
 
@@ -163,37 +169,68 @@ function sanitizeFilename(basename: string): string {
   return basename.replace(/[^a-zA-Z0-9_\-\.]/g, "_");
 }
 
-function extractUsernames(csvText: string): string[] {
+type ExtractResult = { mode: "usernames" | "ids"; values: string[] };
+
+function extractValues(csvText: string): ExtractResult {
   const rows = parseCSV(csvText)
     .map(r => r.map(c => c.trim()))
     .filter(r => r.length > 0 && r.some(c => c.length > 0));
 
-  if (rows.length === 0) return [];
+  if (rows.length === 0) return { mode: "usernames", values: [] };
 
   // Detect header
   const header = rows[0].map(h => h.toLowerCase());
-  const possibleCols = ["username", "handle", "user"];
+  const possibleUserCols = ["username", "handle", "user"];
+  const possibleIdCols = ["id", "user_id", "userid"];
   let colIndex = 0;
   let startRow = 0;
 
-  const found = header.findIndex(h => possibleCols.includes(h));
-  if (found >= 0) {
-    colIndex = found;
-    startRow = 1; // skip header
-  } else {
-    // No header, treat first column as usernames
-    colIndex = 0;
-    startRow = 0;
+  let headerMode: "usernames" | "ids" | null = null;
+  let found = header.findIndex(h => possibleUserCols.includes(h));
+  if (found >= 0) { colIndex = found; startRow = 1; headerMode = "usernames"; }
+  if (found < 0) {
+    const foundId = header.findIndex(h => possibleIdCols.includes(h));
+    if (foundId >= 0) { colIndex = foundId; startRow = 1; headerMode = "ids"; }
   }
+  if (headerMode == null) { colIndex = 0; startRow = 0; }
 
   const set = new Set<string>();
   for (let i = startRow; i < rows.length; i++) {
     const v = rows[i][colIndex];
     if (!v) continue;
-    const name = normalizeUsername(v);
-    if (name) set.add(name);
+    set.add(v);
   }
-  return Array.from(set);
+  const raw = Array.from(set);
+  const normalized = raw.map(v => headerMode === "ids" ? v.trim() : normalizeUsername(v));
+
+  const onlyDigits = (s: string) => /^\d+$/.test(s);
+  const idCount = normalized.filter(onlyDigits).length;
+  const total = normalized.length;
+
+  let mode: "usernames" | "ids";
+  if (headerMode === "usernames") mode = "usernames";
+  else if (headerMode === "ids") mode = "ids";
+  else {
+    if (idCount === total) mode = "ids";
+    else if (idCount === 0) mode = "usernames";
+    else {
+      stderr("Error: Detected a mixture of numeric IDs and usernames in the CSV. Please provide a uniform list.");
+      process.exit(1);
+    }
+  }
+
+  const values = mode === "usernames"
+    ? normalized.map(normalizeUsername)
+    : normalized.map(v => {
+        const s = v.trim();
+        if (!/^\d+$/.test(s)) {
+          stderr(`Error: Non-numeric entry found in ID mode: ${v}`);
+          process.exit(1);
+        }
+        return s;
+      });
+
+  return { mode, values };
 }
 
 function chunk<T>(arr: T[], size: number): T[][] {
@@ -244,47 +281,25 @@ async function fetchUsersBatch(usernames: string[], token: string, userFields: s
   return json || {};
 }
 
-async function fetchUsersWithFallback(usernames: string[], token: string): Promise<RawXUser[]> {
-  // Preferred broad field set (some may not be available on all tiers)
-  const broadFields = [
-    "created_at",
-    "description",
-    "entities",
-    "location",
-    "pinned_tweet_id",
-    "profile_image_url",
-    "public_metrics",
-    "url",
-    "verified",
-    "verified_type",
-    // These may or may not be supported depending on API tier
-    "profile_banner_url",
-    "affiliation",
-  ];
-
-  // Safe subset expected to work broadly
-  const safeFields = [
-    "description",
-    "entities",
-    "public_metrics",
-    "profile_image_url",
-    "url",
-    "verified",
-    "verified_type",
-  ];
-
-  try {
-    const resp = await fetchUsersBatch(usernames, token, broadFields);
-    return resp.data ?? [];
-  } catch (e) {
-    // If we hit a rate limit, do NOT try a second call; bubble up to main immediately
-    if (e instanceof RateLimitError) {
-      throw e;
+async function fetchUsersByIdsBatch(ids: string[], token: string, userFields: string[]): Promise<XUsersByResponse> {
+  const endpoint = "https://api.x.com/2/users";
+  const params = new URLSearchParams({ ids: ids.join(","), "user.fields": userFields.join(",") });
+  const res = await fetch(`${endpoint}?${params.toString()}`, { headers: { Authorization: `Bearer ${token}` } });
+  let json: XUsersByResponse | null = null; const text = await res.text();
+  try { json = text ? (JSON.parse(text) as XUsersByResponse) : {}; } catch { json = {}; }
+  if (!res.ok) {
+    const is429 = res.status === 429 || (json?.errors || []).some(e => e?.status === 429);
+    if (is429) {
+      const retryAfterStr = res.headers.get("retry-after") || undefined;
+      const rlResetStr = res.headers.get("x-rate-limit-reset") || undefined;
+      const retryAfterSec = retryAfterStr ? Number(retryAfterStr) : undefined;
+      const resetAtEpochSec = rlResetStr ? Number(rlResetStr) : undefined;
+      throw new RateLimitError("Rate limit exceeded (HTTP 429).", { retryAfterSec, resetAtEpochSec });
     }
-    stderr(`Warning: broad user.fields failed; retrying with a safe subset. (${(e as Error).message})`);
-    const resp = await fetchUsersBatch(usernames, token, safeFields);
-    return resp.data ?? [];
+    const errDetail = json?.errors?.map(e => e.detail).filter(Boolean).join(" | ") || `${res.status} ${res.statusText}`;
+    throw new Error(`X API error: ${errDetail}`);
   }
+  return json || {};
 }
 
 async function fetchUsersWithMeta(usernames: string[], token: string): Promise<{ users: RawXUser[]; errors: XAPIError[] }> {
@@ -307,6 +322,7 @@ async function fetchUsersWithMeta(usernames: string[], token: string): Promise<{
 
   // Safe subset expected to work broadly
   const safeFields = [
+    "created_at",
     "description",
     "entities",
     "public_metrics",
@@ -329,14 +345,53 @@ async function fetchUsersWithMeta(usernames: string[], token: string): Promise<{
   }
 }
 
-async function writeUserJson(user: RawXUser) {
-  const base = sanitizeFilename(user.username);
-  await fs.mkdir(OUTPUT_DIR, { recursive: true });
-  const file = path.join(OUTPUT_DIR, `${base}.json`);
+async function fetchUsersByIdsWithMeta(ids: string[], token: string): Promise<{ users: RawXUser[]; errors: XAPIError[] }> {
+  const broadFields = [
+    "created_at",
+    "description",
+    "entities",
+    "location",
+    "pinned_tweet_id",
+    "profile_image_url",
+    "public_metrics",
+    "url",
+    "verified",
+    "verified_type",
+    "profile_banner_url",
+    "affiliation",
+  ];
+  const safeFields = [
+    "description",
+    "entities",
+    "public_metrics",
+    "profile_image_url",
+    "url",
+    "verified",
+    "verified_type",
+  ];
+  try {
+    const resp = await fetchUsersByIdsBatch(ids, token, broadFields);
+    return { users: resp.data ?? [], errors: resp.errors ?? [] };
+  } catch (e) {
+    if (e instanceof RateLimitError) throw e;
+    stderr(`Warning: broad user.fields failed; retrying with a safe subset. (${(e as Error).message})`);
+    const resp = await fetchUsersByIdsBatch(ids, token, safeFields);
+    return { users: resp.data ?? [], errors: resp.errors ?? [] };
+  }
+}
+
+async function writeUserJson(user: RawXUser, outDir: string) {
+  const base = sanitizeFilename(user.username || `id_${user.id}`);
+  await fs.mkdir(outDir, { recursive: true });
+  const file = path.join(outDir, `${base}.json`);
   const out = {
     id: user.id,
     name: user.name,
     username: user.username,
+    created_at: user.created_at ?? null,
+    location: user.location ?? null,
+    pinned_tweet_id: user.pinned_tweet_id ?? null,    
+    verified_type: user.verified_type ?? null,
     affiliation: user.affiliation ?? null,
     description: user.description ?? null,
     entities: user.entities ?? null,
@@ -347,7 +402,7 @@ async function writeUserJson(user: RawXUser) {
     url: user.url ?? null,
     verified: user.verified ?? null,
   };
-  await Bun.write(file, JSON.stringify(out, null, 2));
+  await fs.writeFile(file, JSON.stringify(out, null, 2), "utf8");
 }
 
 async function main() {
@@ -363,52 +418,65 @@ async function main() {
 
   let csvText = "";
   try {
-    csvText = await Bun.file(csvPath).text();
+    csvText = await fs.readFile(csvPath, "utf8");
   } catch (e) {
     stderr(`Error: Could not read CSV file: ${csvPath} (${(e as Error).message})`);
     process.exit(1);
   }
 
-  const usernames = extractUsernames(csvText);
-  if (usernames.length === 0) {
+  const extracted = extractValues(csvText);
+  const values = extracted?.values || [];
+  if (values.length === 0) {
     stderr("Error: No usernames found in CSV.");
     process.exit(1);
   }
 
-  // Enforce X API upper limit for /users/by (multi-username) endpoint
-  if (usernames.length > 100) {
-    stderr(`Error: The X API endpoint /2/users/by supports at most 100 usernames per request. Found ${usernames.length}. Please split your CSV into chunks of 100 or fewer usernames and try again.`);
-    process.exit(1);
-  }
+  // Prepare timestamped output directory
+  const now = new Date();
+  const dd = String(now.getDate()).padStart(2, '0');
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const yyyy = String(now.getFullYear());
+  const ts = now.getTime();
+  const runDir = path.join(OUTPUT_ROOT, `${dd}-${mm}-${yyyy}-${ts}`);
 
-  stderr(`Fetching ${usernames.length} user(s) from X API...`);
+  const groups = chunk(values, 100);
+  stderr(`Fetching ${values.length} user(s) from X API in ${extracted.mode} mode in ${groups.length} batch(es)...`);
 
   try {
-    // Single call (<=100 usernames by guard above)
-    const { users, errors } = await fetchUsersWithMeta(usernames, token);
-    let count = 0;
-    for (const u of users) {
-      await writeUserJson(u);
-      count++;
+    let written = 0;
+    const allErrors: XAPIError[] = [];
+    const requestedLower = new Set(values.map(u => u.toLowerCase()));
+    const returnedLower = new Set<string>();
+
+    for (let i = 0; i < groups.length; i++) {
+      const batch = groups[i];
+      stderr(`Batch ${i + 1}/${groups.length}: fetching ${batch.length}...`);
+      const { users, errors } = extracted.mode === 'ids'
+        ? await fetchUsersByIdsWithMeta(batch, token)
+        : await fetchUsersWithMeta(batch, token);
+      for (const u of (users || [])) {
+        await writeUserJson(u, runDir);
+        written++;
+        returnedLower.add((extracted.mode === 'ids' ? u.id : u.username).toLowerCase());
+      }
+      for (const e of (errors || [])) allErrors.push(e);
     }
 
-    const requestedLower = new Set(usernames.map(u => u.toLowerCase()));
-    const returnedLower = new Set(users.map(u => u.username.toLowerCase()));
     const errMap = new Map<string, XAPIError>();
-    for (const e of (errors || [])) {
-      if (e && typeof e.value === "string") errMap.set(e.value.toLowerCase(), e);
+    for (const e of allErrors) {
+      if (e && typeof e.value === 'string') errMap.set(e.value.toLowerCase(), e);
     }
     const missing = Array.from(requestedLower).filter(u => !returnedLower.has(u));
     const missingDetailed = missing.map(u => {
       const e = errMap.get(u);
-      return { username: u, status: e?.status ?? null, error: e?.detail ?? null };
+      return { value: u, status: e?.status ?? null, error: e?.detail ?? null };
     });
 
     if (missingDetailed.length > 0) {
-      stderr(`Note: Received ${count}/${usernames.length}. Missing: ${missingDetailed.length}.`);
+      stderr(`Note: Received ${written}/${values.length}. Missing: ${missingDetailed.length}.`);
     }
 
-    console.log(JSON.stringify({ requested: usernames.length, written: count, missing: missingDetailed }, null, 2));
+    console.log(JSON.stringify({ requested: values.length, written, mode: extracted.mode, batches: groups.length, outDir: runDir, missing: missingDetailed }, null, 2));
   } catch (e) {
     if (e instanceof RateLimitError) {
       const parts: string[] = ["Error: X API rate limit exceeded."];
