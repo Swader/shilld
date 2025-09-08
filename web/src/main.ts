@@ -332,6 +332,33 @@ function donutChart(data: Array<{ name: string; value: number; color: string }>,
 }
 
 // Influence helpers
+function lineChart(data: Array<{ date: string; value: number }>, opts: { width?: number; height?: number; color?: string } = {}) {
+  const width = opts.width ?? 720;
+  const height = opts.height ?? 220;
+  const color = opts.color ?? '#22c55e';
+  const pad = 32;
+  if (!data.length) return s('svg', { viewBox: `0 0 ${width} ${height}` });
+  const xs = data.map((_, i) => i);
+  const ys = data.map(d => d.value);
+  const xMax = Math.max(1, xs[xs.length - 1]);
+  const yMin = Math.min(...ys);
+  const yMax = Math.max(...ys);
+  const x = (i: number) => pad + (i / xMax) * (width - 2 * pad);
+  const y = (v: number) => height - pad - ((v - yMin) / Math.max(1, (yMax - yMin))) * (height - 2 * pad);
+  const svg = s('svg', { viewBox: `0 0 ${width} ${height}` });
+  // grid axes
+  svg.append(
+    s('line', { x1: pad, y1: height - pad, x2: width - pad, y2: height - pad, stroke: '#333' }),
+    s('line', { x1: pad, y1: pad, x2: pad, y2: height - pad, stroke: '#333' })
+  );
+  const d = data.map((p, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(p.value)}`).join(' ');
+  svg.append(s('path', { d, stroke: color, fill: 'none', 'stroke-width': 2 }));
+  // markers at ends
+  svg.append(s('circle', { cx: x(0), cy: y(data[0].value), r: 2, fill: color }));
+  svg.append(s('circle', { cx: x(xs[xs.length - 1]), cy: y(data[data.length - 1].value), r: 2, fill: color }));
+  return svg;
+}
+
 function computeHistogram(values: number[], edges: number[]) {
   const bins = Array(edges.length - 1).fill(0);
   for (const v of values) {
@@ -604,19 +631,29 @@ async function renderAccount(username: string) {
     // changes list (followers)
     const changes = Array.isArray((data as any).changes) ? (data as any).changes : [];
     if (changes.length && changesSection && changeList) {
-      changesSection.removeAttribute('hidden');
-      changes.forEach((c: any) => {
-        const when = new Date(c.at || Date.now()).toLocaleDateString();
+      const pts: Array<{ date: string; value: number }> = [];
+      let latestValue: number | null = (pm && typeof pm.followers_count === 'number') ? pm.followers_count : null;
+      const sorted = [...changes].sort((a: any, b: any) => new Date(a.at || 0).getTime() - new Date(b.at || 0).getTime());
+      sorted.forEach((c: any) => {
+        const when = new Date(c.at || Date.now());
         const f = c.public_metrics && c.public_metrics.followers_count;
-        if (f && (typeof f.before === 'number' || typeof f.after === 'number')) {
+        if (f && typeof f.after === 'number') {
+          pts.push({ date: when.toLocaleDateString(), value: Number(f.after) });
+          latestValue = Number(f.after);
           changeList.append(
             h('div', { className: 'change-row' },
-              h('div', { className: 'muted' }, when),
+              h('div', { className: 'muted' }, when.toLocaleDateString()),
               h('div', null, `${Number(f.before||0).toLocaleString()} → ${Number(f.after||0).toLocaleString()}`)
             )
           );
         }
       });
+      if (pts.length) {
+        changesSection.removeAttribute('hidden');
+        const svg = lineChart(pts, { height: 220, color: '#8b5cf6' });
+        const holder = changesSection.querySelector('[data-linechart]');
+        if (holder) { holder.textContent = ''; holder.append(svg); }
+      }
     }
 
     // affiliation changes

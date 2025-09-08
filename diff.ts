@@ -47,7 +47,7 @@ type ShillFile = Record<string, any> & {
 function stderr(msg: string) { console.error(msg); }
 
 function parseArgs(argv: string[]) {
-  const out: { dir?: string; mode?: 'inspect' | 'update' | 'ids' } = {};
+  const out: { dir?: string; mode?: 'inspect' | 'update' | 'ids'; removeTime?: string } = {};
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--dir' || a === '-d') {
@@ -56,6 +56,9 @@ function parseArgs(argv: string[]) {
     } else if (a === '--mode') {
       const v = (argv[i + 1] || '').toLowerCase();
       if (v === 'inspect' || v === 'update' || v === 'ids') out.mode = v as any;
+      i++;
+    } else if (a === '--removetime') {
+      out.removeTime = argv[i + 1];
       i++;
     } else if (a === '--inspect') {
       out.mode = 'inspect';
@@ -120,9 +123,40 @@ function diffMetrics(newM?: PubMetrics | null, oldM?: PubMetrics | null): string
 }
 
 async function main() {
-  const { dir, mode = 'inspect' } = parseArgs(process.argv);
+  const { dir, mode = 'inspect', removeTime } = parseArgs(process.argv);
   const fetchedRoot = path.join(process.cwd(), 'fetched');
   const webShills = path.join(process.cwd(), 'web', 'shills');
+
+  // One-off cleanup: remove all change entries with a specific timestamp
+  if (removeTime) {
+    let files: string[] = [];
+    try { files = (await fs.readdir(webShills)).filter(f => f.endsWith('.json')); } catch {
+      stderr('Failed to read web/shills for cleanup');
+      process.exit(1);
+    }
+    let totalRemoved = 0;
+    for (const f of files) {
+      try {
+        const p = path.join(webShills, f);
+        const raw = JSON.parse(await fs.readFile(p, 'utf8')) as ShillFile;
+        const arr: any[] = Array.isArray(raw.changes) ? raw.changes : [];
+        const beforeLen = arr.length;
+        const kept = arr.filter((c) => (c && c.at) !== removeTime);
+        if (kept.length !== beforeLen) {
+          totalRemoved += beforeLen - kept.length;
+          // Optionally refresh top-level affiliation to newest remaining entry
+          const lastAff = [...kept].reverse().find((c) => c && ("affiliation_after" in c));
+          if (lastAff && Object.prototype.hasOwnProperty.call(lastAff, 'affiliation_after')) {
+            (raw as any).affiliation = canonicalize(lastAff.affiliation_after) ?? null;
+          }
+          const out = { ...raw, changes: kept } as any;
+          await fs.writeFile(p, JSON.stringify(out, null, 2), 'utf8');
+        }
+      } catch {}
+    }
+    console.log(`Cleanup complete. Removed ${totalRemoved} change entr${totalRemoved===1?'y':'ies'} matching ${removeTime}.`);
+    return;
+  }
 
   // IDs mode: group shills by identical id and print username sets that share the same id
   if (mode === 'ids') {
@@ -244,9 +278,19 @@ async function main() {
         // Update mode: write change logs (affiliation + metrics) into file
         if (mode === 'update') {
           const updates: Record<string, any> = { at: runIso };
+          // De-duplicate affiliation change entries; and optionally advance top-level affiliation
           if (affChanged) {
-            updates.affiliation_before = affOldCanon ?? null;
-            updates.affiliation_after = affNewCanon ?? null;
+            const existingList: any[] = Array.isArray(shill.changes) ? shill.changes : [];
+            const lastAff = [...existingList].reverse().find((c) => c && ("affiliation_after" in c || "affiliation_before" in c));
+            const lastAfterCanon = canonicalize(lastAff?.affiliation_after);
+            const lastBeforeCanon = canonicalize(lastAff?.affiliation_before);
+            const isDuplicate = deepEqual(lastAfterCanon, affNewCanon) && deepEqual(lastBeforeCanon, affOldCanon);
+            if (!isDuplicate) {
+              updates.affiliation_before = affOldCanon ?? null;
+              updates.affiliation_after = affNewCanon ?? null;
+            }
+            // Sync top-level affiliation to current so subsequent diffs don't re-flag the same change
+            (shill as any).affiliation = affNewCanon ?? null;
           }
           const metricDiffsObj: Record<string, { before: number | null; after: number | null }> = {};
           const keys: (keyof PubMetrics)[] = ['followers_count', 'following_count', 'tweet_count', 'listed_count'];

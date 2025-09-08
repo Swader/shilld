@@ -4,11 +4,11 @@
   "username": "presidentpush",
   "affiliation": {
     "badge_url": "https://pbs.twimg.com/profile_images/1930649359856848896/y2Czqjrj_bigger.jpg",
+    "description": "TELEMETRY by BONKbot",
+    "url": "https://twitter.com/bonkbot_io",
     "user_id": [
       "1688577373396963328"
-    ],
-    "url": "https://twitter.com/bonkbot_io",
-    "description": "BONKbot"
+    ]
   },
   "description": "Founder of @presidentalpha_ \nData Research for @lukebelmar \nAmbassador @bonkbot_io - https://t.co/Kgmz3CRngh",
   "entities": {
