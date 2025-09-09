@@ -2,7 +2,14 @@
   "id": "1403293509411512325",
   "name": "BagCalls",
   "username": "BagCalls",
-  "affiliation": null,
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1946354315909832704/LljD1HVI_bigger.jpg",
+    "description": "dm.fun",
+    "url": "https://twitter.com/dmdotfun",
+    "user_id": [
+      "1876365731962724352"
+    ]
+  },
   "description": "investor in $PEPE TG: Bitbaggerr https://t.co/ZsMjDWRYHv https://t.co/2DOsiPDtfS",
   "entities": {
     "url": {
@@ -84,6 +91,36 @@
         "listed_count": {
           "before": 246,
           "after": 249
+        }
+      }
+    },
+    {
+      "at": "2025-09-09T16:40:39.843Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1946354315909832704/LljD1HVI_bigger.jpg",
+        "description": "dm.fun",
+        "url": "https://twitter.com/dmdotfun",
+        "user_id": [
+          "1876365731962724352"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 69706,
+          "after": 64854
+        },
+        "following_count": {
+          "before": 1698,
+          "after": 1714
+        },
+        "tweet_count": {
+          "before": 8047,
+          "after": 8136
+        },
+        "listed_count": {
+          "before": 246,
+          "after": 251
         }
       }
     }

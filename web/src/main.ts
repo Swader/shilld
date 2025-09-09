@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 type Proof = {
   name: string;
   date: string;
@@ -332,6 +333,48 @@ function donutChart(data: Array<{ name: string; value: number; color: string }>,
 }
 
 // Influence helpers
+function lineChartD3(container: HTMLElement, data: Array<{ date: Date; value: number }>, opts: { height?: number; color?: string } = {}) {
+  if (!d3 || !data.length) return;
+  const height = opts.height ?? 260;
+  const color = opts.color ?? '#8b5cf6';
+  const width = container.clientWidth || 720;
+  container.innerHTML = '';
+  const margin = { top: 16, right: 24, bottom: 28, left: 48 };
+  const innerW = Math.max(100, width - margin.left - margin.right);
+  const innerH = Math.max(80, height - margin.top - margin.bottom);
+
+  const svg = d3.select(container).append('svg').attr('width', width).attr('height', height);
+  const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleTime().domain(d3.extent(data, (d: any) => d.date)).range([0, innerW]);
+  const y = d3.scaleLinear().domain([d3.min(data, (d: any) => d.value), d3.max(data, (d: any) => d.value)]).nice().range([innerH, 0]);
+
+  const xAxis = d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat('%d/%m'));
+  const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d3.format(','));
+  g.append('g').attr('transform', `translate(0,${innerH})`).call(xAxis as any).selectAll('text').attr('fill', '#aaa');
+  g.append('g').call(yAxis as any).selectAll('text').attr('fill', '#aaa');
+
+  const line = d3.line().x((d: any) => x(d.date)).y((d: any) => y(d.value)).curve(d3.curveMonotoneX);
+  g.append('path').datum(data).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2).attr('d', line as any);
+
+  const focus = g.append('g').style('display', 'none');
+  focus.append('circle').attr('r', 3).attr('fill', color);
+  const tooltip = d3.select(container).append('div').style('position', 'absolute').style('pointer-events', 'none').style('background', '#111').style('border', '1px solid #333').style('padding', '6px 8px').style('border-radius', '6px').style('color', '#fff').style('font-size', '12px').style('display', 'none');
+  const bisect = d3.bisector((d: any) => d.date).left;
+  svg.append('rect').attr('transform', `translate(${margin.left},${margin.top})`).attr('width', innerW).attr('height', innerH).attr('fill', 'transparent')
+    .on('mouseover', () => { focus.style('display', null); tooltip.style('display', null); })
+    .on('mouseout', () => { focus.style('display', 'none'); tooltip.style('display', 'none'); })
+    .on('mousemove', function (event: any) {
+      const [mx] = d3.pointer(event, this);
+      const x0 = x.invert(mx);
+      const i = Math.min(data.length - 1, Math.max(0, bisect(data, x0)));
+      const d0 = data[i - 1] || data[i];
+      const d1 = data[i] || data[i - 1];
+      const d = (x0 as any) - (d0.date as any) > (d1.date as any) - (x0 as any) ? d1 : d0;
+      focus.attr('transform', `translate(${margin.left + x(d.date)},${margin.top + y(d.value)})`);
+      tooltip.style('left', `${margin.left + x(d.date) + 10}px`).style('top', `${margin.top + y(d.value) - 20}px`).html(`${d3.timeFormat('%d/%m/%Y')(d.date)}<br/>${d3.format(',')(d.value)} followers`);
+    });
+}
 function lineChart(data: Array<{ date: string; value: number }>, opts: { width?: number; height?: number; color?: string } = {}) {
   const width = opts.width ?? 720;
   const height = opts.height ?? 220;
@@ -560,6 +603,7 @@ async function renderAccount(username: string) {
     const tpl = await fetchHTML('/account.html');
     const tplEl = tpl.querySelector('#account-template') as HTMLTemplateElement | null;
     const frag = tplEl && 'content' in tplEl ? (tplEl as any).content.cloneNode(true) as DocumentFragment : tpl;
+    if (!frag) { console.log('[account] template fragment missing'); app.append(h('div', { className:'muted' }, 'Template not found.')); return; }
     const accountEl = frag.querySelector('[data-account]') as HTMLElement;
     const avatar = frag.querySelector('[data-avatar]') as HTMLImageElement;
     const nameEl = frag.querySelector('[data-name]') as HTMLElement;
@@ -631,14 +675,20 @@ async function renderAccount(username: string) {
     // changes list (followers)
     const changes = Array.isArray((data as any).changes) ? (data as any).changes : [];
     if (changes.length && changesSection && changeList) {
-      const pts: Array<{ date: string; value: number }> = [];
+      const pts: Array<{ date: Date; value: number }> = [];
       let latestValue: number | null = (pm && typeof pm.followers_count === 'number') ? pm.followers_count : null;
       const sorted = [...changes].sort((a: any, b: any) => new Date(a.at || 0).getTime() - new Date(b.at || 0).getTime());
+      // Baseline point: hardcode first fetch date 2025-09-01 with earliest 'before' if available
+      if (sorted.length) {
+        const first = sorted[0];
+        const fb = first?.public_metrics?.followers_count?.before;
+        if (typeof fb === 'number') pts.push({ date: new Date('2025-09-01T00:00:00Z'), value: Number(fb) });
+      }
       sorted.forEach((c: any) => {
         const when = new Date(c.at || Date.now());
         const f = c.public_metrics && c.public_metrics.followers_count;
         if (f && typeof f.after === 'number') {
-          pts.push({ date: when.toLocaleDateString(), value: Number(f.after) });
+          pts.push({ date: when, value: Number(f.after) });
           latestValue = Number(f.after);
           changeList.append(
             h('div', { className: 'change-row' },
@@ -650,9 +700,12 @@ async function renderAccount(username: string) {
       });
       if (pts.length) {
         changesSection.removeAttribute('hidden');
-        const svg = lineChart(pts, { height: 220, color: '#8b5cf6' });
-        const holder = changesSection.querySelector('[data-linechart]');
-        if (holder) { holder.textContent = ''; holder.append(svg); }
+        const holder = changesSection.querySelector('[data-linechart]') as HTMLElement | null;
+        if (!holder) { console.log('[account] linechart holder missing'); }
+        else {
+          try { lineChartD3(holder as HTMLElement, pts, { height: 240, color: '#8b5cf6' }); }
+          catch (err) { console.log('[account] d3 draw failed', err); }
+        }
       }
     }
 

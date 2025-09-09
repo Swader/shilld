@@ -3,12 +3,12 @@
   "name": "Trevv ($TRENCH)",
   "username": "9trevv",
   "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1965051914464460800/9a6RUODs_bigger.jpg",
+    "description": "Ourbit",
     "url": "https://twitter.com/Ourbit_Official",
     "user_id": [
       "1755825073817366528"
-    ],
-    "description": "Ourbit",
-    "badge_url": "https://pbs.twimg.com/profile_images/1960705708284067840/R46qGI6Z_bigger.jpg"
+    ]
   },
   "description": "for the $TRENCH E2KiYxrbfeBeajPr2kJAvwkzPr8p1hi81kFGYfB6pump @TrenchWarriorME https://t.co/e34cLdMHJ9",
   "entities": {
@@ -91,6 +91,43 @@
         "listed_count": {
           "before": 119,
           "after": 125
+        }
+      }
+    },
+    {
+      "at": "2025-09-09T16:40:39.843Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1960705708284067840/R46qGI6Z_bigger.jpg",
+        "description": "Ourbit",
+        "url": "https://twitter.com/Ourbit_Official",
+        "user_id": [
+          "1755825073817366528"
+        ]
+      },
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1965051914464460800/9a6RUODs_bigger.jpg",
+        "description": "Ourbit",
+        "url": "https://twitter.com/Ourbit_Official",
+        "user_id": [
+          "1755825073817366528"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 46533,
+          "after": 47034
+        },
+        "following_count": {
+          "before": 3089,
+          "after": 3198
+        },
+        "tweet_count": {
+          "before": 11245,
+          "after": 11456
+        },
+        "listed_count": {
+          "before": 119,
+          "after": 128
         }
       }
     }

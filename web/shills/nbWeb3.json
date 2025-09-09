@@ -28,5 +28,15 @@
       ]
     }
   ],
-  "changes": []
+  "changes": [
+    {
+      "at": "2025-09-09T16:40:39.843Z",
+      "public_metrics": {
+        "followers_count": {
+          "before": 1,
+          "after": 2
+        }
+      }
+    }
+  ]
 }

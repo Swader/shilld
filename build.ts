@@ -25,6 +25,7 @@ function log(msg: string) { console.log(msg); }
 async function buildWebsite() {
   log('🏗️ Building website...');
   cleanDir(webDist);
+  const buildVersion = Date.now().toString();
 
   // Bundle TS
   ensureDir(path.join(webDist, 'assets'));
@@ -44,7 +45,7 @@ async function buildWebsite() {
 
   // Copy static files
   // Ensure main.js is referenced by absolute path for nested routes
-  const idxSrc = fs.readFileSync(path.join(webSrc, 'index.html'), 'utf8').replace('src="./assets/main.js"', 'src="/assets/main.js"');
+  const idxSrc = fs.readFileSync(path.join(webSrc, 'index.html'), 'utf8').replace('src="./assets/main.js"', `src="/assets/main.js?v=${buildVersion}"`);
   fs.writeFileSync(path.join(webDist, 'index.html'), idxSrc);
   fs.copyFileSync(path.join(webSrc, 'style.css'), path.join(webDist, 'style.css'));
   // Copy account template for runtime fetch
@@ -353,7 +354,7 @@ async function buildWebsite() {
 
     const baseShellNested = shell
       .replace('href="./style.css"', 'href="../style.css"')
-      .replace('src="./assets/main.js"', 'src="../assets/main.js"')
+      .replace('src="./assets/main.js"', `src="../assets/main.js?v=${buildVersion}"`)
       .replace(/src="\.\/images\//g, 'src="../images/');
 
     for (const acc of accounts) {
@@ -361,13 +362,13 @@ async function buildWebsite() {
       // Adjust path for nested json location
       let full: any = {};
       try { full = JSON.parse(fs.readFileSync(path.join(shillsOutRoot, acc.username, `${acc.username}.json`), 'utf8')); } catch {}
-      const content = renderAccount(acc, full);
+      const content = '';
       // Two-level nested page: /shills/<username>/index.html
       const baseShellNested2 = shell
         .replace('href="./style.css"', 'href="../../style.css"')
-        .replace('src="./assets/main.js"', 'src="/assets/main.js"')
+        .replace('src="./assets/main.js"', `src="/assets/main.js?v=${buildVersion}"`)
         .replace(/src="\.\/images\//g, 'src="../../images/');
-      const html = replaceMain(baseShellNested2, content);
+      const html = replaceMain(baseShellNested2, '');
       const outDir = path.join(webDist, 'shills', acc.username);
       ensureDir(outDir);
       fs.writeFileSync(path.join(outDir, 'index.html'), html);

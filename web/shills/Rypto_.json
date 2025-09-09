@@ -37,6 +37,15 @@
           "after": 2
         }
       }
+    },
+    {
+      "at": "2025-09-09T16:40:39.843Z",
+      "public_metrics": {
+        "listed_count": {
+          "before": 0,
+          "after": 2
+        }
+      }
     }
   ]
 }
