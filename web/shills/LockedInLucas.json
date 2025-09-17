@@ -2,7 +2,14 @@
   "id": "2252245051",
   "name": "Lucas",
   "username": "LockedInLucas",
-  "affiliation": null,
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+    "description": "Solpump",
+    "url": "https://twitter.com/solpumpcom",
+    "user_id": [
+      "1920590621418663936"
+    ]
+  },
   "description": "most locked in to do it — use @100xLabs_",
   "entities": {
     "url": {
@@ -89,6 +96,36 @@
         "listed_count": {
           "before": 206,
           "after": 216
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1929309456447516672/nG3mGp___bigger.jpg",
+        "description": "Solpump",
+        "url": "https://twitter.com/solpumpcom",
+        "user_id": [
+          "1920590621418663936"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 40457,
+          "after": 36497
+        },
+        "following_count": {
+          "before": 4598,
+          "after": 4576
+        },
+        "tweet_count": {
+          "before": 206799,
+          "after": 215754
+        },
+        "listed_count": {
+          "before": 206,
+          "after": 219
         }
       }
     }

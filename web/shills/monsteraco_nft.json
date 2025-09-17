@@ -2,7 +2,14 @@
   "id": "1645364873239359489",
   "name": "Monsteraco",
   "username": "monsteraco_nft",
-  "affiliation": null,
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1966465736710238208/xkptvGSa_bigger.jpg",
+    "description": "atm.day",
+    "url": "https://twitter.com/atmdotday",
+    "user_id": [
+      "1856728854934482944"
+    ]
+  },
   "description": "Crypto Investor & KOL| Best app for memecoins: BullX 👉 https://t.co/rKECG0m41q | ByBit 👉 https://t.co/MwQOO1wzOf Posts are NFA & AD’s",
   "entities": {
     "url": {
@@ -94,6 +101,36 @@
         "tweet_count": {
           "before": 4608,
           "after": 4621
+        },
+        "listed_count": {
+          "before": 38,
+          "after": 36
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1966465736710238208/xkptvGSa_bigger.jpg",
+        "description": "atm.day",
+        "url": "https://twitter.com/atmdotday",
+        "user_id": [
+          "1856728854934482944"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 62254,
+          "after": 61253
+        },
+        "following_count": {
+          "before": 2424,
+          "after": 2408
+        },
+        "tweet_count": {
+          "before": 4608,
+          "after": 4645
         },
         "listed_count": {
           "before": 38,

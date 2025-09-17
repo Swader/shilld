@@ -2,14 +2,7 @@
   "id": "218392981",
   "name": "CardCabz.eth | 𝔽rAI",
   "username": "CardCabz",
-  "affiliation": {
-    "badge_url": "https://pbs.twimg.com/profile_images/1844429845184249860/T2MVaGI-_bigger.jpg",
-    "user_id": [
-      "1818702702748012544"
-    ],
-    "url": "https://twitter.com/unrugginc",
-    "description": "UNRUGGABLES INC"
-  },
+  "affiliation": null,
   "description": "I DROP ALPHA! Trader/Airdrop Hunter/Crypto Educator/Marketing Specialist: DM for Collab! @ScratchTokenX @MutantDogsYC #SpacesHost #ContentCreator",
   "entities": {
     "url": {
@@ -113,6 +106,36 @@
         "listed_count": {
           "before": 52,
           "after": 53
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1844429845184249860/T2MVaGI-_bigger.jpg",
+        "description": "UNRUGGABLES INC",
+        "url": "https://twitter.com/unrugginc",
+        "user_id": [
+          "1818702702748012544"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 11505,
+          "after": 11061
+        },
+        "following_count": {
+          "before": 3992,
+          "after": 4022
+        },
+        "tweet_count": {
+          "before": 67890,
+          "after": 71339
+        },
+        "listed_count": {
+          "before": 52,
+          "after": 51
         }
       }
     }

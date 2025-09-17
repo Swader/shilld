@@ -2,7 +2,14 @@
   "id": "76196786",
   "name": "rozer",
   "username": "rozer100x",
-  "affiliation": null,
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
+    "description": "Pyro Agency",
+    "url": "https://twitter.com/PyroAgency",
+    "user_id": [
+      "1889117062070759424"
+    ]
+  },
   "description": "I will never stop clicking.",
   "entities": {
     "url": {
@@ -80,6 +87,36 @@
         "listed_count": {
           "before": 122,
           "after": 126
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
+        "description": "Pyro Agency",
+        "url": "https://twitter.com/PyroAgency",
+        "user_id": [
+          "1889117062070759424"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 31759,
+          "after": 30897
+        },
+        "following_count": {
+          "before": 7464,
+          "after": 8921
+        },
+        "tweet_count": {
+          "before": 30645,
+          "after": 37926
+        },
+        "listed_count": {
+          "before": 122,
+          "after": 132
         }
       }
     }

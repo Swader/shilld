@@ -2,14 +2,7 @@
   "id": "1500248217086140417",
   "name": "Rome",
   "username": "RomeJayX",
-  "affiliation": {
-    "badge_url": "https://pbs.twimg.com/profile_images/1446190334753443849/c4HA2pm9_bigger.jpg",
-    "user_id": [
-      "1446189710913638415"
-    ],
-    "url": "https://twitter.com/GraffitiMansion",
-    "description": "Graffiti Mansion"
-  },
+  "affiliation": null,
   "description": "Money Maxi & Content Creator 🎬 | MAYC #23017 | @GraffitiMansion Rep | Trade with https://t.co/n8RMeuOqRG | Turning market chaos into alpha 📈",
   "entities": {
     "url": {
@@ -105,6 +98,36 @@
         "listed_count": {
           "before": 110,
           "after": 115
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1446190334753443849/c4HA2pm9_bigger.jpg",
+        "description": "Graffiti Mansion",
+        "url": "https://twitter.com/GraffitiMansion",
+        "user_id": [
+          "1446189710913638415"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 36988,
+          "after": 37119
+        },
+        "following_count": {
+          "before": 3886,
+          "after": 3919
+        },
+        "tweet_count": {
+          "before": 100312,
+          "after": 101283
+        },
+        "listed_count": {
+          "before": 110,
+          "after": 116
         }
       }
     }

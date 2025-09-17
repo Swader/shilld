@@ -3,7 +3,7 @@
   "name": "ray 🍪",
   "username": "mooondat",
   "affiliation": {
-    "badge_url": "https://pbs.twimg.com/profile_images/1962850230300213249/D4tej5Dl_bigger.jpg",
+    "badge_url": "https://pbs.twimg.com/profile_images/1966555056980848640/owBtfHrd_bigger.jpg",
     "description": "mc.xyz",
     "url": "https://twitter.com/mcxyz",
     "user_id": [
@@ -107,6 +107,43 @@
         "listed_count": {
           "before": 545,
           "after": 548
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1962850230300213249/D4tej5Dl_bigger.jpg",
+        "description": "mc.xyz",
+        "url": "https://twitter.com/mcxyz",
+        "user_id": [
+          "1405895910798790656"
+        ]
+      },
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1966555056980848640/owBtfHrd_bigger.jpg",
+        "description": "mc.xyz",
+        "url": "https://twitter.com/mcxyz",
+        "user_id": [
+          "1405895910798790656"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 201451,
+          "after": 196981
+        },
+        "following_count": {
+          "before": 3613,
+          "after": 3724
+        },
+        "tweet_count": {
+          "before": 24930,
+          "after": 25566
+        },
+        "listed_count": {
+          "before": 545,
+          "after": 554
         }
       }
     }

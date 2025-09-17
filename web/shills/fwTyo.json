@@ -2,14 +2,7 @@
   "id": "1591503788174712832",
   "name": "Tyo",
   "username": "fwTyo",
-  "affiliation": {
-    "url": "https://twitter.com/TradeonVyper",
-    "user_id": [
-      "1798107128823267328"
-    ],
-    "description": "Vyper",
-    "badge_url": "https://pbs.twimg.com/profile_images/1798161731841409024/4IOHh_sr_bigger.jpg"
-  },
+  "affiliation": null,
   "description": "Strategist | Always NFA & DYOR l Trading at https://t.co/bcY7LGFCxV",
   "entities": {
     "url": {
@@ -98,6 +91,36 @@
         "listed_count": {
           "before": 451,
           "after": 461
+        }
+      }
+    },
+    {
+      "at": "2025-09-17T06:10:04.754Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1798161731841409024/4IOHh_sr_bigger.jpg",
+        "description": "Vyper",
+        "url": "https://twitter.com/TradeonVyper",
+        "user_id": [
+          "1798107128823267328"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 356201,
+          "after": 359622
+        },
+        "following_count": {
+          "before": 52794,
+          "after": 60153
+        },
+        "tweet_count": {
+          "before": 76337,
+          "after": 76981
+        },
+        "listed_count": {
+          "before": 451,
+          "after": 469
         }
       }
     }
