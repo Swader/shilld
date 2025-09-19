@@ -2,7 +2,14 @@
   "id": "1591503788174712832",
   "name": "Tyo",
   "username": "fwTyo",
-  "affiliation": null,
+  "affiliation": {
+    "badge_url": "https://pbs.twimg.com/profile_images/1903907414963056640/HsUvxb1y_bigger.jpg",
+    "description": "CZR",
+    "url": "https://twitter.com/czrexchange",
+    "user_id": [
+      "1890765335189676032"
+    ]
+  },
   "description": "Strategist | Always NFA & DYOR l Trading at https://t.co/bcY7LGFCxV",
   "entities": {
     "url": {
@@ -121,6 +128,36 @@
         "listed_count": {
           "before": 451,
           "after": 469
+        }
+      }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "affiliation_before": null,
+      "affiliation_after": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1903907414963056640/HsUvxb1y_bigger.jpg",
+        "description": "CZR",
+        "url": "https://twitter.com/czrexchange",
+        "user_id": [
+          "1890765335189676032"
+        ]
+      },
+      "public_metrics": {
+        "followers_count": {
+          "before": 356201,
+          "after": 359843
+        },
+        "following_count": {
+          "before": 52794,
+          "after": 60889
+        },
+        "tweet_count": {
+          "before": 76337,
+          "after": 77052
+        },
+        "listed_count": {
+          "before": 451,
+          "after": 467
         }
       }
     }

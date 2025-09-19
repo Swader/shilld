@@ -55,6 +55,19 @@
           "after": 2
         }
       }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "public_metrics": {
+        "followers_count": {
+          "before": 3,
+          "after": 4
+        },
+        "listed_count": {
+          "before": 0,
+          "after": 2
+        }
+      }
     }
   ]
 }

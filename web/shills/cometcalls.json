@@ -2,14 +2,7 @@
   "id": "1419659978437181444",
   "name": "comet",
   "username": "cometcalls",
-  "affiliation": {
-    "url": "https://twitter.com/townsxyz",
-    "user_id": [
-      "1619069071516917761"
-    ],
-    "description": "Towns App",
-    "badge_url": "https://pbs.twimg.com/profile_images/1945658198217596928/tLPwnPHB_bigger.png"
-  },
+  "affiliation": null,
   "description": "memecoin genius. @coinbase ambassador. $giga bull. trade with me ⬇️",
   "entities": {
     "url": {
@@ -124,6 +117,36 @@
         "listed_count": {
           "before": 327,
           "after": 339
+        }
+      }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1945658198217596928/tLPwnPHB_bigger.png",
+        "description": "Towns App",
+        "url": "https://twitter.com/townsxyz",
+        "user_id": [
+          "1619069071516917761"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 110231,
+          "after": 111801
+        },
+        "following_count": {
+          "before": 5629,
+          "after": 5724
+        },
+        "tweet_count": {
+          "before": 21663,
+          "after": 22083
+        },
+        "listed_count": {
+          "before": 327,
+          "after": 342
         }
       }
     }

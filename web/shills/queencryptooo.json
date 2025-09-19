@@ -2,14 +2,7 @@
   "id": "1357395816193916929",
   "name": "Zoe🔶",
   "username": "queencryptooo",
-  "affiliation": {
-    "badge_url": "https://pbs.twimg.com/profile_images/1932746338648678400/Tg5FJokD_bigger.jpg",
-    "user_id": [
-      "1915792665876066304"
-    ],
-    "url": "https://twitter.com/Linos_AI",
-    "description": "Linos.AI"
-  },
+  "affiliation": null,
   "description": "Web3 content creator || thread writer 🧵 ||crypto news || $KTA $PI $ICP $HBAR $WLFI #spx6900 tweets are NFA🙋‍♀️ promos r paid ||for business DM",
   "entities": {
     "url": {
@@ -144,6 +137,36 @@
         "listed_count": {
           "before": 221,
           "after": 238
+        }
+      }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1932746338648678400/Tg5FJokD_bigger.jpg",
+        "description": "Linos.AI",
+        "url": "https://twitter.com/Linos_AI",
+        "user_id": [
+          "1915792665876066304"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 90562,
+          "after": 92133
+        },
+        "following_count": {
+          "before": 6986,
+          "after": 7146
+        },
+        "tweet_count": {
+          "before": 41263,
+          "after": 42011
+        },
+        "listed_count": {
+          "before": 221,
+          "after": 236
         }
       }
     }

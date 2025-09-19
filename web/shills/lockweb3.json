@@ -124,6 +124,27 @@
           "after": 248
         }
       }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "public_metrics": {
+        "followers_count": {
+          "before": 85747,
+          "after": 100122
+        },
+        "following_count": {
+          "before": 40740,
+          "after": 43868
+        },
+        "tweet_count": {
+          "before": 73058,
+          "after": 74746
+        },
+        "listed_count": {
+          "before": 237,
+          "after": 252
+        }
+      }
     }
   ]
 }

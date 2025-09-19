@@ -2,14 +2,7 @@
   "id": "1495674877256560640",
   "name": "vasta 💰",
   "username": "vasta",
-  "affiliation": {
-    "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
-    "user_id": [
-      "1889117062070759424"
-    ],
-    "url": "https://twitter.com/PyroAgency",
-    "description": "Pyro Agency"
-  },
+  "affiliation": null,
   "description": "content creator paving my own path • web3 degen • open for marketing // posts are nfa • @solana maxi 🐦‍🔥",
   "entities": {
     "description": {
@@ -106,6 +99,36 @@
         "listed_count": {
           "before": 402,
           "after": 393
+        }
+      }
+    },
+    {
+      "at": "2025-09-19T20:42:24.441Z",
+      "affiliation_before": {
+        "badge_url": "https://pbs.twimg.com/profile_images/1889117121126322176/3iWboKOg_bigger.jpg",
+        "description": "Pyro Agency",
+        "url": "https://twitter.com/PyroAgency",
+        "user_id": [
+          "1889117062070759424"
+        ]
+      },
+      "affiliation_after": null,
+      "public_metrics": {
+        "followers_count": {
+          "before": 121213,
+          "after": 26542
+        },
+        "following_count": {
+          "before": 32680,
+          "after": 3012
+        },
+        "tweet_count": {
+          "before": 51725,
+          "after": 29212
+        },
+        "listed_count": {
+          "before": 402,
+          "after": 16
         }
       }
     }
